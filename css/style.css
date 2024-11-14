@@ -1,0 +1,28 @@
+/*This stylesheet is a private propriety*/
+
+*{
+    max-width: 100%;
+}
+html, body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Playfair Display",'Time New Romance', sans-serif;
+    color: #252525;
+}
+h1{
+    font-size: 2.3em;
+}
+
+p, a{
+    font-family: "Raleway", 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #252525;
+    text-decoration: none;
+}
+
+.line{
+    border: solid 1px #252525;
+}
