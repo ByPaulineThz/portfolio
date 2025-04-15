@@ -141,7 +141,7 @@ label {
 }
 
 /*MAIN*/
-main {
+main.home {
   height: 70vh;
   display: flex;
   align-items: left;
