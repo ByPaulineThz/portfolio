@@ -30,7 +30,7 @@ h6 {
 
 h1 {
   margin-bottom: 15px;
-  font-size: 40px;
+  font-size: 50px;
 }
 @media (min-width: 548px) {
   h1 {
@@ -38,12 +38,24 @@ h1 {
   }
 }
 h2 {
-  font-size: 25px;
+  font-size: 35px;
+}
+h3 {
+  font-size: 30px;
 }
 p,
-a {
+a{
   font-family: var(--paragraphe);
-  font-size: 15px;
+  font-size: 18px;
+  line-height:22px;
+  color: #252525;
+  margin: 0;
+  text-decoration: none;
+}
+li {
+  font-family: var(--paragraphe);
+  font-size: 18px;
+  line-height:32px;
   color: #252525;
   margin: 0;
   text-decoration: none;
@@ -244,8 +256,9 @@ main.home {
 
 /*RESUME*/
 article {
-  padding-inline: 4em;
+  padding-inline: 8%;
   padding-bottom: 165px;
+  overflow: hidden;
 }
 .category {
   color: var(--coffee);
