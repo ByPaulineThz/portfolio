@@ -367,7 +367,7 @@ main.project{
 }
 
 .audit .box{
-	border:solid 1Px #000;
+	border:solid 1Px var(--marin);
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
@@ -378,7 +378,7 @@ main.project{
     gap: 20px;
 }
 .problem{
-	background-color: #252525;
+	background-color: var(--marin);
 	color: #fff;
 	padding-inline: 50px!important;
 }
@@ -411,3 +411,89 @@ main.project{
 		flex-wrap: wrap;	
 	}
 }
+
+/*PERSONAE*/
+#user{
+	overflow: visible;
+}
+.persona{
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 30px;
+	flex-wrap: wrap;
+}
+
+.persona img{
+	max-width:100%;
+	width: 250px;
+}
+.persona .element{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.persona .el{
+	border-radius: 5px;
+	border: 1px solid var(--marin);
+	padding: 20px;
+}
+
+.persona .el h3{
+	font-size: 20px;
+}
+
+.persona .el li{
+	font-size: 15px;
+}
+.persona .identite_persona{
+	position: relative;
+}
+
+.persona .infos_persona{
+	position: sticky;
+	top: 0;
+	border: 1px solid var(--marin);
+	padding: 20px;
+	border-radius: 5px;
+}
+.tab{
+justify-content: center;
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+
+
+.tab button{
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #949494;
+	font-size: 40px;
+	color:#949494;
+	font-weight: 700;
+	font-family: var(--title);
+	padding: 0 20px;
+	cursor: pointer;
+}
+.tab button.active{
+	border-bottom: 2px solid #000;
+	color: #000;
+}
+.tabcontent {
+	display: none;
+}
+
+.tabcontent.active{
+	display: block;
+}
+
+/*userflow*/
+.userflow{
+	display: flex;
+}
+
+.userflow .legende{
+	max-width: 120px;
+}
+
