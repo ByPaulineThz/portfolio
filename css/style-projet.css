@@ -1,10 +1,27 @@
 
-/*main*/
+/*MAIN*/
 main.project{
     position: relative;
 }
-/* swiper */
- .swiper-container {
+.banner{
+	height: 50vh;
+    align-items: anchor-center;
+    background-size: cover;
+	 display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	border-bottom-left-radius: 80px;
+	border-bottom-right-radius: 80px;
+}
+
+.resume-project{
+	max-width: 1200px;
+	margin: auto;
+}
+/* SWIPER */
+ /* .swiper-container {
 	 padding: 0;
 	 height: 80vh;
 	 width: 100%;
@@ -17,7 +34,7 @@ main.project{
 	 .swiper-container {
 		 height: 500px;
 	}
-}
+} */
  .swiper-slide {
 	 width: 100%;
 	 background-size: cover;
@@ -46,7 +63,6 @@ main.project{
 	 bottom: 0;
 	 z-index: 1;
 }
-/* swiper arrows */
  .swiper-button-prev, .swiper-button-next {
 	 width: 50px;
 	 height: 50px;
@@ -100,8 +116,7 @@ main.project{
  .swiper-button-prev:hover span:after, .swiper-button-next:hover span:after {
 	 width: calc(20px - 4px);
 }
-/* swiper arrows mobile */
- @media screen and (max-width: 768px) {
+$ @media screen and (max-width: 768px) {
 	 .swiper-button-prev {
 		 left: 0px;
 	}
@@ -118,7 +133,7 @@ main.project{
 		 display: none;
 	}
 }
-/* swiper pagination */
+
  .swiper-pagination {
 	 height: 40px;
 }
@@ -139,7 +154,6 @@ main.project{
 	 background-color: transparent;
 	 border: solid 1px white;
 }
-/* text content */
  .slide-text {
 	 text-align: center;
 	 color: white;
@@ -152,7 +166,7 @@ main.project{
 
 	 letter-spacing: 0.03em;
 }
-/* text mobile */
+/* MOBILE*/
  @media screen and (max-width: 768px) {
 	 .slide-text {
 		 width: 60%;
@@ -213,33 +227,7 @@ main.project{
 	 outline: 0;
 }
  
-/*box*/
-.box_0{
-    height: 200px;
-    width: 300px;
-    background-color: white;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 20px 20px 80px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-@media (max-width:992px) {
-    .box_0{
-        width: 90%;
-        padding: 0;
-        align-items: center;
-        bottom: -180px;
-        margin: auto 30px;
-    }
-
-}
-
-/*line*/
+/*LIGNE*/
 
 .line-title h4{
     padding-left: 30px;
@@ -248,7 +236,7 @@ main.project{
     font-weight: 400;
 }
 
-/*other*/
+/*AUTRE*/
 .other{
     display: flex;
     justify-content: center;
@@ -352,7 +340,7 @@ main.project{
 	display: flex;
 	flex-direction: column;
   }
-  /*Audit*/
+/*AUDIT*/
 
 .audit{
 	display: flex;
@@ -392,7 +380,7 @@ main.project{
 	}
 	.problem{
 		width:100%;
-		padding-inline:20%!important;
+		padding-inline:28%!important;
 	
 	}
 	.problem h3{
@@ -426,7 +414,7 @@ main.project{
 
 .persona img{
 	max-width:100%;
-	width: 250px;
+	/* width: 250px; */
 }
 .persona .element{
 	display: flex;
