@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>Portfolio | Pauline Thz</title>
+    <title>Portfolio | Pauline Thelliez</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,14 +9,22 @@
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--STYLE-->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/animate.css" />
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/wow.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
 
     <script>
       new WOW().init();
@@ -24,88 +32,351 @@
   </head>
 
   <body>
-      <header class="header" id="header">
-          <nav class="nav-bar">
-            <div class="toggle-menu">
-              <div class="line line1"></div>
-              <div class="line line2"></div>
-              <div class="line line3"></div>
-            </div>
-            <ul class="nav-list">
-              <li class="nav-list-item"><a href="" class="nav-link">Accueil</a></li>
-              <li class="nav-list-item"><a href="" class="nav-link">A propos</a></li>
-              <li class="nav-list-item">
-                <a href="" class="nav-link">Projets</a>
-              </li>
-              <li class="nav-list-item">
-                <a href="" class="nav-link">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div>
+    <header class="header" id="header">
+      <nav class="nav-bar desktop" id="navbarDesktop">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn active">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn">Projets</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav-bar mobile" id="navbarMobile">
+        <div class="toggle-menu">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">Projets</a>
+          </li>
+        </ul>
 
-       
+        <div class="nav-contact">
+          <h2>On prend contact ?</h2>
+          <p>
+            <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+              ><span>thelliezpauline@gmail.com</span></a
+            >
+            <a href="tel:0631007416" class="btn-underline"
+              ><span>06 31 00 74 16</span></a
+            >
+          </p>
+        </div>
+      </nav>
     </header>
     <main class="home">
-      <div class="main-txt fadeInDown">
-       <h1>Bonjour, Pauline Thelliez <h1>
-        <h2 class="h2">UX UI designer, webdesigner et intégratrice web.</h2>
-    </div>
-  </main>
+      <div class="row">
+        <div class="main-txt fadeInDown">
+          <span>Bonjour</span>
+          <h1>Je suis Pauline <br />UX UI designer & +</h1>
+          <p>
+            UX, UI, dev, print… Je suis passionnée par la création sous toutes
+            ses formes. Chaque projet est pour moi l’occasion d’apprendre, de
+            tester, et surtout de concevoir des outils et des solutions qui ont
+            du sens.
+          </p>
+          <div class="main-btn">
+            <a href="#realisations" class="btn-underline"
+              ><span>Voir les projets</span></a
+            >
+            <a href="./about.html" class="btn-underline btn-light"
+              ><span>Découvrir le CV</span></a
+            >
+          </div>
+        </div>
+        <div class="main-img">
+          <img src="./assets/img/profil.png" alt="Pauline Thelliez" />
+        </div>
+      </div>
+    </main>
+
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li>
+            <img
+              src="./assets/img/icons/html-124-svgrepo-com.png"
+              alt="logo HTML 5"
+              class="marquee-icone "
+            />
+            <div class="marquee-nom">HTML 5</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/prestashop-svgrepo-com.png"
+              alt="logo Prestashop"
+              class="marquee-icone"
+            />
+              <div class="marquee-nom">Prestashop</div>
+          </li>
+           <li>
+            <img
+              src="./assets/img/icons/figma.png"
+              alt="logo Figma"
+              class="marquee-icone"
+            />
+             <div class="marquee-nom">Figma</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobexd-svgrepo-com.png"
+              alt="logo Adobe XD"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Adobe XD</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/css3-02-svgrepo-com.png"
+              alt="logo CSS 3"
+              class="marquee-icone"
+            />
+            <div class="marquee-nom">CSS 3</div>
+
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobephotoshop-svgrepo-com.png"
+              alt="logo Photoshop"
+              class="marquee-icone"
+            />
+           <div class="marquee-nom">Photoshop</div>
+          </li>
+           <li>
+            <img
+              src="./assets/img/icons/react-svgrepo-com.png"
+              alt="logo React"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">React</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobeillustrator-svgrepo-com.png"
+              alt="logo Illustrator"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Illustrator</div>
+          </li>
+           <li>
+            <img
+              src="./assets/img/icons/php01-svgrepo-com.png"
+              alt="logo PHP"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">PHP</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobepremierepro-svgrepo-com.png"
+              alt="logo Premiere Pro"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Premiere Pro</div>
+          </li>
+           <li>
+            <img
+              src="./assets/img/icons/github-142-svgrepo-com.png"
+              alt="logo GitHub"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">GitHub</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobeaftereffects-svgrepo-com.png"
+              alt="logo After Effects"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">After Effects</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/js01-svgrepo-com.png"
+              alt="logo Javascript"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Javascript</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/adobeindesign-svgrepo-com.png"
+              alt="logo Indesign"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Indesign</div>
+          </li>
+           <li>
+            <img
+              src="./assets/img/icons/jquery-svgrepo-com.png"
+              alt="logo JQuery"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">JQuery</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/canva-svgrepo-com.png"
+              alt="logo Canva"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Canva</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/filezilla-svgrepo-com.png"
+              alt="logo Filezilla"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Filezilla</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/visual-studio-svgrepo-com.png"
+              alt="logo Visual Studio Code"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">Visual Studio Code</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/wordpress-svgrepo-com.png"
+              alt="logo Wordpress"
+              class="marquee-icone"
+            />
+              <div class="marquee-nom">Wordpress</div>
+          </li>
+          <li>
+            <img
+              src="./assets/img/icons/mysql-svgrepo-com.png"
+              alt="logo MySQL"
+              class="marquee-icone"
+            />
+               <div class="marquee-nom">MySQL</div>
+          </li>
+        </ul>
+      </div>
     <div class="arg">
-      <p>Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.
+      <h2>Designer, mais pas que !</h2>
+      <p>
+        UX/UI Designer depuis 4 ans, j’ai développé un profil hybride en
+        intervenant également sur des missions de développement front-end (HTML,
+        CSS, JavaScript/jQuery, PHP, React) et d’intégration sur Prestashop et
+        WordPress.
+        <br /><br />Je conçois des interfaces pour des projets très variés :
+        sites vitrines, e-commerce, applications mobiles, logiciels métiers
+        (back-office, dashboards, etc.). En parallèle, j’assure aussi des
+        missions de webmastering et de design graphique, allant de la création
+        de supports print à la conception d’identités visuelles complètes
+        (logos, chartes graphiques, etc.). <br /><br />Cette diversité me permet
+        non seulement de ne jamais m’ennuyer, mais surtout d’avoir une vision
+        globale des projets, de la création à la mise en ligne.
       </p>
-        <a href="./about.html" class="btn-underline"><span>En savoir plus</span></a>
+      <br />
+      <a href="./about.html" class="btn-underline"
+        ><span>En savoir plus</span></a
+      >
     </div>
-    
+
     <section class="realisations">
       <div class="container">
-       <div class="arg"><h2>Projets</h2></div> 
+        <div class="arg"><h2>Projets</h2></div>
         <div class="box-project" id="box-project-1">
           <div class="img-project"></div>
           <div class="item-project" id="item-project-1">
-            <label>UX UI design</label>
+            <label>2024 - UX UI design</label>
+            <div class="title-project">
+              <h2 class="btn btn-light">Artois Auto Import</h2>
+              <svg class="arrow" viewBox="0 0 23 13">
+                <polygon
+                  style="stroke: white"
+                  points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+                ></polygon>
+              </svg>
+            </div>
+            <p>Site web pour un professionnel de l'importation automobile</p>
+          </div>
+        </div>
+        <div class="box-project" id="box-project-2">
+          <div class="img-project"></div>
+          <div class="item-project" id="item-project-2">
+            <label>2020 - UX UI design</label>
             <div class="title-project">
               <h2 class="btn">Songes</h2>
-              <svg class="arrow" viewBox="0 0 23 13" ><polygon style="stroke:black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon></svg>
+              <svg class="arrow" viewBox="0 0 23 13">
+                <polygon
+                  style="stroke: black"
+                  points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+                ></polygon>
+              </svg>
             </div>
             <p>Référencer et comprendre la signification de vos rêves</p>
           </div>
         </div>
-        <div class="box-project" id="box-project-2">
-           <div class="img-project"></div>
-          <div class="item-project" id="item-project-2">
-            <label>UX UI design</label>
-            <div class="title-project">
-              <h2 class="btn">Artois Auto Import</h2>
-              <svg class="arrow" viewBox="0 0 23 13" ><polygon style="stroke:black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon></svg>
-            </div>
-            <p>Site web pour un professionnel de  l'importation automobile</p>
-          </div>
-        </div>
+
         <div class="box-project" id="box-project-3">
-           <div class="img-project"></div>
+          <div class="img-project"></div>
           <div class="item-project" id="item-project-3">
             <label>Branding</label>
             <div class="title-project">
               <h2 class="btn">TIAA</h2>
-              <svg class="arrow" viewBox="0 0 23 13" ><polygon style="stroke:black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon></svg>
+              <svg class="arrow" viewBox="0 0 23 13">
+                <polygon
+                  style="stroke: black"
+                  points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+                ></polygon>
+              </svg>
             </div>
-            <p>Une solution contre les incontinences </p>
+            <p>Une solution contre les incontinences</p>
           </div>
         </div>
       </div>
     </section>
-
-
+    
     <footer class="footer" id="footer">
       <h2>On prend contact ?</h2>
-      <p style="display:flex; gap: 25px;justify-content: center;"><a href='mailto:thelliezpauline@gmail.com' class="btn-underline"><span>thelliezpauline@gmail.com</span></a> <a href='tel:0631007416' class="btn-underline"><span>06 31 00 74 16</span></a></p>
-    <p style="position:absolute; bottom:0; margin:auto; width:100%">&copy; Pauline Thelliez</p>    
-  </footer>
-
+      <p
+        style="
+          display: flex;
+          gap: 25px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+          ><span>thelliezpauline@gmail.com</span></a
+        >
+        <a href="tel:0631007416" class="btn-underline"
+          ><span>06 31 00 74 16</span></a
+        >
+      </p>
+      <p style="position: absolute; bottom: 0; margin: auto; width: 100%">
+        &copy; Pauline Thelliez
+      </p>
+    </footer>
+    <button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
+      <svg class="" viewBox="0 0 23 13">
+        <polygon
+          style="stroke: #000"
+          points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+        ></polygon>
+      </svg>
+    </button>
     <!--script-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/style.js"></script>
+
+    <script src="./assets/js/style.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

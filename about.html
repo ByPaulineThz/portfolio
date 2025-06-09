@@ -1,22 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Propos</title>
-</head>
-<body>
-    <header>
+  <head>
+    <title>Portfolio | Pauline Thz</title>
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+
+  <body class="body-about">
+    <header class="header" id="header">
+      <nav class="nav-bar desktop" id="navbarDesktop">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn active">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link nav-link-lg btn">Projets</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav-bar mobile" id="navbarMobile">
+        <div class="toggle-menu">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="" class="nav-link btn">Projets</a>
+          </li>
+        </ul>
+
+        <div class="nav-contact">
+          <h2>On prend contact ?</h2>
+          <p>
+            <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+              ><span>thelliezpauline@gmail.com</span></a
+            >
+            <a href="tel:0631007416" class="btn-underline"
+              ><span>06 31 00 74 16</span></a
+            >
+          </p>
+        </div>
+      </nav>
     </header>
-    <main>
-
+    <main class="about">
+      <div class="row">
+        <div class="main-txt about-txt fadeInDown">
+          <span>Et si...</span>
+          <h1>Nous faisions connaissance </h1>
+          <p>
+           Enchantée, je suis Pauline Thelliez, j'ai 28 ans et je suis (principalement) designer UX UI, basée à Cambrai dans les Hauts-de-France.
+          </p>
+          <div class="main-btn">
+            <a href="#realisations" class="btn-underline"
+              ><span>Voir les projets</span></a
+            >
+            <a href="./about.html" class="btn-underline btn-light"><span>Télécharger le CV</span></a
+            >
+          </div>
+        </div>
+      </div>
     </main>
-    <section>
+    <section class="presentation">
+        <img src="./assets/img/DSCF3181- INSTAGRAM-2.jpg" class='about-img' alt="Photo Pauline"/>
+      <div class="arg">
+        <h2>De 2019 à 2021</h2>
+        <h3 class="sun">Vers les utilisateurs</h3>
+        <p>
+        Après avoir obtenu une <b>licence professionnelle en e-commerce et marketing numérique</b>, j’ai eu envie de me tourner 
+        vers ce qui me touche le plus dans le digital : <b>l’utilisateur final.</b>
+        Étant naturellement empathique, j’ai à cœur de <b>créer des solutions utiles, simples et vraiment pensées pour leurs besoins.</b>
+        <br><br>
+        Déterminée à devenir UX/UI designer, j’ai ensuite intégré un <b>master en design graphique et d’interaction</b>, que j’ai obtenu avec <i>the cherry on the cake,</i> une <b>mention très bien</b>. 
+        Puis fraîchement diplômée, l’agence web qui m’avait accueillie lors de mes stages m’a proposé un poste en UX/UI design. 
+        Vous pensez bien, je n’ai pas hésité une seconde : j’ai acceptée et aujourd’hui j’y travaille toujours.
+      </p>
+      <br>
+        <h2>Depuis 2021</h2>
+        <h3 class="sun">Le temps a passé, et l’expérience s’est construite.</h3>
+        <p>
+          Au fil du temps, j’ai pu <b>gagner en expérience et élargir mes compétences.</b>
+          Au sein de l’agence, j’ai eu l’opportunité de travailler sur une <b>grande variété de projets </b>: sites vitrines, boutiques e-commerce, applications mobiles, logiciels professionnels… Chaque mission m’a permis de m’adapter à de nouveaux défis et de monter en compétences.
+        <br><br>
+          Pour renforcer l’équipe, j’ai dû <b>aller plus loin dans le développement web</b>. J’ai <b>dépassé les bases</b> du HTML5, CSS3 et de la bibliothèque Bootstraps pour <b>approfondir mes connaissances en PHP.</b>
+          J’ai appris à <b>créer des thèmes sur mesure</b>, que ce soit pour des sites <b>WordPress ou full custom</b>, à écrire de nombreuses <b>requêtes SQL (PHPMyAdmin)</b>, et à me former au <b>JavaScript et à jQuery.</b>
+          J’ai également exploré le cœur de PrestaShop, en personnalisant des thèmes et en contribuant aux modifications ou développement de plusieurs modules. 
+          Pour continuer sur ma lancer, je me suis initiée à <b>React tant côté front </b>(<i>installation de packages npm, utilisation de material UI ou mantine) </i> <b>que côté back</b> (<i>intégration et tests des APIs)</i></b>
+      </p>
+      <br>
+      <h2>Et maintenant...</h2>
+        <h3 class="sun">Que vais-je faire ?</h3>
+        <p>
+       Vous l’aurez compris, j’ai un goût prononcé pour <b>l’apprentissage en continu et les défis du quotidien.</b><br>
+      Aujourd’hui, j’aspire à <b>mettre à profit ces connaissances</b> dans une entreprise qui me permettrait d’<b>occuper un poste (un peu) moins polyvalent, mais plus aligné avec ce que j’aime vraiment faire : l'UX UI design</b>.
+      J’aimerais pouvoir <b>travailler au sein d’une équipe </b>tout en gardant une certaine <b>autonomie</b>, sur des projets variés, et dans un environnement bienveillant qui me permette <b>d’évoluer et de progresser tout au long de ma carrière.</b>
 
+        </p>
+          <br>
+      <h2>Un petit recap' ?</h2>
+         <a href="./about.html" class="btn-underline"
+          ><h3 class="sun"><span>Téléchargez mon CV</span></h3></a
+        >
+        <br />
+      </div>
     </section>
-    <footer>
-        
+     
+    <footer class="footer" id="footer">
+      <h2>On prend contact ?</h2>
+      <p
+        style="
+          display: flex;
+          gap: 25px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+          ><span>thelliezpauline@gmail.com</span></a
+        >
+        <a href="tel:0631007416" class="btn-underline"
+          ><span>06 31 00 74 16</span></a
+        >
+      </p>
+      <p style="position: absolute; bottom: 0; margin: auto; width: 100%">
+        &copy; Pauline Thelliez
+      </p>
     </footer>
-</body>
+
+    <!--script-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/style.js"></script>
+  </body>
 </html>
