@@ -1,9 +1,4 @@
 
-//TOOLTIP MARQUE
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip({delay: { "show": 500, "hide": 100 }})
-})
-
 //SLIDER MARQUE 
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
