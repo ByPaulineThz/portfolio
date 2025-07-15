@@ -466,7 +466,7 @@ main.home .row {
   background-size: cover;
 }
 #box-project-2 .img-project {
-  background-image: url("../img/cover/c-songes.png");
+  background: url("../img/banner/proximy-colis.png"),var(--lion);
   background-size: cover;
 }
 #box-project-1 label,

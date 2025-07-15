@@ -3,22 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--FAVICON-->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+       <!--FAVICON-->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Portfolio Pauline Thz" />
-    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 
     <title>Projet Proximy</title>
     <link
@@ -175,7 +166,7 @@
         </div>
       </nav>
     </header>
-    <main class="home projet" id="project_1">
+    <main class="home projet" id="project_2">
       <div class="row">
         <div class="main-txt fadeInDown">
           <span>Design Graphique</span>
@@ -193,8 +184,8 @@
         </div>
         <div class="main-img">
           <img
-            src="../assets/img/banner/b-artois-auto.png"
-            alt="Artois Autos Import"
+            src="../assets/img/banner/proximy-colis.png"
+            alt="Proximy Logo "
           />
         </div>
       </div>
@@ -234,11 +225,9 @@
         valorisation de l'activité logisitique.
       </h2>
     </div>
-    <div class="process">
+ <div class="process">
       <span class="item">Procédure</span>
-      <div class="timeline">
-        <div class="timeline-container left">
-          <div class="content">
+      <div class="content">
             <h2>
               <span class="icon"><i class="fas fa-search"></i></span> Liste des
               containtes
@@ -261,12 +250,6 @@
               </li>
             </ul>
           </div>
-          <!-- <div
-            class="image"
-            style="background-image: url(./img/existant.jpg)"
-          ></div> -->
-        </div>
-        <div class="timeline-container right">
           <div class="content">
             <h2>
               <span class="icon"><i class="fas fa-filter"></i></span> 
@@ -275,44 +258,41 @@
             <p>
               Mes contraintes en tête, je commence mes recherches pour contruire mon <i>moodboard</i>  et développer mon univers graphique.
             </p>
+            <!-- <button class="btn-underline sun btnShowHide" id="btnShowHide"><span class="actionWord">Cacher livrable.s</span></button> -->
+              <div class="moodboardProximy livrable show" id="moodboardProximy">
+                <img src="./img/moodboard.png" alt="Moodboard Proximy" />
+              </div>
           </div>
-          <!-- <div
-            class="image"
-            style="background-image: url(./img/moodboard.png)"
-          ></div> -->
-        </div>
-        <div class="timeline-container left">
+      
           <div class="content">
             <h2>
               <span class="icon"><i class="fas fa-compass"></i></span> 
               Idéation
             </h2>
             <p>
-            Après quelques ébauches effectuées sur le papier, j'ouvre mon Illustrator et commence mes tests graphiques.
-            Puis je développe l'idée sur laquelle je me suis fixée. Je conçois des variantes couleurs et emplacements.
+            Après quelques ébauches effectuées sur papier, j'ouvre mon Illustrator et commence mes tests graphiques.
             </p>
+             <div class="livrable show">
+              <div><img src="./img/proximy-ideation.png" class="proximy-logo" alt="Idéation Proximy" style="margin:auto"/></div>
+            </div>
           </div>
-          <!-- <div
-            class="image"
-            style="background-image: url(./img/logique-logo.png)"
-          ></div> -->
-        </div>
-        <div class="timeline-container right">
-          <div class="content">
+        
+           <div class="content">
             <h2>
               <span class="icon"><i class="fas fa-object-group"></i></span>
-              Mise en situation
+              Conception et mise en situation
             </h2>
             <p>
+            Puis je développe l'idée sur laquelle je me suis fixée. Je conçois des variantes couleurs et emplacements.
             Sur Photoshop, je mets en situation mon logo grace à des mockups.
             </p>
+            <br>
+            <!-- <button class="btn-underline sun btnShowHide" id="btnShowHide"><span class="actionWord">Cacher livrable.s</span></button> -->
+            <div class="persona livrable show">
+              <div><img src="./img/propositions.png" class="proximy-logo" alt="Logique du logo Proximy" style="margin:auto"/></div>
+            </div>
           </div>
-          <!-- <div
-            class="image"
-            style="background-image: url(./img/mockup-colis.png)"
-          ></div> -->
-        </div>
-        <div class="timeline-container left">
+
           <div class="content">
             <h2>
               <span class="icon"><i class="fas fa-palette"></i></span>
@@ -323,27 +303,11 @@
              J'y rédige un récapitulatif de la demande et des contraintes et y regroupe mon moodboard,
               mon logotype, les variantes et les mises en situations. 
             </p>
+            <div class="livrable show">
+              <div> <img src="./img/fond-logo.PNG" class="proximy-logo" alt="Variantes du logo Proximy" style="margin:auto;max-width: 1200px;"/></div>
+              <div><img src="./img/mockup-proximy.png" class="proximy-logo" alt="Mockup colis logo Proximy" style="margin:auto"/></div>
+            </div>
           </div>
-          <!-- <div
-            class="image"
-            style="background-image: url(./img/prototype.jpg)"
-          ></div> -->
-        </div>
-      </div>
-    </div>
-    <section class="resume-project" id="resume-project" style="margin-top:3rem">
-        <div style="display:flex;flex-direction:column;align-items: center;"> 
-          <span class="item">Résultat</span>
-          <img src="./img/moodboard.png" class="proximy-logo" alt="Moodboard Proximy" style="margin:auto"/>
-          <img src="./img/logique-logo.png" class="proximy-logo" alt="Logique du logo Proximy" style="margin:auto"/>
-          <img src="./img/variante-proximy.png" class="proximy-logo" alt="Variantes du logo Proximy" style="margin:auto"/>
-          <img src="./img/logo_nb.png" class="proximy-logo" alt="Variantes du logo Proximy" style="margin:auto"/>
-          <img src="./img/fond-logo.PNG" class="proximy-logo" alt="Variantes du logo Proximy" style="margin:auto;max-width: 1200px;"/>
-          <img src="./img/mockup-proximy.png" class="proximy-logo" alt="Mockup colis logo Proximy" style="margin:auto"/>
-        </div>
-        </div>
-      
-    </section>
 
     <section class="other">
       <div class="other-title">
@@ -398,7 +362,7 @@
           ><span>06 31 00 74 16</span></a
         >
       </p>
-      <p style="position: absolute; bottom: 0; margin: auto; width: 100%">
+      <p style="position: relative; bottom: 0; margin: auto; width: 100%">
         &copy; Pauline Thelliez
       </p>
     </footer>
