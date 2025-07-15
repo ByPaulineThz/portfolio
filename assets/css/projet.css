@@ -1,5 +1,3 @@
-
-
 /*MAIN*/
 main.projet {
   position: relative;
@@ -299,6 +297,10 @@ button:focus {
   padding-bottom: 20px;
 }
 
+.other-project label{
+  margin-right: 20px;
+}
+
 .o-project {
   background-color: #252525;
   cursor: pointer;
@@ -450,9 +452,22 @@ button:focus {
   }
 }
 
+.livrable{
+  opacity: 0;
+  height:0;
+  transition: opacity 1s, height 1s;
+
+}
+.livrable.show{
+  display: block;
+  opacity: 1;
+  height: auto;
+
+}
 /*PERSONAE*/
-#user {
-  overflow: visible;
+#user p {
+font-weight: 500;
+font-style: italic;
 }
 .persona {
   display: flex;
@@ -572,11 +587,10 @@ button:focus {
   margin: 0 auto 6rem auto;
   padding: 0 20px;
 }
-.objectif h2{
-    max-width: 768px;
-    margin: auto;
-  }
-
+.objectif h2 {
+  max-width: 768px;
+  margin: auto;
+}
 
 .item {
   font-family: var(--paragraphe);
@@ -586,9 +600,15 @@ button:focus {
   display: block;
 }
 
-
-.process{
-  text-align: center;
+.process {
+  max-width: 1000px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  /* border-radius: 5px;
+  border: solid 1px var(--lion); */
 }
 
 .timeline {
@@ -597,7 +617,7 @@ button:focus {
   margin: 0 auto;
   padding: 64px 0;
 }
-.timeline .image{
+.timeline .image {
   width: 50%;
   background-size: cover;
   background-position: center;
@@ -625,23 +645,23 @@ button:focus {
 }
 
 .timeline-container.left .image {
-    width: 43%;
-    background-color: #000;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 3%;
+  width: 43%;
+  background-color: #000;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 3%;
 }
 
 .timeline-container.right .image {
-    width: 43%;
-    background-color: #000;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: -46%;
+  width: 43%;
+  background-color: #000;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -46%;
 }
-.timeline-container .content{
+.timeline-container .content {
   width: 41%;
 }
 .timeline-container.right {
@@ -655,45 +675,50 @@ button:focus {
   width: 24px;
   height: 24px;
   background: var(--sun);
-   order: 4px solid var(--sun);
+  order: 4px solid var(--sun);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999;
 }
 
 .timeline-container.left::before {
- top: 50%;
- left: 50.4%;
+  top: 50%;
+  left: 50.4%;
 }
 .timeline-container.right::before {
- top: 50%;
- left:4px
+  top: 50%;
+  left: 4px;
 }
 .content {
-  padding: 30px ;
+  margin: 60px 30px;
   background-color: var(--snow);
   position: relative;
-  border-radius: 5px;
-  border: solid 1px var(--lion);
+  /* border-radius: 5px;
+  border: solid 1px var(--lion); */
   transform: scaleX(1);
   transform-origin: right center;
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   color: #000;
+  width: 100%;
   font-weight: bold;
+
   font-size: 1.25rem;
 }
-
+.actionWord{
+  margin-bottom:20px
+}
 .icon {
   font-size: 32px;
-  margin-right:20px;
+  margin-right: 20px;
   color: var(--sun);
 }
 
-.content h2{
+.content h2 {
   margin-bottom: 20px;
   text-align: left;
 }
-.content p, .content li{
+.content p,
+.content li {
   text-align: left;
   font-family: var(--paragraphe);
   font-size: 1rem;
@@ -702,9 +727,9 @@ button:focus {
 @media screen and (max-width: 860px) {
   .timeline-container .content {
     width: auto;
-}
+  }
   .timeline-container .image {
-display: none;
+    display: none;
   }
   .timeline::after {
     left: 31px;
@@ -731,4 +756,10 @@ display: none;
   .timeline-container.right {
     left: 0;
   }
+}
+
+
+/*footer*/
+footer{
+
 }
