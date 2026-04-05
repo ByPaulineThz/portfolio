@@ -64,22 +64,22 @@ window.onscroll = function () {
 };
 
 //SHOW HIDE LIVRABLES
-let btnShowHide = document.getElementsByClassName("btnShowHide");
+// let btnShowHide = document.getElementsByClassName("btnShowHide");
 
-for (let i = 0; i < btnShowHide.length; i++) {
-  btnShowHide[i].addEventListener("click", function () {
-    let livrable = this.nextElementSibling;
+// for (let i = 0; i < btnShowHide.length; i++) {
+//   btnShowHide[i].addEventListener("click", function () {
+//     let livrable = this.nextElementSibling;
 
-    if (livrable && livrable.classList.contains("livrable")) {
-      livrable.classList.toggle("show");
+//     if (livrable && livrable.classList.contains("livrable")) {
+//       livrable.classList.toggle("show");
 
-      let actionWord = this.querySelector(".actionWord");
-      if (actionWord) {
-        actionWord.textContent = livrable.classList.contains("show") ? "Cacher livrable.s"  : "Afficher livrable.s";
-      }
-    }
-  });
-}
+//       let actionWord = this.querySelector(".actionWord");
+//       if (actionWord) {
+//         actionWord.textContent = livrable.classList.contains("show") ? "Cacher livrable.s"  : "Afficher livrable.s";
+//       }
+//     }
+//   });
+// }
 
 
 
