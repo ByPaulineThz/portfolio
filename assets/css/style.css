@@ -474,7 +474,7 @@ main.home .row {
   background-size: cover;
 }
 #box-project-2 .img-project {
-  background: url("../img/banner/proximy-colis.png"), var(--lion);
+  background: var(--sun);
   background-size: cover;
 }
 #box-project-1 label,
