@@ -1,4 +1,3 @@
-let prevScrollpos = window.pageYOffset;
 
 //TOGGLE MENU MOBILE
 const toggleMobileButton = document.querySelector(".toggle-menu");
@@ -19,6 +18,8 @@ function scrollToTop() {
 }
 
 //NAVBAR
+let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function () {
   let currentScrollpos = window.pageYOffset;
   const navbar = document.getElementById("navbarDesktop");
@@ -63,23 +64,35 @@ window.onscroll = function () {
   toggleTopButton();
 };
 
-//SHOW HIDE LIVRABLES
-// let btnShowHide = document.getElementsByClassName("btnShowHide");
+//ABOUT MODAL
+var modal = document.getElementById("myModal");
 
-// for (let i = 0; i < btnShowHide.length; i++) {
-//   btnShowHide[i].addEventListener("click", function () {
-//     let livrable = this.nextElementSibling;
+var master = document.getElementById("master");
+var certifReact = document.getElementById("certifReact");
+var certifFigma = document.getElementById("certifFigma");
 
-//     if (livrable && livrable.classList.contains("livrable")) {
-//       livrable.classList.toggle("show");
+var modalImg = document.getElementById("certification");
+var captionText = document.getElementById("caption");
 
-//       let actionWord = this.querySelector(".actionWord");
-//       if (actionWord) {
-//         actionWord.textContent = livrable.classList.contains("show") ? "Cacher livrable.s"  : "Afficher livrable.s";
-//       }
-//     }
-//   });
-// }
-
+master.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+certifFigma.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+certifReact.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+//CLOSE MODAL
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
 
 

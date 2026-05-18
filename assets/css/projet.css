@@ -4,15 +4,22 @@ main.projet {
   display: flex;
   align-items: center;
 }
+main.projet .main-txt{
+  min-width: 45%;
+}
 
 main.projet .main-img {
   min-width: auto;
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
 }
 main.projet .main-img img {
   position: relative;
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -22,7 +29,8 @@ main.projet .main-img img {
     justify-content: center;
   }
   main.projet .main-img {
-    max-width: 600px;
+    max-width: 350px;
+    padding: 0;
   }
   main.projet .main-img img {
     bottom: 0;
@@ -126,6 +134,9 @@ main.projet .main-img img {
   height: fit-content;
   margin: auto;
 }
+.part-6 .point{
+  max-width: none;
+}
 .point p {
   font-size: 20px !important;
 }
@@ -150,13 +161,14 @@ main.projet .main-img img {
   text-align: left;
   font-family: var(--paragraphe);
   font-size: 1.1rem;
+  font-weight: 500;
 }
 .insights h3 {
   font-size: 18px;
   margin-top: 20px;
 }
-.keyInsights{
-  font-size: 22px!important;
+.keyInsights {
+  font-size: 22px !important;
 }
 .highlighted {
   background-position: top left;
@@ -165,7 +177,7 @@ main.projet .main-img img {
   background-image: linear-gradient(to top, var(--lightsun) 60%, transparent 0);
 }
 
-.part-2 {
+.part-2, .part-6{
   background-color: var(--ebb);
   margin-top: 50px;
   padding: 0 0 50px 0;
@@ -213,10 +225,32 @@ main.projet .main-img img {
   left: auto;
 }
 
-.postit p{
-      font-size: 0.95rem;
+.postit p {
+  font-size: 0.95rem;
 }
-
+.content.flex {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  justify-content: space-around;
+}
+.content .explications {
+  position: sticky;
+  top: 10px;
+  height: fit-content;
+  max-width: 40%;
+}
+.content .img{
+  width: 50%;
+  border-radius: 5px;
+  height: fit-content;
+}
+.part-6 .content{
+  align-items: center;
+}
+.intro{
+  margin-top: 50px;
+}
 @media screen and (max-width: 860px) {
   .elements {
     flex-direction: column;
@@ -248,6 +282,22 @@ main.projet .main-img img {
     flex-direction: column;
     margin: 10px auto;
     width: fit-content;
+  }
+  .content.flex.reverse,
+  .content.flex.reverse  {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .content.flex.col {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content .img{
+  width: 100%;
+}
+  .content .explications {
+    max-width: 100%;
+    position: relative;
   }
 }
 

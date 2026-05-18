@@ -17,6 +17,12 @@
       sizes="180x180"
       href="./assets/favicon/apple-touch-icon.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="apple-mobile-web-app-title" content="Portfolio Pauline Thz" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
@@ -37,6 +43,28 @@
     <link rel="stylesheet" href="./assets/css/projet.css" />
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
+<!-- A VOUS DEVELOPPEUR QUI REGARDAIT CE CODE
+
+Cher Développeur,
+
+Je suis navrée car vous risquez de vous ennuyer en analysant ce code. 
+En effet, ce portfolio repose sur des technologies assez “classiques” : HTML, CSS et JavaScript.
+J’aurais adoré pouvoir vous montrer mes compétences en PHP ou en React, avec une vraie base de données derrière, car ce sont des technologies et outils avec lesquels je suis à l’aise. 
+Là où je suis employée, j'utilise PHPMyAdmin. Alors oui, je connais bien les requêtes SQL !
+
+Malheureusement, GitHub a ses limites lorsqu’il s’agit d’afficher le rendu d'un projet. 
+J’ai donc fait le choix de rester sur une solution simple, sans passer par une plateforme de portfolio ou un hébergeur payant.
+
+J’espère malgré tout que ce portfolio vous donnera un bon aperçu de mes compétences et de ma façon de travailler.
+
+Je vous souhaite une bonne découverte et espère pouvoir échanger avec vous bientôt :)
+
+Pauline Thelliez
+
+PS : Je ne suis pas contre l'IA à partir du moment où nous comprenons les solutions qu'elle nous apporte. 
+Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé. 
+-->
+
   <body>
     <header class="header" id="header">
       <a href="./index.html" class="logo">
@@ -101,8 +129,8 @@
             <a href="./about.html" class="nav-link nav-link-lg btn">A propos</a>
           </li>
           <li class="nav-list-item">
-            <a href="./projet-1.html" class="nav-link nav-link-lg btn"
-              >Projet 1</a
+            <a href="./rushmaker.html" class="nav-link nav-link-lg btn"
+              >RushMaker</a
             >
           </li>
           <li class="nav-list-item">
@@ -135,8 +163,8 @@
             <a href="./about.html" class="nav-link btn">A propos</a>
           </li>
           <li class="nav-list-item">
-            <a href="./projet-1.html" class="nav-link nav-link-lg btn"
-              >Projet 1</a
+            <a href="./rushmaker.html" class="nav-link nav-link-lg btn"
+              >RushMaker</a
             >
           </li>
           <li class="nav-list-item">
@@ -168,19 +196,25 @@
         </div>
       </nav>
     </header>
-    <main class="home projet" id="project_1">
+    <main class="home projet" id="proxidriver">
       <div class="row">
         <div class="main-txt fadeInDown">
           <span>Refonte UX UI design</span>
           <h1>Proxidriver</h1>
           <p>
-            Ce projet porte sur la refonte global de l’application Proxidriver,
-            avec pour objectif d'améliorer l’utilisabilité et ainsi optimiser
-            les performances et accélérer l’exécution des tâches des livreurs.
+            Ce projet porte sur la refonte global <br />de l’application métier
+            Proxidriver.
           </p>
         </div>
-        <div class="main-img">
-          <img src="./assets/img/banner/.png" alt="" />
+        <div class="main-img" style="display: flex">
+          <img
+            src="./assets/img/logo-proxidriver.gif"
+            alt="Proxidriver logo animation"
+          />
+          <span class="curve"
+            >J'ai réalisé ce motion design à la demande du client via After
+            Effects. Ce dernier a été approuvé !</span
+          >
         </div>
       </div>
     </main>
@@ -215,16 +249,18 @@
             des tournées et des livraisons.
             <br />
             <br />
-            Suite à un projet de rebranding de l’entreprise, un besoin de
-            refonte de l’outil est apparu, tant sur le plan de l’utilisabilité
-            que du design.
+            Suite à un projet de <b>rebranding</b> de l’entreprise, un besoin de
+            refonte de l’outil est apparu, tant sur le plan de
+            <b>l’utilisabilité que du design.</b>
             <br />
             <br />
             À l’origine, l’application a été conçue principalement par des
             équipes techniques et de développement, sans intervention d’un
-            designer UX/UI. Cela a conduit à une interface fonctionnelle, mais
-            dont l’expérience utilisateur et l’ergonomie n’ont jamais été
-            réellement optimisées.
+            designer UX/UI. Cela a conduit à
+            <b
+              >une interface fonctionnelle, mais dont l’expérience utilisateur
+              et l’ergonomie n’ont jamais été réellement optimisées.</b
+            >
             <br />
             <br />
             Dans le secteur de la livraison, la rapidité et l’efficacité sont
@@ -244,17 +280,14 @@
           </p>
           <ul>
             <li>
-              une navigation complexe, qui rend certaines actions difficiles à
-              trouver
-            </li>
-            <li>
-              une surcharge d’informations, rendant l’interface difficile à lire
-              lors des déplacements
+              une navigation peu intuitive, qui rend certaines actions
+              difficiles à trouver ou à comprendre
             </li>
             <li>
               des actions nécessitant plusieurs étapes, ce qui ralentit les
               interactions
             </li>
+            <li>un design vétuste qui ne donne pas envie à l'utilisateur</li>
           </ul>
           <p>Ces difficultés peuvent entraîner plusieurs conséquences :</p>
           <ul>
@@ -267,29 +300,13 @@
               livraison
             </li>
             <li>perte de temps dans les tournées</li>
+            <li>un délaissement de l'outil par l'utilisateur</li>
             <li>dégradation de la qualité de service pour les clients</li>
           </ul>
         </div>
         <div class="content insights">
           <h2>Insights</h2>
-          <h3>
-            <svg
-              style="width: 25px; padding-right: 10px"
-              class=""
-              viewBox="0 0 23 13"
-            >
-              <polygon
-                style="stroke: #f9b233"
-                points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
-              ></polygon>
-            </svg>
-            Le démarrage est répétitif mais rarement standardisé
-          </h3>
-          <p>
-            Les équipes recréent une structure similaire à chaque projet sans
-            outil dédié.
-          </p>
-          <br />
+
           <h3>
             <svg
               style="width: 25px; padding-right: 10px"
@@ -339,12 +356,12 @@
                 points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
               ></polygon>
             </svg>
-            La surcharge d’informations crée une charge cognitive inutile qui
-            ralentit les utilisateurs.
+            Une architecture d'information mal optimisée peut crée une charge
+            cognitive inutile qui ralentit les utilisateurs.
           </h3>
           <p>
-            Les livreurs ont surtout besoin d’informations prioritaires, claires
-            et hiérarchisées.
+            Les livreurs ont surtout besoin d'une navigation claire, simple et
+            bien hiérarchise.
           </p>
           <br />
           <h3>
@@ -381,9 +398,29 @@
             deviennent un véritable problème opérationnel.
           </h3>
           <p>
-            Une ergonomie améliorer peut avoir un impact direct sur la
-            performance des tournées.
+            Une ergonomie et design intuitifs peuvent avoir un impact direct sur
+            la performance des tournées.
           </p>
+          <h3>
+            <svg
+              style="width: 25px; padding-right: 10px"
+              class=""
+              viewBox="0 0 23 13"
+            >
+              <polygon
+                style="stroke: #f9b233"
+                points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+              ></polygon>
+            </svg>
+            Une interface obsolète peut traduire un manque de considération pour
+            le métier des utilisateurs, ce qui peut freiner l'adoption de
+            l'outil et générer une crainte sur la fiabilité de ce dernier.
+          </h3>
+          <p>
+            L'identité visuelle doit être modernisée et valorisante pour
+            restaurer la confiance, légitimer l'outil et stimuler l'engagement.
+          </p>
+          <br />
           <br /><br />
           <h3 class="keyInsights">
             <span class="highlighted"
@@ -404,8 +441,8 @@
               <h3 style="color: var(--sun)"><i>How Might We</i></h3>
               <p>
                 Comment permettre aux livreurs d’accéder aux actions
-                essentielles en quelques secondes, tout en réduisant la charge
-                cognitive liée à l’interface ?
+                essentielles en quelques secondes, tout en offrant une interface
+                attrayante et intuitive ?
               </p>
             </div>
             <div class="postit">
@@ -441,13 +478,156 @@
     </div>
     <div class="part-3">
       <div class="process">
-        <div class="content">
+        <div class="content flex reverse">
           <iframe
-            title="Octopus.do visual sitemap"
-            width="1200px"
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="500"
             height="500"
-            src="https://share.octopus.do/embed/jyqzw32x0w"
+            src="https://embed.figma.com/board/Refx4JrmLYt1Eu1vj6gs8B/Proxidriver---Arborescence?node-id=0-1&embed-host=share"
+            allowfullscreen
           ></iframe>
+          <div class="explications">
+            <h2>Structuration de l’interface</h2>
+            <p>
+              J’ai d’abord structuré l’arborescence en regroupant les contenus
+              similaires afin de <b>simplifier la navigation</b>. <br /><br />
+              Une fois cette structure validée, j’ai conçu les wireframes en me
+              concentrant sur les éléments essentiels et la hiérarchie des
+              informations. La <i>navbar</i> a volontairement été limitée à
+              quatre entrées explicites pour
+              <b>améliorer la compréhension immédiate de l’interface.</b>
+
+              <br /><br />
+              Enfin, j’ai construit les user flows à partir de ces wireframes
+              afin de
+              <b>vérifier la fluidité des parcours, limiter les frictions</b>
+              et m’assurer qu’aucun écran ou étape importante n’avait été
+              oublié.
+              <br /><br />
+              J’ai également pris en compte les guidelines et le design system
+              de la technologie utilisée, notamment les composants et principes
+              React Native Paper basé sur Material Design 3 (MD3), pour<b>
+                garantir des interfaces cohérentes avec les contraintes de
+                développement.</b
+              >
+              <br />
+              <br />
+              <b class="highlighted"
+                >C'est une approche que je priorise puisqu'elle me permet de
+                collaborer efficacement avec les développeurs et de concevoir
+                des solutions réalistes et réalisables pour le client.</b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="part-4">
+      <div class="process">
+        <div class="content flex col">
+          <div class="explications">
+            <h2>Design system</h2>
+            <p>
+              J’ai structuré le design system selon une approche
+              <i>Atomic Design</i> en commençant par les
+              <b
+                >fondations visuelles : couleurs, typographies, espacements,
+                élévations, icônes et illustrations.</b
+              >
+              <br /><br />
+              J’ai ensuite conçu les <b>composants de l’interface</b> en
+              définissant leurs <b>différentes variantes</b> (taille, couleur,
+              état, type, comportement) afin de garantir la cohérence, la
+              réutilisabilité et la scalabilité de l’interface.
+            </p>
+          </div>
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="500"
+            height="500"
+            src="https://embed.figma.com/design/DUE5ObKP8NaEnZjYemAUzm/Proxidriver?node-id=0-1&embed-host=share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="part-5">
+      <div class="process">
+        <div class="content flex reverse">
+          <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1)"
+            width="390"
+            height="900"
+            src="https://embed.figma.com/proto/DUE5ObKP8NaEnZjYemAUzm/Proxidriver?node-id=54-1982&p=f&scaling=scale-down&content-scaling=fixed&page-id=54%3A1981&starting-point-node-id=54%3A1982&show-proto-sidebar=1&embed-host=share"
+            allowfullscreen
+          ></iframe>
+          <div class="explications">
+            <h2>Prototype</h2>
+            <p>
+              Enfin, j’ai donné vie aux wireframes en
+              <b>intégrant les composants du design system</b> ainsi que les
+              éléments graphiques (couleurs, typographies, etc.) pour créer un
+              <b>prototype plus réaliste et proche de l’expérience finale.</b>
+              <br /><br />
+              Tout au long de cette étape, j’ai vérifié régulièrement la
+              <b>cohérence des interactions</b> afin de m’assurer de leur
+              fluidité et de leur logique. Plutôt que de chercher à couvrir des
+              cas complexes ou exhaustifs, j’ai privilégié un système
+              d’interactions simple et fonctionnel, suffisant pour démontrer<b>
+                un parcours clair, intuitif et compréhensible.</b
+              >
+              <br /><br />
+
+              <span class="highlighted">
+                Cette phase m’a également permis d’identifier certains
+                ajustements nécessaires : certains wireframes ont été optimisés
+                au fur et à mesure afin d’améliorer la clarté des parcours et
+                l’expérience globale.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="part-6">
+      <div class="process">
+        <div class="intro">
+          <h2>Présentation client</h2>
+          <p>
+            Après finalisation de ce prototype V1, j'effectue en distanciel une
+            présentation du projet avec différents scénarios possible pour
+            explorer l'ensemble de l'application. Lorsque cela est nécessaire
+            j'explique brièvement au client mes intentions UX UI et n'hésite pas
+            à répondre à ses potentiels questions.
+          </p>
+        </div>
+        <div class="content flex col">
+          <div class="explications">
+            <br /><br />
+            <p>Ce qui est à retenir pour la version 2 :</p>
+            <ul>
+              <li>une incompréhension sur une fonctionnalités a été relevée</li>
+              <li>l'utilisabilité de l'app répond à leurs attentes</li>
+              <li>le design est extrêmement apprécié</li>
+              <li>
+                des fonctionnalités connaîtront des évolutions, fusions ou
+                suppressions.
+              </li>
+            </ul>
+            <br /><br />
+            <div class="point">
+              <p>
+                La V2 du protoype sera déployée fin juin et fera l'objet de
+                tests d'utilisabilité <i>in situ</i> avec un panel représentatif
+                d'utilisateurs finaux.
+              </p>
+            </div>
+          </div>
+          <img
+            src="./assets/img/reunion.jpg"
+            class="img"
+            alt="Réunion de présentation de l'application Proxidriver"
+          />
         </div>
       </div>
     </div>
