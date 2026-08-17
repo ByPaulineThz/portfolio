@@ -55,7 +55,7 @@ p,
 a {
   font-family: var(--paragraphe);
   font-size: 16px;
-  line-height: 20px;
+  line-height: normal;
   color: #252525;
   margin: 0;
   text-decoration: none;
@@ -462,7 +462,8 @@ main.home .row {
 .box-project:hover {
   transform: scale(1.01);
 }
-#box-project-1 {
+#box-project-1,
+#box-project-3 {
   background-color: var(--parisien);
 }
 #box-project-2 {
@@ -474,11 +475,18 @@ main.home .row {
   background-size: cover;
 }
 #box-project-2 .img-project {
-  background: var(--sun);
+  background-image: url("../img/cover/cover-rushmarker.png");
   background-size: cover;
 }
-#box-project-1 label,
-#box-project-1 p {
+
+#box-project-3 .img-project {
+  background-image: url("../img/cover/cover-tiaa.png");
+  background-size: cover;
+}
+
+.box-project.light label,
+.box-project.light h2,
+.box-project.light p {
   color: #fff;
 }
 /* #box-project-3 {
@@ -791,6 +799,7 @@ footer {
 }
 .about-txt {
   justify-content: center;
+  margin-inline: auto;
 }
 .presentation {
   display: flex;
@@ -798,7 +807,13 @@ footer {
   justify-content: center;
   position: relative;
 }
-
+.presentation-bis {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 .about-img {
   position: sticky;
   top: 0;
@@ -813,7 +828,8 @@ footer {
     align-items: center;
   }
   .about-img {
-    max-width: none;
+    max-width: 600px;
+    width: 95%;
   }
 }
 .curve {
@@ -910,4 +926,20 @@ footer {
   .modal-content {
     width: 100%;
   }
+}
+
+/**Hoobies*/
+
+.hoobie {
+  max-width: 450px;
+  width: 100%;
+}
+.hoobie-img {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  gap: 3rem;
+  max-width: 992px;
 }

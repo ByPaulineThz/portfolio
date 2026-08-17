@@ -1,3 +1,4 @@
+var modal = document.getElementById("certifModal");
 
 //TOGGLE MENU MOBILE
 const toggleMobileButton = document.querySelector(".toggle-menu");
@@ -5,6 +6,7 @@ const navBar = document.querySelector("#navbarMobile");
 toggleMobileButton.addEventListener("click", () => {
   navBar.classList.toggle("toggle");
 });
+
 function toggleTopButton() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("back-to-up").classList.remove("none");
@@ -19,14 +21,14 @@ function scrollToTop() {
 
 //NAVBAR
 let prevScrollpos = window.pageYOffset;
-
+var logo = document.querySelector(".logo");
+var navbar = document.getElementById("navbarDesktop");
 window.onscroll = function () {
   let currentScrollpos = window.pageYOffset;
-  const navbar = document.getElementById("navbarDesktop");
   const links = document.getElementsByClassName("nav-link-lg");
   const toggleLine = document.getElementsByClassName("line");
   const logotype = document.getElementById("p");
-  const logo = document.querySelector(".logo");
+  //const logo = document.querySelector(".logo");
 
   if (prevScrollpos > currentScrollpos) {
     navbar.style.top = "0";
@@ -65,8 +67,6 @@ window.onscroll = function () {
 };
 
 //ABOUT MODAL
-var modal = document.getElementById("myModal");
-
 var master = document.getElementById("master");
 var certifReact = document.getElementById("certifReact");
 var certifFigma = document.getElementById("certifFigma");
@@ -76,16 +76,33 @@ var captionText = document.getElementById("caption");
 
 master.onclick = function(){
   modal.style.display = "block";
+  toggleMobileButton.style.display = 'none';
+  logo.style.display = 'none';
+  navbar.style.display = 'none';
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 }
 certifFigma.onclick = function(){
   modal.style.display = "block";
+  toggleMobileButton.style.display = 'none';
+  logo.style.display = 'none';
+  navbar.style.display = 'none';
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 }
 certifReact.onclick = function(){
   modal.style.display = "block";
+  toggleMobileButton.style.display = 'none';
+  navbar.style.display = 'none';
+  logo.style.display = 'none';
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+certifJavascript.onclick = function(){
+  modal.style.display = "block";
+  toggleMobileButton.style.display = 'none';
+  navbar.style.display = 'none';
+  logo.style.display = 'none';
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 }
@@ -93,6 +110,10 @@ certifReact.onclick = function(){
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
+  toggleMobileButton.style.display = 'flex';
+  logo.style.display = 'block';
+  navbar.style.display = 'block';
+
 }
 
 
