@@ -463,10 +463,13 @@ main.home .row {
   transform: scale(1.01);
 }
 #box-project-1,
-#box-project-3 {
+#box-project-3, 
+#box-project-5{
   background-color: var(--parisien);
 }
-#box-project-2 {
+#box-project-2,
+#box-project-4,
+#box-project-6 {
   background-color: var(--sun);
 }
 
@@ -478,9 +481,13 @@ main.home .row {
   background-image: url("../img/cover/cover-rushmarker.png");
   background-size: cover;
 }
-
 #box-project-3 .img-project {
-  background-image: url("../img/cover/cover-tiaa.png");
+  background:url("../img/cover/cover-aether.png");
+  background-size: cover;
+}
+
+#box-project-6 .img-project {
+  background: url("../img/cover/cover-tiaa.png");
   background-size: cover;
 }
 
