@@ -453,6 +453,15 @@ main.projet .main-img img {
   font-size: 0.65rem;
 }
 
+.aether-screens{
+  flex-wrap: wrap;
+  justify-content: center!important;
+}
+.aether-picture{
+  max-width: 100%;
+  width:20%;
+  min-width: 150px;
+}
 /*footer*/
 footer {
 }
