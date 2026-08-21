@@ -474,20 +474,30 @@ main.home .row {
 }
 
 #box-project-1 .img-project {
-  background-image: url("../img/cover/cover-proxidriver.png");
+  background-image: url("../img/proxidriver/cover-proxidriver.png");
   background-size: cover;
 }
 #box-project-2 .img-project {
-  background-image: url("../img/cover/cover-rushmarker.png");
+  background-image: url("../img/projectOs/cover-projectos.png");
   background-size: cover;
 }
 #box-project-3 .img-project {
-  background:url("../img/cover/cover-aether.png");
+  background:url("../img/aether/aether.png");
   background-size: cover;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#box-project-4 .img-project {
+  background:url("../img/boxy/boxy-generator.png");
+  padding: 10px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #box-project-6 .img-project {
-  background: url("../img/cover/cover-tiaa.png");
+  background: url("../img/tiaa/cover-tiaa.png");
   background-size: cover;
 }
 
