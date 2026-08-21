@@ -495,7 +495,13 @@ main.home .row {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+#box-project-5 .img-project {
+  background:url("../img/mykookie/myKookie.png");
+  padding: 10px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 #box-project-6 .img-project {
   background: url("../img/tiaa/cover-tiaa.png");
   background-size: cover;

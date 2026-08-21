@@ -74,14 +74,6 @@ var certifFigma = document.getElementById("certifFigma");
 var modalImg = document.getElementById("certification");
 var captionText = document.getElementById("caption");
 
-master.onclick = function(){
-  modal.style.display = "block";
-  toggleMobileButton.style.display = 'none';
-  logo.style.display = 'none';
-  navbar.style.display = 'none';
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
 certifFigma.onclick = function(){
   modal.style.display = "block";
   toggleMobileButton.style.display = 'none';
