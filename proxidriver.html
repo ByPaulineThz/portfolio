@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="./assets/css/projet.css" />
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
-<!-- A VOUS DEVELOPPEUR QUI REGARDAIT CE CODE
+  <!-- A VOUS DEVELOPPEUR QUI REGARDAIT CE CODE
 
 Cher Développeur,
 
@@ -469,13 +469,12 @@ Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé.
     <div class="part-3">
       <div class="process">
         <div class="content flex reverse">
-          <iframe
-            style="border: 1px solid rgba(0, 0, 0, 0.1)"
-            width="500"
-            height="500"
-            src="https://embed.figma.com/board/Refx4JrmLYt1Eu1vj6gs8B/Proxidriver---Arborescence?node-id=0-1&embed-host=share"
-            allowfullscreen
-          ></iframe>
+          <img
+            src="./assets/img/proxidriver/arbo_wf_uf.png"
+            alt="Arborescence Wireframe Userflow Proxidriver"
+            class="img"
+          />
+
           <div class="explications">
             <h2>Structuration de l’interface</h2>
             <p>
@@ -508,6 +507,16 @@ Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé.
                 des solutions réalistes et réalisables pour le client.</b
               >
             </p>
+            <br />
+            <a
+              href="https://www.figma.com/board/Refx4JrmLYt1Eu1vj6gs8B/Proxidriver?node-id=0-1&t=UdGNpNojGEpmLORI-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-underline "
+              style='margin-bottom: 20px;'
+            >
+              <span class="sun">Voir sur Figjam</span>
+            </a>
           </div>
         </div>
       </div>
@@ -544,19 +553,38 @@ Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé.
     <div class="part-5">
       <div class="process">
         <div class="content flex reverse">
-          <iframe
-            style="border: 1px solid rgba(0, 0, 0, 0.1)"
-            width="390"
-            height="900"
-            src="https://embed.figma.com/proto/DUE5ObKP8NaEnZjYemAUzm/Proxidriver?node-id=54-1982&p=f&scaling=scale-down&content-scaling=fixed&page-id=54%3A1981&starting-point-node-id=54%3A1982&show-proto-sidebar=1&embed-host=share"
-            allowfullscreen
-          ></iframe>
+          <div class="prototype">
+            <div class="toggle">
+              <input type="checkbox" id="theme-toggle" />
+
+              <label for="theme-toggle" class="toggle-switch">
+                <div class="switch-handle">
+                  <span class="icon-sun">☀️</span>
+                  <span class="icon-moon">🌙</span>
+                </div>
+              </label>
+
+              <div class="proxidriver-images">
+                <img
+                  src="./assets/img/proxidriver/proxidriver-light.png"
+                  class="proxidriver-light"
+                  alt="Prototype de l'application Proxidriver mode light"
+                />
+
+                <img
+                  src="./assets/img/proxidriver/proxidriver-dark.png"
+                  class="proxidriver-dark"
+                  alt="Prototype de l'application Proxidriver mode dark"
+                />
+              </div>
+            </div>
+          </div>
           <div class="explications">
             <h2>Prototype</h2>
             <p>
               Enfin, j’ai donné vie aux wireframes en
-              <b>intégrant les composants du design system</b> ainsi que les
-              éléments graphiques (couleurs, typographies, etc.) pour créer un
+              <b>intégrant les composants du design system</b> et les éléments
+              graphiques (couleurs, typographies, etc.) pour créer un
               <b>prototype plus réaliste et proche de l’expérience finale.</b>
               <br /><br />
               Tout au long de cette étape, j’ai vérifié régulièrement la
@@ -582,34 +610,45 @@ Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé.
     <div class="part-6">
       <div class="process">
         <div class="intro">
-          <h2>Présentation client</h2>
+          <h2>Design Review</h2>
           <p>
-            Après finalisation de ce prototype V1, j'effectue en distanciel une
-            présentation du projet avec différents scénarios possible pour
-            explorer l'ensemble de l'application. Lorsque cela est nécessaire
-            j'explique brièvement au client mes intentions UX UI et n'hésite pas
-            à répondre à ses potentiels questions.
+            Après finalisation de chaque version du prototype, j’organise une
+            présentation du projet à distance afin de présenter les différents
+            scénarios et de parcourir l’ensemble de l’application. Lorsque cela
+            est nécessaire, j'explique brièvement au client mes intentions UX/UI
+            et réponds à ses éventuelles questions
+            <br />
+            Trois design reviews ont ainsi été réalisées, donnant lieu à trois
+            versions du prototype. Chaque itération a permis d’affiner
+            l’expérience, le design, de faire évoluer certaines fonctionnalités
+            et de répondre progressivement aux besoins identifiés.
           </p>
         </div>
-        <div class="content flex col">
+        <div class="content flex col" style="margin:0">
           <div class="explications">
             <br /><br />
-            <p>Ce qui est à retenir pour la version 2 :</p>
+            <p>Ce qui est à retenir :</p>
             <ul>
               <li>une incompréhension sur une fonctionnalités a été relevée</li>
-              <li>l'utilisabilité de l'app répond à leurs attentes</li>
+              <li>l'utilisabilité de l'application répond à leurs attentes</li>
               <li>le design est extrêmement apprécié</li>
               <li>
-                des fonctionnalités connaîtront des évolutions, fusions ou
-                suppressions.
+                certaines fonctionnalités ont évolué, ont été fusionnées ou
+                supprimées
               </li>
             </ul>
             <br /><br />
             <div class="point">
               <p>
-                La V2 du protoype sera déployée fin juin et fera l'objet de
-                tests d'utilisabilité <i>in situ</i> avec un panel représentatif
-                d'utilisateurs finaux.
+                La V3 du prototype fera ensuite l'objet de
+                <b>tests d'utilisabilité in situ</b>, avec un panel
+                représentatif d'utilisateurs finaux, afin de confronter
+                l’expérience conçue aux usages en conditions réelles.
+                <br /><br />
+                À la suite de ces tests, <b>le design handoff </b>sera réalisé
+                afin de transmettre les éléments nécessaires aux développeurs.
+                Une UX specification sera créée pour documenter les spécificités
+                et le fonctionnement des différentes fonctionnalités.
               </p>
             </div>
           </div>
@@ -653,7 +692,6 @@ Néanmoins, je vous affirme qu'ici elle n'a pas été utilisé.
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="./assets/js/style.js"></script>
-    <script src="./assets/js/projet.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
