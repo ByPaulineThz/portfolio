@@ -557,6 +557,7 @@ main.projet .main-img img {
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .img-app .img{
   width: 100%;
@@ -564,6 +565,11 @@ main.projet .main-img img {
   min-width: 250px;
 }
 .img-app + p{
-  text-align: right;
+  text-align: center;
   font-size: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .img-app {
+    margin-inline: 50px;
+  }
 }
