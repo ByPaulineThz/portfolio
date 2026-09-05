@@ -629,6 +629,7 @@ main.projet .main-img img {
 }
 
 
+
 .highlight-box {
   margin-top: 14px;
   padding: 10px;
@@ -644,6 +645,42 @@ main.projet .main-img img {
 .highlight-box strong {
   font-family: var(--title);
   color: var(--raisin-black);
+}
+.wireframes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding:25px ;
+  background-color: var(--parisien);
+  margin: 50px 0;
+}
+.prototype{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding:25px ;
+  margin: 50px 0;
+}
+.wireframes img{
+  max-width: 100%;
+  width: 40%;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.prototype img{
+  max-width: 100%;
+  width: 40%;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 768px) {
+  .wireframes img{
+    width: 80%;
+  }
 }
 
 .aether-screens {
