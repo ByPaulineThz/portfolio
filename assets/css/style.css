@@ -321,7 +321,7 @@ main.home .row {
   flex-direction: column;
   width: fit-content;
   gap: 25px;
-  max-width: 510px;
+  max-width: 530px;
 }
 
 .main-txt span {
@@ -457,68 +457,82 @@ main.home .row {
   cursor: pointer;
   border-radius: 10px;
   height: 300px;
+  border: 2px solid var(--raisin-black);
   display: flex;
   -webkit-transition: -webkit-transform 450ms ease;
   transition: -webkit-transform 450ms ease;
   transition: transform 450ms ease;
   transition:
-    transform 450ms ease,
+    all 450ms ease,
     -webkit-transform 450ms ease;
 }
 
 .box-project:hover {
   transform: scale(1.01);
 }
-#box-project-1,
-#box-project-3,
-#box-project-5 {
+#box-project-1:hover,
+#box-project-3:hover,
+#box-project-5:hover {
   background-color: var(--parisien);
+  border: 2px solid var(--parisien);
 }
-#box-project-2,
-#box-project-4,
-#box-project-6 {
+#box-project-2:hover,
+#box-project-4:hover,
+#box-project-6:hover {
+  border: 2px solid var(--sun);
   background-color: var(--sun);
 }
 
 #box-project-1 .img-project {
-  background-image: url("../img/proxidriver/cover-proxidriver.png");
+  background-image: url("../img/proxidriver/proxidriver.png");
   background-size: cover;
+    background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+    background-color:transparent;
 }
 #box-project-2 .img-project {
   background-image: url("../img/projectOs/cover-projectos.png");
   background-size: cover;
-}
-#box-project-3 .img-project {
-  background: url("../img/aether/aether.png");
-  background-size: cover;
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
+    background-color:transparent;
+
 }
-#box-project-4 .img-project {
+#box-project-3 .img-project {
   background: url("../img/boxy/boxy-generator.png");
   padding: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-#box-project-5 .img-project {
+#box-project-4 .img-project {
+  background: url("../img/aether/aether.png");
+  background-size: cover;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* #box-project-4 .img-project {
   background: url("../img/mykookie/myKookie.png");
   padding: 10px;
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 #box-project-6 .img-project {
   background: url("../img/tiaa/cover-tiaa.png");
   background-size: 100%;
 }
 
-.box-project.light label,
-.box-project.light h2,
-.box-project.light p {
+.box-project.light:hover label,
+.box-project.light:hover h2,
+.box-project.light:hover p {
   color: #fff;
 }
+
 /* #box-project-3 {
   background-color: var(--sun);
 } */
