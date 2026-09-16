@@ -205,7 +205,8 @@
             par peur d'un incident (croisement imprévu, sursollicitation), et se
             retrouve à courir seul, alors même que le contact avec d'autres
             binômes compatibles serait bénéfique pour le chien comme pour son
-            maître. Aujourd'huin, aucun outil ne permet de filtrer un run ou un
+            maître. <br />
+            <br />Aujourd'huin, aucun outil ne permet de filtrer un run ou un
             partenaire selon le tempérament du chien, pas seulement selon
             l'allure de course.
           </p>
@@ -534,96 +535,199 @@
         </h3>
       </div>
     </div>
-    <div class="part-3" style="margin-top:35px">
+    <div class="part-3" style="margin-top: 35px">
       <div class="process">
         <div class="flow-header">
-          <h2>User Flow : Parcours de matching coureur-chien</h2>
+          <h2>User Flow : Parcours coureur & hôte</h2>
           <p>
-            Comment un binôme coureur-chien passe de la création de son profil à
-            la confirmation d'un run compatible en 4 étapes clés.
+            Deux parcours clés de l'application : trouver un run compatible, ou
+            en publier un pour sa communauté.
           </p>
         </div>
 
-        <div class="flow-grid">
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">1</span>
-              <span class="step-tag">Entrée</span>
-            </div>
-            <span class="step-actor">👤 Coureur</span>
-            <h3 class="step-title">Création du profil binôme</h3>
-            <ul class="step-list">
-              <li>
-                Renseignement du tempérament du chien (réactif, sociable,
-                senior, en rééducation).
-              </li>
-              <li>
-                Indication du niveau sportif (allure, distance habituelle,
-                endurance).
-              </li>
-            </ul>
-          </div>
+        <div class="flow-tabs">
+          <button class="flow-tab active" data-tab="chercheur">
+            Vue Chercheur
+          </button>
+          <button class="flow-tab" data-tab="hote">Vue Hôte</button>
+        </div>
 
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">2</span>
-              <span class="step-tag">Automatique</span>
+        <div class="flow-panel active" id="panel-chercheur">
+          <div class="flow-grid">
+            <div class="flow-step">
+              <div class="step-badge-wrapper">
+                <span class="step-number">1</span>
+                <span class="step-tag">Entrée</span>
+              </div>
+              <span class="step-actor">👤 Coureur</span>
+              <h3 class="step-title">Création du profil binôme</h3>
+              <ul class="step-list">
+                <li>
+                  Renseignement du tempérament du chien (réactif, sociable,
+                  senior, en rééducation).
+                </li>
+                <li>
+                  Indication du niveau sportif (allure, distance habituelle,
+                  endurance).
+                </li>
+              </ul>
             </div>
-            <span class="step-actor actor-ia">⚡ Moteur de matching</span>
-            <h3 class="step-title">Recherche & Filtrage</h3>
-            <ul class="step-list">
-              <li>
-                Croisement du tempérament et du niveau sportif avec les runs
-                disponibles à proximité.
-              </li>
-              <li>
-                Calcul d'un score de compatibilité pour chaque proposition.
-              </li>
-            </ul>
-          </div>
 
-          <div class="flow-step active">
-            <div class="step-badge-wrapper">
-              <span class="step-number">3</span>
-              <span class="step-tag">Écran Clé</span>
+            <div class="flow-step">
+              <div class="step-badge-wrapper">
+                <span class="step-number">2</span>
+                <span class="step-tag">Automatique</span>
+              </div>
+              <span class="step-actor actor-ia">⚡ Moteur de matching</span>
+              <h3 class="step-title">Recherche & Filtrage</h3>
+              <ul class="step-list">
+                <li>
+                  Croisement du tempérament et du niveau sportif avec les runs
+                  disponibles à proximité.
+                </li>
+                <li>
+                  Calcul d'un score de compatibilité pour chaque proposition.
+                </li>
+              </ul>
             </div>
-            <span class="step-actor">👤 Coureur + 🐾 Communauté</span>
-            <h3 class="step-title">Sélection & Confirmation</h3>
-            <ul class="step-list">
-              <li>
-                Consultation de la fiche du run (parcours, affluence, profil des
-                autres binômes).
-              </li>
-              <li>
-                Confirmation de participation ou prise de contact avec l'hôte.
-              </li>
-            </ul>
-            <div class="highlight-box">
-              💡 <strong>Étape Charnière :</strong> L'utilisateur garde la main
-              sur la décision finale, même après un score de compatibilité
-              élevé.
-            </div>
-          </div>
 
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">4</span>
-              <span class="step-tag">Sortie</span>
+            <div class="flow-step active">
+              <div class="step-badge-wrapper">
+                <span class="step-number">3</span>
+                <span class="step-tag">Écran Clé</span>
+              </div>
+              <span class="step-actor">👤 Coureur + 🐾 Communauté</span>
+              <h3 class="step-title">Sélection & Confirmation</h3>
+              <ul class="step-list">
+                <li>
+                  Consultation de la fiche du run (parcours, affluence, profil
+                  des autres binômes).
+                </li>
+                <li>
+                  Confirmation de participation ou prise de contact avec l'hôte.
+                </li>
+              </ul>
+              <div class="highlight-box">
+                💡 <strong>Étape Charnière :</strong> L'utilisateur garde la
+                main sur la décision finale, même après un score de
+                compatibilité élevé.
+              </div>
             </div>
-            <span class="step-actor">🚀 Binôme & Communauté</span>
-            <h3 class="step-title">Run & Suivi</h3>
-            <ul class="step-list">
-              <li>
-                Notification de rappel avant le run (parcours, météo, point de
-                rendez-vous).
-              </li>
-              <li>
-                Enregistrement de la sortie dans le suivi de progression croisé
-                (humain + chien).
-              </li>
-            </ul>
+
+            <div class="flow-step">
+              <div class="step-badge-wrapper">
+                <span class="step-number">4</span>
+                <span class="step-tag">Sortie</span>
+              </div>
+              <span class="step-actor">🚀 Binôme & Communauté</span>
+              <h3 class="step-title">Run & Suivi</h3>
+              <ul class="step-list">
+                <li>
+                  Notification de rappel avant le run (parcours, météo, point de
+                  rendez-vous).
+                </li>
+                <li>
+                  Enregistrement de la sortie dans le suivi de progression
+                  croisé (humain + chien).
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <div class="flow-panel" id="panel-hote">
+          <p>
+            Le parcours hôte a été conçu et détaillé (voir user flow ci-dessous),
+            mais n'a pas été poussé jusqu'au prototype interactif, le prototype
+            cliquable de ce projet se concentrant sur le parcours principal du
+            chercheur de run.
+          </p>
+          <br />
+          <div class="flow-grid">
+            <div class="flow-step">
+              <div class="step-badge-wrapper">
+                <span class="step-number">1</span>
+                <span class="step-tag">Entrée</span>
+              </div>
+              <span class="step-actor">👤 Hôte</span>
+              <h3 class="step-title">Création du run</h3>
+              <ul class="step-list">
+                <li>
+                  Choix du parcours, de la date, de l'heure et du niveau de
+                  difficulté.
+                </li>
+                <li>
+                  Indication du niveau sportif requis pour les participants.
+                </li>
+              </ul>
+            </div>
+
+            <div class="flow-step active">
+              <div class="step-badge-wrapper">
+                <span class="step-number">2</span>
+                <span class="step-tag">Écran Clé</span>
+              </div>
+              <span class="step-actor">👤 Hôte</span>
+              <h3 class="step-title">Paramétrage du groupe</h3>
+              <ul class="step-list">
+                <li>
+                  Définition du tempérament accepté (ex. groupe 100% Sociable).
+                </li>
+                <li>Fixation de la taille maximale du groupe.</li>
+              </ul>
+              <div class="highlight-box">
+                💡 <strong>Étape Charnière :</strong> Le système applique ici
+                les règles de matching définies en amont — impossible d'accepter
+                un second profil sensible sur le même run.
+              </div>
+            </div>
+
+            <div class="flow-step">
+              <div class="step-badge-wrapper">
+                <span class="step-number">3</span>
+                <span class="step-tag">Sortie</span>
+              </div>
+              <span class="step-actor">🚀 Système & Communauté</span>
+              <h3 class="step-title">Publication & Gestion des demandes</h3>
+              <ul class="step-list">
+                <li>
+                  Run visible dans les résultats de recherche des coureurs
+                  compatibles.
+                </li>
+                <li>
+                  Réception des demandes de participation via la messagerie,
+                  validation par l'hôte.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div class="process">
+        <h2>Bilan et enseignements</h2>
+
+        <h3>Une hypothèse remise en question</h3>
+        <p>
+          Au départ, je voulais faire matcher des chiens au tempérament
+          similaire. Puis je me suis rappelée mes cours d'éducation canine :
+          deux chiens en rééducation réunis sur un même run créent plus de
+          risques qu'ils n'en résolvent. C'est pourquoi, le matching a été
+          repensé autour de la complémentarité : un chien sociable en rôle de
+          régulateur, plutôt que de la similarité. Ainsi, j'ai constaté qu'une
+          bonne UX de matching ne peut pas se limiter à "faire correspondre des
+          tags" : elle doit s'appuyer sur une vraie connaissance du terrain.
+        </p>
+        <br />
+        <h3>Deux problèmes = deux traitements</h3>
+        <p>
+          La réactivité aux congénères et la réactivité aux humains sont deux
+          sujets différents. La première dépend du groupe (score de
+          compatibilité). La seconde dépend de l'environnement (affluence,
+          terrain, horaire). Les fusionner dans un seul score aurait rendu
+          l'information illisible.
+        </p>
       </div>
     </div>
     <footer class="footer" id="footer">

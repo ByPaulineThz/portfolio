@@ -640,11 +640,54 @@ main.projet .main-img img {
   font-size: 0.78rem;
   color: var(--raisin-black);
   line-height: 1.4;
+  font-weight: 500;
 }
 
 .highlight-box strong {
   font-family: var(--title);
   color: var(--raisin-black);
+}
+
+.flow-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.flow-tab {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.flow-tab:hover {
+  color: #333;
+}
+
+.flow-tab.active {
+  color: #111;
+  border-bottom-color: #111;
+}
+
+.flow-panel {
+  display: none;
+}
+
+.flow-panel.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .wireframes{
   display: flex;
