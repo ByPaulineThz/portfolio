@@ -500,7 +500,6 @@ main.home .row {
   background-repeat: no-repeat;
   background-position: center;
     background-color:transparent;
-
 }
 #box-project-3 .img-project {
   background: url("../img/boxy/boxy-generator.png");
@@ -510,6 +509,13 @@ main.home .row {
   background-position: center;
 }
 #box-project-4 .img-project {
+  background: url("../img/boxy/boxy-generator.png");
+  padding: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#box-project-5 .img-project {
   background: url("../img/aether/aether.png");
   background-size: cover;
   background-size: 90%;
@@ -517,13 +523,6 @@ main.home .row {
   background-position: center;
 }
 
-/* #box-project-4 .img-project {
-  background: url("../img/mykookie/myKookie.png");
-  padding: 10px;
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 #box-project-6 .img-project {
   background: url("../img/tiaa/cover-tiaa.png");
   background-size: 100%;
