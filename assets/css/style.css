@@ -992,6 +992,7 @@ footer {
 .about-img {
   position: sticky;
   top: 0;
+  left: 20px;
   max-width: 500px;
   width: 100%;
   height: fit-content;
@@ -1005,6 +1006,7 @@ footer {
   .about-img {
     max-width: 600px;
     width: 95%;
+    left: 0;
   }
 }
 .curve {
