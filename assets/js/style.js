@@ -66,18 +66,20 @@ window.onscroll = function () {
   toggleTopButton();
 };
 
-if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
 
-document.querySelectorAll('.skills-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+const skillsTabs = document.querySelectorAll('.skills-tab');
+if (skillsTabs.length > 0) {
+  skillsTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
 
-    tab.classList.add('active');
-    document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+      tab.classList.add('active');
+      document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+    });
   });
-});
 }
+
 
 if (window.location.href.match(/about.html/)) {
 //ABOUT MODAL
