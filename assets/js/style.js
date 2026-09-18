@@ -1,135 +1,154 @@
-var modal = document.getElementById("certifModal");
+//Juste pour le fun
+console.log('%c Hey toi le dev curieux ! 👋 ', 'background: #5a6d65; color:#fff ; font-size: 16px; font-weight: bold; padding: 8px; border-radius: 4px;');
+console.log("%cSi tu inspectes mon code, c'est qu'on a probablement des choses à se dire. On prend contact ? ", 'background: #edb441; color:#000 ; font-size: 16px; font-weight: bold; padding: 8px; border-radius: 4px;');
 
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.style.top = `${e.clientY - 15}px`;
+    cursor.style.left = `${e.clientX - 15}px`;
+});
+
+document.addEventListener('click', () => {
+    cursor.classList.add('expand');
+    setTimeout(() => {
+        cursor.classList.remove('expand');
+    }, 500);
+});
+
+document.addEventListener('click', () => {
+	cursor.classList.add('expand');
+	setTimeout(() => cursor.classList.remove('expand'), 500);
+});
+
+var modal = document.getElementById('certifModal');
 //TOGGLE MENU MOBILE
-const toggleMobileButton = document.querySelector(".toggle-menu");
-const navBar = document.querySelector("#navbarMobile");
-toggleMobileButton.addEventListener("click", () => {
-  navBar.classList.toggle("toggle");
+const toggleMobileButton = document.querySelector('.toggle-menu');
+const navBar = document.querySelector('#navbarMobile');
+toggleMobileButton.addEventListener('click', () => {
+	navBar.classList.toggle('toggle');
 });
 
 function toggleTopButton() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("back-to-up").classList.remove("none");
-  } else {
-    document.getElementById("back-to-up").classList.add("none");
-  }
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById('back-to-up').classList.remove('none');
+	} else {
+		document.getElementById('back-to-up').classList.add('none');
+	}
 }
 // BACK TO UP
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 //NAVBAR
 let prevScrollpos = window.pageYOffset;
-var logo = document.querySelector(".logo");
-var navbar = document.getElementById("navbarDesktop");
+var logo = document.querySelector('.logo');
+var navbar = document.getElementById('navbarDesktop');
 window.onscroll = function () {
-  let currentScrollpos = window.pageYOffset;
-  const links = document.getElementsByClassName("nav-link-lg");
-  const toggleLine = document.getElementsByClassName("line");
-  const logotype = document.getElementById("p");
+	let currentScrollpos = window.pageYOffset;
+	const links = document.getElementsByClassName('nav-link-lg');
+	const toggleLine = document.getElementsByClassName('line');
+	const logotype = document.getElementById('p');
 
+	if (prevScrollpos > currentScrollpos) {
+		navbar.style.top = '0';
+		logo.style.top = '0';
+	} else {
+		navbar.style.top = '-100px';
+		logo.style.top = '-100px';
+	}
 
-  if (prevScrollpos > currentScrollpos) {
-    navbar.style.top = "0";
-    logo.style.top = "0";
-  } else {
-    navbar.style.top = "-100px";
-    logo.style.top = "-100px";
-  }
+	if (currentScrollpos <= 738) {
+		navbar.style.background = 'transparent';
+		logotype.setAttribute('fill', '#fff');
 
-  if (currentScrollpos <= 738) {
-    navbar.style.background = "transparent";
-    logotype.setAttribute("fill", "#fff");
+		for (let i = 0; i < toggleLine.length; i++) {
+			toggleLine[i].style.background = '#fff';
+		}
 
-    for (let i = 0; i < toggleLine.length; i++) {
-      toggleLine[i].style.background = "#fff";
-    }
+		for (let i = 0; i < links.length; i++) {
+			links[i].style.color = '#fff';
+		}
+	} else {
+		navbar.style.background = '#fff';
+		logotype.setAttribute('fill', '#000');
 
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.color = "#fff";
-    }
-  } else {
-    navbar.style.background = "#fff";
-    logotype.setAttribute("fill", "#000");
+		for (let i = 0; i < toggleLine.length; i++) {
+			toggleLine[i].style.background = '#000';
+		}
 
-    for (let i = 0; i < toggleLine.length; i++) {
-      toggleLine[i].style.background = "#000";
-    }
+		for (let i = 0; i < links.length; i++) {
+			links[i].style.color = '#000';
+		}
+	}
 
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.color = "#000";
-    }
-  }
-
-  prevScrollpos = currentScrollpos;
-  toggleTopButton();
+	prevScrollpos = currentScrollpos;
+	toggleTopButton();
 };
-
 
 const skillsTabs = document.querySelectorAll('.skills-tab');
 if (skillsTabs.length > 0) {
-  skillsTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+	skillsTabs.forEach((tab) => {
+		tab.addEventListener('click', () => {
+			document.querySelectorAll('.skills-tab').forEach((t) => t.classList.remove('active'));
+			document.querySelectorAll('.skills-panel').forEach((p) => p.classList.remove('active'));
 
-      tab.classList.add('active');
-      document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
-    });
-  });
+			tab.classList.add('active');
+			document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+		});
+	});
 }
-
 
 if (window.location.href.match(/about.html/)) {
-//ABOUT MODAL
-var master = document.getElementById("master");
-var certifReact = document.getElementById("certifReact");
-var certifFigma = document.getElementById("certifFigma");
+	//ABOUT MODAL
+	var master = document.getElementById('master');
+	var certifReact = document.getElementById('certifReact');
+	var certifFigma = document.getElementById('certifFigma');
 
-var modalImg = document.getElementById("certification");
-var captionText = document.getElementById("caption");
+	var modalImg = document.getElementById('certification');
+	var captionText = document.getElementById('caption');
 
-certifFigma.onclick = function () {
-  modal.style.display = "block";
-  toggleMobileButton.style.display = "none";
-  logo.style.display = "none";
-  navbar.style.display = "none";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-};
-certifReact.onclick = function () {
-  modal.style.display = "block";
-  toggleMobileButton.style.display = "none";
-  navbar.style.display = "none";
-  logo.style.display = "none";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-};
-certifJavascript.onclick = function () {
-  modal.style.display = "block";
-  toggleMobileButton.style.display = "none";
-  navbar.style.display = "none";
-  logo.style.display = "none";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-};
-//CLOSE MODAL
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function () {
-  modal.style.display = "none";
-  toggleMobileButton.style.display = "flex";
-  logo.style.display = "block";
-  navbar.style.display = "block";
-};
+	certifFigma.onclick = function () {
+		modal.style.display = 'block';
+		toggleMobileButton.style.display = 'none';
+		logo.style.display = 'none';
+		navbar.style.display = 'none';
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+	};
+	certifReact.onclick = function () {
+		modal.style.display = 'block';
+		toggleMobileButton.style.display = 'none';
+		navbar.style.display = 'none';
+		logo.style.display = 'none';
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+	};
+	certifJavascript.onclick = function () {
+		modal.style.display = 'block';
+		toggleMobileButton.style.display = 'none';
+		navbar.style.display = 'none';
+		logo.style.display = 'none';
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+	};
+	//CLOSE MODAL
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function () {
+		modal.style.display = 'none';
+		toggleMobileButton.style.display = 'flex';
+		logo.style.display = 'block';
+		navbar.style.display = 'block';
+	};
 }
 
-document.querySelectorAll('.flow-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.flow-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.flow-panel').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('.flow-tab').forEach((tab) => {
+	tab.addEventListener('click', () => {
+		document.querySelectorAll('.flow-tab').forEach((t) => t.classList.remove('active'));
+		document.querySelectorAll('.flow-panel').forEach((p) => p.classList.remove('active'));
 
-    tab.classList.add('active');
-    document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
-  });
+		tab.classList.add('active');
+		document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+	});
 });

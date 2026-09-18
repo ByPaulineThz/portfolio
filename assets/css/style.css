@@ -930,7 +930,55 @@ footer {
   justify-content: flex-start;
   gap: 20px;
 }
+/*CURSOR*/
+.cursor {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 111;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #fff;
+    transition: border 0.2s, background 0.2s;
+    animation: moveCursor1 .5s infinite alternate;
+}
 
+.expand {
+    background: transparent;
+    animation: moveCursor2 .5s forwards;
+    border: 1px solid var(--sun);
+}
+
+@keyframes moveCursor1 {
+    from {
+        width: 30px;
+        height: 30px;
+    }
+    to {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@keyframes moveCursor2 {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+    50% {
+        width: 75px;
+        height: 75px;
+    }
+    100% {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+}
 /*BACK TO UP*/
 .none {
   display: none;
