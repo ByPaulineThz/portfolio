@@ -53,7 +53,7 @@ window.onscroll = function () {
 
 	if (prevScrollpos > currentScrollpos) {
 		navbar.style.top = '0';
-		logo.style.top = '0';
+		logo.style.top = '0.5rem';
 	} else {
 		navbar.style.top = '-100px';
 		logo.style.top = '-100px';

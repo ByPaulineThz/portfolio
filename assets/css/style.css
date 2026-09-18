@@ -5,7 +5,9 @@
   --title: "Poppins", "Time New Romance", sans-serif;
   --paragraphe: "Raleway", "Arial", sans-serif;
   --raisin-black: #1a1423ff;
+  --light-parisien: #779085;
   --parisien: #5a6d65;
+  --dark-parisien: #26302c;
   --lion: #b48557;
   --sun: #edb441;
   --snow: #fffbfcff;
@@ -185,7 +187,7 @@ label {
   }
   .toggle-menu {
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
     gap: 10px;
     width: 3rem;
@@ -195,7 +197,11 @@ label {
     padding: 0.2rem 0.5rem;
     border-radius: 0.5rem;
   }
-
+.logo {
+    position: fixed;
+    top: 0.5rem;
+    z-index: 9999;
+  }
   .toggle .toggle-menu {
     gap: 0;
   }
@@ -248,6 +254,9 @@ label {
       transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
       background-color: #000 !important;
     }
+    .main-txt span{
+      font-size:18px!important;
+    }
   }
   .nav-list {
     list-style: none;
@@ -299,7 +308,7 @@ label {
 main.home {
   /* border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px; */
-  background: radial-gradient(var(--parisien), #2b3b34);
+  /* background: radial-gradient(var(--parisien), #2b3b34); */
   min-height: 80vh;
   flex-wrap: nowrap;
   color: #fff;
@@ -307,8 +316,21 @@ main.home {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(90deg,  var(--parisien), var(--dark-parisien));
+  background-size: 600% 600%;
+  animation: gradient 20s ease infinite;
 }
-
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 main.home .row {
   margin: auto;
   display: flex;
@@ -356,8 +378,19 @@ main.home .row {
   max-width: 450px;
   align-items: center;
   justify-content: center;
+  animation: bounce 6s infinite;
 }
-
+@keyframes bounce {
+ 0% {
+  transform: translateY(0);
+ }
+ 50% {
+  transform: translateY(-10px);
+ }
+ 100% {
+  transform: translateY(0);
+ }
+}
 @media (min-width: 1200px) {
   main .row {
     max-width: 1200px;
@@ -390,12 +423,16 @@ main.home .row {
     margin-bottom: 40px !important;
   }
 
-  h1 {
-    font-size: 1.6rem;
+  .main-txt h1 {
+      padding: 0 12px 0 0;
+      font-size: 30px;
+    }
   }
   .main-txt {
     max-width: 88%;
-    margin-top: 70px;
+    margin-top: 100px;
+    gap:14px!important;
+    margin-bottom: 20px;
   }
   .main-txt h2 {
     font-size: 1.5rem;
@@ -403,7 +440,7 @@ main.home .row {
   .main-img {
     max-width: 300px;
     max-height: 40vh;
-  }
+  
 }
 .main .btn {
   border: none;
@@ -943,6 +980,7 @@ footer {
     border-radius: 50%;
     background: transparent;
     border: 1px solid #fff;
+        mix-blend-mode: difference;
     transition: border 0.2s, background 0.2s;
     animation: moveCursor1 .5s infinite alternate;
 }
@@ -952,7 +990,11 @@ footer {
     animation: moveCursor2 .5s forwards;
     border: 1px solid var(--sun);
 }
-
+@media (max-width:768px){
+  .cursor{
+    display:none;
+  }
+}
 @keyframes moveCursor1 {
     from {
         width: 30px;
