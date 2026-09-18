@@ -66,6 +66,18 @@ window.onscroll = function () {
   toggleTopButton();
 };
 
+if (window.location.href.match(/index.html/)) {
+document.querySelectorAll('.skills-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+
+    tab.classList.add('active');
+    document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+  });
+});
+}
+
 if (window.location.href.match(/about.html/)) {
 //ABOUT MODAL
 var master = document.getElementById("master");

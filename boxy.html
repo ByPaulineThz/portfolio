@@ -25,7 +25,9 @@
 				<svg id="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.12 77.96">
 					<defs>
 						<style>
-							  .cls-1{fill:#f9b233;}
+							.cls-1 {
+								fill: #f9b233;
+							}
 						</style>
 					</defs>
 					<g id="" data-name="Calque 2">
@@ -102,7 +104,7 @@
 		<div class="elements">
 			<div class="element element-1">
 				<span>Rôle</span>
-				<p>UI Designer, developpeur front</p>
+				<p>UI Designer, Développeur front-end</p>
 			</div>
 
 			<div class="element element-3">
@@ -111,29 +113,33 @@
 			</div>
 			<div class="element element-4">
 				<span>Outils utilisés</span>
-				<p>VS code, Tailwind, Github</p>
+				<p>React, Redux Toolkit, Vite, VS code, Tailwind, Github</p>
 			</div>
 		</div>
 		<div class="part-1">
 			<div class="process">
 				<div class="content" style="margin-top: 0">
 					<h2>Contexte du projet</h2>
-					<p style="border-left: solid var(--sun) 5px; padding-left: 15px">Ce projet a été réalisé dans le cadre d'une formation React sur Udemy, que j'ai suivie pour consolider mes compétences front-end au-delà de la théorie. J'ai choisi de le pousser plus loin que l'exercice de base pour en faire une pièce de portfolio à part entière : styling personnalisé, structuration du code et déploiement.</p>
+					<p style="border-left: solid var(--sun) 5px; padding-left: 15px">Ce projet est né d'une formation React suivie sur Udemy, pour mettre en pratique mes compétences en développement front-end au-delà de la théorie. Je suis allée plus loin que l'exercice de base pour en faire une vraie pièce de portfolio : personnalisation du design, organisation du code, et mise en ligne.</p>
 				</div>
 
 				<div class="content">
 					<h2>Pourquoi ces choix techniques</h2>
 					<ul>
-						<li><b>React gère l'interface réactive </b>: chaque ajustement (flou, taille, couleur) se répercute instantanément sur l'aperçu.</li>
-						<li><b>Redux Toolkit</b> centralise l'état des différents paramètres d'ombre (position, flou, étendue, couleur, opacité) qui doivent rester synchronisés entre eux et avec le code CSS généré en temps réel.</li>
-						<li><b>Vite</b> offre un démarrage et un rechargement quasi instantanés en développement, confortable pour itérer rapidement sur le rendu visuel.</li>
-						<li><b>ESLint</b> garantit un code propre et cohérent tout au long du projet.</li>
+						<li><b>React</b> permet à l'interface de réagir instantanément : dès qu'on modifie un réglage (flou, taille, couleur), l'aperçu se met à jour en temps réel.</li>
+						<li><b>Redux Toolkit</b> garde en mémoire tous les réglages de l'ombre (position, flou, étendue, couleur, opacité) au même endroit, pour être sûre qu'ils restent toujours cohérents entre eux et avec le code CSS généré.</li>
+						<li><b>Vite</b> rend le développement plus rapide et plus fluide : le site se recharge presque instantanément à chaque modification, ce qui facilite les allers-retours pendant la création.</li>
 					</ul>
-			
-					<h2>Ce que j'en retiens</h2>
+					<br />
+					<h2>Défi principal</h2>
 					<p>
-						Au-delà du suivi du cours, ce projet m'a permis de manipuler concrètement la gestion d'état avec Redux Toolkit et de comprendre l'intérêt d'un tooling moderne (Vite) sur un cas réel plutôt que théorique.
+						Le plus difficile a été de faire en sorte que tout bouge ensemble, sans accroc : dès qu'on déplace un curseur, l'aperçu visuel ET le code CSS affiché doivent <b>se mettre à jour instantanément et rester synchronisés.</b>
+						C'est ce qui m'a poussée à mieux structurer mes données avec Redux Toolkit, plutôt que de tout gérer de façon éparpillée.
 					</p>
+				</div>
+				<div class="content">
+					<h2>Ce que j'en retiens</h2>
+					<p>Au-delà du suivi du cours, ce projet m'a permis de manipuler concrètement la gestion des données avec Redux Toolkit, et de comprendre l'intérêt d'un outil moderne comme Vite sur un cas concret plutôt que théorique.</p>
 				</div>
 				<a href="https://github.com/ByPaulineThz/Boxy-Project" target="_blank" style="margin-bottom: 3rem" class="btn-underline">
 					<h3 class="sun"><span>Voir le projet</span></h3></a
@@ -145,7 +151,6 @@
 				<div class="content flex">
 					<video width="1080" controls loop muted poster="assets/img/boxy/boxy.jpg" style="border-radius: 20px">
 						<source src="assets/video/boxy.mp4" type="video/mp4" />
-			
 					</video>
 				</div>
 			</div>
