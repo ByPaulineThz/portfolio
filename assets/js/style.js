@@ -66,7 +66,8 @@ window.onscroll = function () {
   toggleTopButton();
 };
 
-if (window.location.href.match(/index.html/)) {
+if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+
 document.querySelectorAll('.skills-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
