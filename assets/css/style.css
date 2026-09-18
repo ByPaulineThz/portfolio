@@ -452,6 +452,9 @@ main.home .row {
   margin-top: 50px;
   padding: 25px 0 50px 0;
 }
+.realisations#projets-secondaires h2{
+font-size:28px
+}
 .box-project {
   margin: 10px auto;
   width: 992px;
