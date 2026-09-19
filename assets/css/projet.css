@@ -714,9 +714,12 @@ main.projet .main-img img {
   padding:25px;
   margin: 50px 0;
 }
+  .prototype.desktop{
+    margin: 0 0 50px 0;
+  }
 .wireframes img{
   max-width: 100%;
-  width: 40%;
+  width: 45%;
   border-radius: 5px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -729,13 +732,21 @@ main.projet .main-img img {
 }
 .prototype img{
   max-width: 100%;
-  width: 40%;
+  width: 45%;
   border-radius: 5px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 768px) {
-  .wireframes img{
-    width: 80%;
+  .wireframes.desktop img{
+    width: 100%;
+    padding:25px 10px;
+  }
+  .prototype.desktop img{
+    width: 100%;
+  }
+  .prototype.desktop{
+    flex-direction: column;
+    padding: 0 10px;
   }
 }
 

@@ -21,21 +21,8 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
     <title>Tiaa | Motion design</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projet.css" />
-    <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
   <!-- Si tu lis ceci, c'est que tu prêtes attention aux détails. On devrait travailler ensemble ! Contacte-moi ! -->
   <body>
@@ -118,14 +105,20 @@
         </ul>
       </nav>
       <nav class="nav-bar mobile" id="navbarMobile">
-        <div class="toggle-menu">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-          <div class="line line3"></div>
-        </div>
+        <button
+          class="toggle-menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navbarMobile"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
         <ul class="nav-list">
           <li class="nav-list-item">
-            <a href="" class="nav-link btn">Accueil</a>
+            <a href="./index.html" class="nav-link btn">Accueil</a>
           </li>
           <li class="nav-list-item">
             <a href="./about.html" class="nav-link btn">A propos</a>
@@ -165,12 +158,13 @@
           <span>Motion design</span>
           <h1>Tiaa</h1>
           <p>
-            Ce projet porte sur la confection de <b>deux animations du logo Tiaa en motion design. </b>
+            Ce projet porte sur la confection de
+            <b>deux animations du logo Tiaa en motion design. </b>
           </p>
         </div>
         <div class="main-img">
           <img
-            src="./assets/img/tiaa/tiaa-ae.png"
+            src="./assets/img/tiaa/tiaa-ae.webp"
             alt="Tiaa After Effect animation logo"
           />
         </div>
@@ -198,7 +192,8 @@
           <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
             Dans le cadre du lancement de Tiaa, la nouvelle marque de santé et
             d'hygiène de Riccobono Healthcare, j'ai été chargée de donner vie à
-            sa toute nouvelle identité visuelle en concevant en <b>motion design l'animation du logo.</b>
+            sa toute nouvelle identité visuelle en concevant en
+            <b>motion design l'animation du logo.</b>
           </p>
         </div>
 
@@ -216,7 +211,12 @@
     <div class="part-2">
       <div class="process">
         <div class="content flex reverse">
-          <video width="560" height="364" controls poster="assets/video/tiaa_v1.jpg" >
+          <video
+            width="560"
+            height="364"
+            controls
+            poster="assets/video/tiaa_v1.webp"
+          >
             <source src="assets/video/tiaa_v1.mp4" type="video/mp4" />
             <source src="assets/video/tiaa_v1.ogg" type="video/ogg" />
           </video>
@@ -289,7 +289,12 @@
               </p>
             </div>
           </div>
-          <video width="560" height="364" controls poster="assets/video/tiaa_v2.jpg">
+          <video
+            width="560"
+            height="364"
+            controls
+            poster="assets/video/tiaa_v2.webp"
+          >
             <source src="assets/video/tiaa_v2.mp4" type="video/mp4" />
             <source src="assets/video/tiaa_v2.ogg" type="video/ogg" />
           </video>
@@ -325,12 +330,8 @@
       </svg>
     </button>
     <div class="cursor"></div>
-    <!--script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="./assets/js/style.js"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   </body>
 </html>

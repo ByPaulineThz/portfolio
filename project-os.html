@@ -21,21 +21,9 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
     <title>Project OS | Usercase UX UI</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projet.css" />
-    <script src="./assets/js/jquery-3.7.1.min.js"></script>
   </head>
   <!--
   Bravo d'être venu jusqu'ici. Si tu trouves un bug, fait le moi savoir !
@@ -121,14 +109,20 @@
         </ul>
       </nav>
       <nav class="nav-bar mobile" id="navbarMobile">
-        <div class="toggle-menu">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-          <div class="line line3"></div>
-        </div>
+        <button
+          class="toggle-menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navbarMobile"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
         <ul class="nav-list">
           <li class="nav-list-item">
-            <a href="" class="nav-link btn">Accueil</a>
+            <a href="./index.html" class="nav-link btn">Accueil</a>
           </li>
           <li class="nav-list-item">
             <a href="./about.html" class="nav-link btn">A propos</a>
@@ -168,13 +162,16 @@
           <span>UX/UI Case Study</span>
           <h1>ProjectOS</h1>
           <p>
-           Projet personnel : Un copilote intelligent qui analyse le cahier des charges,
-            automatise la configuration initiale et laisse le contrôle final au
-            chef de projet.
+            Projet personnel : Un copilote intelligent qui analyse le cahier des
+            charges, automatise la configuration initiale et laisse le contrôle
+            final au chef de projet.
           </p>
         </div>
         <div class="main-img">
-          <img src="./assets/img/projectOs/cover-projectos.png" alt="ProjectOS" />
+          <img
+            src="./assets/img/projectOs/cover-projectos.webp"
+            alt="ProjectOS"
+          />
         </div>
       </div>
     </main>
@@ -366,7 +363,7 @@
           <article class="persona-card">
             <header class="persona-header">
               <img
-                src="./assets/img/projectOs/persona-1-lg.jpg"
+                src="./assets/img/projectOs/persona-1-lg.webp"
                 alt="Persona Chef de projets"
               />
               <div class="persona-title">
@@ -424,7 +421,7 @@
           <article class="persona-card">
             <header class="persona-header">
               <img
-                src="./assets/img/projectOs/persona-2-lg.jpg"
+                src="./assets/img/projectOs/persona-2-lg.webp"
                 alt="Persona Chef de projets"
               />
               <div class="persona-title">
@@ -606,11 +603,11 @@
       </div>
     </div>
 
-    <div class="wireframes">
-      <img src="./assets/img/projectOs/wireframe_1.png" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_2.png" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_3.png" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_4.png" alt="Wireframes" />
+    <div class="wireframes desktop">
+      <img src="./assets/img/projectOs/wireframe_1.webp" alt="Wireframes" />
+      <img src="./assets/img/projectOs/wireframe_2.webp" alt="Wireframes" />
+      <img src="./assets/img/projectOs/wireframe_3.webp" alt="Wireframes" />
+      <img src="./assets/img/projectOs/wireframe_4.webp" alt="Wireframes" />
     </div>
     <div class="part-3">
       <div class="process">
@@ -650,12 +647,12 @@
         >
       </div>
     </div>
-    
-    <div class="prototype">
-      <img src="./assets/img/projectOs/step-1-hifi.png" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-2-hifi.png" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-3-hifi.png" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-4-hifi.png" alt="Prototype" />
+
+    <div class="prototype desktop">
+      <img src="./assets/img/projectOs/step-1-hifi.webp" alt="Prototype" />
+      <img src="./assets/img/projectOs/step-2-hifi.webp" alt="Prototype" />
+      <img src="./assets/img/projectOs/step-3-hifi.webp" alt="Prototype" />
+      <img src="./assets/img/projectOs/step-4-hifi.webp" alt="Prototype" />
     </div>
     <div class="part-5">
       <div class="process">
@@ -711,12 +708,7 @@
       </svg>
     </button>
     <div class="cursor"></div>
-    <!--script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="./assets/js/style.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
