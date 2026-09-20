@@ -20,16 +20,17 @@
 	Si tu inspectes mon code, c'est qu'on a probablement des choses à se dire. On prend contact ?
 	-->
 	<body>
+		<a href="#main" class="skip-link">Aller au contenu principal</a>
 		<header class="header" id="header">
-			<a href="./index.html" class="logo">
-				<svg id="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.12 77.96">
+			<a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
+				<svg id="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.12 77.96" aria-hidden="true" focusable="false">
 					<defs>
 						<style>
 							  .cls-1{fill:#f9b233;}
 							<!-- .cls-2{fill: #fff} -->
 						</style>
 					</defs>
-					<g id="" data-name="Calque 2">
+					<g data-name="Calque 2">
 						<g id="Calque_1-2" data-name="Calque 1">
 							<path class="cls-1" d="M29,13.64h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,9.31,33.32h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,29,13.64Z" transform="translate(-4.33 42.62) rotate(-90)" />
 							<path class="cls-1" d="M9.31,45.54h0A19.68,19.68,0,0,1,29,65.22v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,9.31,45.54v0A0,0,0,0,1,9.31,45.54Z" transform="translate(74.53 36.24) rotate(90)" />
@@ -42,10 +43,10 @@
 					</g>
 				</svg>
 			</a>
-			<nav class="nav-bar desktop" id="navbarDesktop">
+			<nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
 				<ul class="nav-list">
 					<li class="nav-list-item">
-						<a href="" class="nav-link nav-link-lg btn active">Accueil</a>
+						<a href="./index.html" class="nav-link nav-link-lg btn active" aria-current="page">Accueil</a>
 					</li>
 					<li class="nav-list-item">
 						<a href="./about.html" class="nav-link nav-link-lg btn">A propos</a>
@@ -54,11 +55,11 @@
 						<a href="#projets" class="nav-link nav-link-lg btn">Projets</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" target="_blank" download class="nav-link btn sun">Télécharger CV</a>
+						<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" download class="nav-link btn sun">Télécharger CV</a>
 					</li>
 				</ul>
 			</nav>
-			<nav class="nav-bar mobile" id="navbarMobile">
+			<nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
 				<button class="toggle-menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbarMobile">
 					<span class="line line1"></span>
 					<span class="line line2"></span>
@@ -66,7 +67,7 @@
 				</button>
 				<ul class="nav-list">
 					<li class="nav-list-item">
-						<a href="#header" class="nav-link btn active">Accueil</a>
+						<a href="#header" class="nav-link btn active" aria-current="page">Accueil</a>
 					</li>
 					<li class="nav-list-item">
 						<a href="./about.html" class="nav-link btn">A propos</a>
@@ -75,7 +76,7 @@
 						<a href="#projets" class="nav-link nav-link-lg btn">Projets</a>
 					</li>
 					<li class="nav-list-item">
-						<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" target="_blank" download class="nav-link btn sun">Télécharger CV</a>
+						<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" download class="nav-link btn sun">Télécharger CV</a>
 					</li>
 				</ul>
 
@@ -88,269 +89,272 @@
 				</div>
 			</nav>
 		</header>
-		<main class="home">
-			<div class="row">
-				<div class="main-txt fadeInDown">
-					<span>Je suis Pauline Thelliez</span>
-					<h1>Product Designer UX/UI & Dev Front-End</h1>
-					<p>Passionnée par la conception digitale, j'allie UX/UI Design et développement web pour créer des interfaces simples, fluides et utiles. Mon objectif : transformer des problématiques complexes en solutions concrètes et optimisées pour les utilisateurs.</p>
-					<div class="main-btn">
-						<a href="#projets" class="btn-underline"><span>Voir les projets</span></a>
-						<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" target="_blank" download class="btn-underline btn-light"><span>Télécharger mon CV</span></a>
+		<main id="main" tabindex="-1">
+			<div class="home">
+				<div class="row">
+					<div class="main-txt fadeInDown">
+						<span>Je suis Pauline Thelliez</span>
+						<h1>Product Designer UX/UI &amp; Dev Front-End</h1>
+						<p>Passionnée par la conception digitale, j'allie UX/UI Design et développement web pour créer des interfaces simples, fluides et utiles. Mon objectif : transformer des problématiques complexes en solutions concrètes et optimisées pour les utilisateurs.</p>
+						<div class="main-btn">
+							<a href="#projets" class="btn-underline"><span>Voir les projets</span></a>
+							<a href="./assets/pdf/CV_Pauline_Thelliez.pdf" download class="btn-underline btn-light"><span>Télécharger mon CV</span></a>
+						</div>
+					</div>
+					<div class="main-img">
+						<img src="./assets/img/about/a_propos_circle.webp" alt="Portrait de Pauline Thelliez" />
 					</div>
 				</div>
-				<div class="main-img">
-					<img src="./assets/img/about/a_propos_circle.webp" alt="Pauline Thelliez" />
-				</div>
 			</div>
+
+			<section class="presentation" id="presentation">
+				<div class="arg">
+					<h2>Design x Dev : Le meilleur des deux mondes.</h2>
+					<p>
+						<b>Product Designer depuis 5 ans</b>, j’ai développé un profil hybride en alliant la création d'interfaces et le <b>développement front-end</b>
+						(React, PHP, JavaScript, WordPress, PrestaShop).
+						<br /><br />
+						Du design d'applications métiers (dashboards, back-office) à l'intégration web, je conçois des solutions intuitives et performantes. Cette double culture me permet d'assurer un vrai pont entre les besoins utilisateurs et les contraintes techniques, avec
+						<b>une vision globale du projet, de la recherche à la mise en ligne.</b>
+					</p>
+					<br />
+					<a href="./about.html" class="btn-underline sun"><span>En savoir plus</span></a>
+				</div>
+			</section>
+			<section class="skills" id="skills">
+				<h2 class="sr-only">Compétences</h2>
+				<div class="skills-tabs" role="tablist" aria-label="Catégories de compétences">
+					<button class="skills-tab active" data-tab="hard" type="button" role="tab" id="tab-hard" aria-selected="true" aria-controls="panel-hard">Hard skills</button>
+					<button class="skills-tab" data-tab="soft" type="button" role="tab" id="tab-soft" aria-selected="false" aria-controls="panel-soft" tabindex="-1">Soft skills</button>
+				</div>
+
+				<div class="skills-panel active" id="panel-hard" role="tabpanel" aria-labelledby="tab-hard" tabindex="0">
+					<div class="skills-grid">
+						<div class="skills-group">
+							<h3>Design</h3>
+							<div class="skills-list" role="list">
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/figma.webp" alt="" /><span>Figma</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/xd.webp" alt="" /><span>Adobe XD</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/ps.webp" alt="" /><span>Photoshop</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/ai.webp" alt="" /><span>Illustrator</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/ae.webp" alt="" /><span>After Effects</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/pr.webp" alt="" /><span>Premiere Pro</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/id.webp" alt="" /><span>InDesign</span></div>
+							</div>
+						</div>
+
+						<div class="skills-group">
+							<h3>Développement</h3>
+							<div class="skills-list" role="list">
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/html.webp" alt="" /><span>HTML5</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/css.webp" alt="" /><span>CSS3</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/js.webp" alt="" /><span>JavaScript</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/react.webp" alt="" /><span>React</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/jquery.webp" alt="" /><span>JQuery</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/php.webp" alt="" /><span>PHP</span></div>
+							</div>
+						</div>
+
+						<div class="skills-group">
+							<h3>CMS &amp; Back-office</h3>
+							<div class="skills-list" role="list">
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/wp.webp" alt="" /><span>WordPress</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/presta.webp" alt="" /><span>PrestaShop</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/mysql.webp" alt="" /><span>MySQL</span></div>
+							</div>
+						</div>
+
+						<div class="skills-group">
+							<h3>Outils</h3>
+							<div class="skills-list" role="list">
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/github.webp" alt="" /><span>GitHub</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/vsc.webp" alt="" /><span>VS Code</span></div>
+								<div class="skill-chip" role="listitem"><img src="./assets/img/icons/filezilla.webp" alt="" /><span>FileZilla</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="skills-panel" id="panel-soft" role="tabpanel" aria-labelledby="tab-soft" tabindex="0">
+					<div class="soft-skills-grid" role="list">
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+								<circle cx="12" cy="7" r="4" />
+							</svg>
+							<h4 aria-level="3">Autonome</h4>
+							<p>Je sais avancer seule sur un projet, de la recherche à la mise en ligne.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10" />
+								<circle cx="12" cy="12" r="6" />
+								<circle cx="12" cy="12" r="2" />
+							</svg>
+							<h4 aria-level="3">Perfectionniste</h4>
+							<p>Je vise juste, et j'apprends avec le temps à savoir quand m'arrêter.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+								<path d="M6 12v5c3 3 9 3 12 0v-5" />
+							</svg>
+							<h4 aria-level="3">Pédagogue</h4>
+							<p>Je forme mes clients à l'utilisation de leur back-office, sans jargon.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M16 3h5v5" />
+								<path d="M8 21H3v-5" />
+								<path d="M21 3 14 10" />
+								<path d="M3 21l7-7" />
+							</svg>
+							<h4 aria-level="3">Adaptable</h4>
+							<p>Je passe d'une étude UX au débogage d'un back-office PrestaShop dans la même journée.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" /></svg>
+							<h4 aria-level="3">Sang-froid</h4>
+							<p>Je garde mon calme face à l'imprévu, dans la limite du raisonnable.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+								<circle cx="9" cy="7" r="4" />
+								<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+								<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+							</svg>
+							<h4 aria-level="3">Esprit d'équipe</h4>
+							<p>J'aime travailler avec des coéquipiers bosseurs et de confiance.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></svg>
+							<h4 aria-level="3">Empathique</h4>
+							<p>Je me mets à la place de l'utilisateur, du client ou du collègue avant d'agir.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+								<path d="M9 18h6" />
+								<path d="M10 22h4" />
+							</svg>
+							<h4 aria-level="3">Curieuse</h4>
+							<p>Je recherche toujours la cohérence et la logique, ce qui me pousse à apprendre en continu et à échanger avec les développeurs.</p>
+						</div>
+						<div class="soft-skill-card" role="listitem">
+							<svg class="lucide-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+								<path d="M4 22V15" />
+							</svg>
+							<h4 aria-level="3">Déterminée</h4>
+							<p>Je défends mes idées, mais je sais repartir de zéro si besoin, sans m'entêter à outrance.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="realisations" id="projets">
+				<div class="container">
+					<div class="arg"><h2>Projets principaux</h2></div>
+					<a href="./proxidriver.html">
+						<div class="box-project light" id="box-project-1">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-1">
+								<label>UX UI design</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">Proxidriver</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Application métier pour les livreurs</p>
+							</div>
+						</div>
+					</a>
+					<a href="./project-os.html">
+						<div class="box-project" id="box-project-2">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-2">
+								<label>UX UI Case Study</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">ProjectOS</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Outil de génération de projet en collaboration avec l'IA.</p>
+							</div>
+						</div>
+					</a>
+					<a href="./trail-and-tail.html">
+						<div class="box-project light" id="box-project-3">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-3">
+								<label> UX UI Case Study</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">Trail &amp; Tail</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Application mobile de canicross, pour créer des binômes coureur-chien adaptés.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="realisations" id="projets-secondaires">
+				<div class="container">
+					<div class="arg"><h2>Projets secondaires</h2></div>
+					<div class="secondary-grid">
+					<a href="./boxy.html">
+						<div class="box-project" id="box-project-4">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-4">
+								<label> React | Vite</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">Boxy Generator</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Générateur de box-shadow réalisé en React, Vite et Tailwind CSS</p>
+							</div>
+						</div>
+					</a>
+					<a href="./aether.html">
+						<div class="box-project light" id="box-project-5">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-5">
+								<label> UI design</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">Aether VR</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Projet animation Figma</p>
+							</div>
+						</div>
+					</a>
+					<a href="./tiaa.html">
+						<div class="box-project" id="box-project-6">
+							<div class="img-project"></div>
+							<div class="item-project" id="item-project-6">
+								<label>Motion Design</label>
+								<div class="title-project">
+									<h2 class="btn" aria-level="3">Tiaa</h2>
+									<svg class="arrow" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+										<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
+									</svg>
+								</div>
+								<p>Motion design du logo Tiaa</p>
+							</div>
+						</div>
+					</a>
+					</div>
+				</div>
+			</section>
 		</main>
-
-		<section class="presentation" id="presentation">
-			<div class="arg">
-				<h2>Design x Dev : Le meilleur des deux mondes.</h2>
-				<p>
-					<b>Product Designer depuis 5 ans</b>, j’ai développé un profil hybride en alliant la création d'interfaces et le <b>développement front-end</b>
-					(React, PHP, JavaScript, WordPress, PrestaShop).
-					<br /><br />
-					Du design d'applications métiers (dashboards, back-office) à l'intégration web, je conçois des solutions intuitives et performantes. Cette double culture me permet d'assurer un vrai pont entre les besoins utilisateurs et les contraintes techniques, avec
-					<b>une vision globale du projet, de la recherche à la mise en ligne.</b>
-				</p>
-				<br />
-				<a href="./about.html" class="btn-underline sun"><span>En savoir plus</span></a>
-			</div>
-		</section>
-		<section class="skills" id="skills">
-			<div class="skills-tabs">
-				<button class="skills-tab active" data-tab="hard">Hard skills</button>
-				<button class="skills-tab" data-tab="soft">Soft skills</button>
-			</div>
-
-			<div class="skills-panel active" id="panel-hard">
-				<div class="skills-grid">
-					<div class="skills-group">
-						<h3>Design</h3>
-						<div class="skills-list">
-							<div class="skill-chip"><img src="./assets/img/icons/figma.webp" alt="Figma" /><span>Figma</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/xd.webp" alt="Adobe XD" /><span>Adobe XD</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/ps.webp" alt="Photoshop" /><span>Photoshop</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/ai.webp" alt="Illustrator" /><span>Illustrator</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/ae.webp" alt="After Effects" /><span>After Effects</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/pr.webp" alt="Premiere Pro" /><span>Premiere Pro</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/id.webp" alt="InDesign" /><span>InDesign</span></div>
-						</div>
-					</div>
-
-					<div class="skills-group">
-						<h3>Développement</h3>
-						<div class="skills-list">
-							<div class="skill-chip"><img src="./assets/img/icons/html.webp" alt="HTML5" /><span>HTML5</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/css.webp" alt="CSS3" /><span>CSS3</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/js.webp" alt="JavaScript" /><span>JavaScript</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/react.webp" alt="React" /><span>React</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/jquery.webp" alt="JQuery" /><span>JQuery</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/php.webp" alt="PHP" /><span>PHP</span></div>
-						</div>
-					</div>
-
-					<div class="skills-group">
-						<h3>CMS & Back-office</h3>
-						<div class="skills-list">
-							<div class="skill-chip"><img src="./assets/img/icons/wp.webp" alt="Wordpress" /><span>WordPress</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/presta.webp" alt="Prestashop" /><span>PrestaShop</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/mysql.webp" alt="MySQL" /><span>MySQL</span></div>
-						</div>
-					</div>
-
-					<div class="skills-group">
-						<h3>Outils</h3>
-						<div class="skills-list">
-							<div class="skill-chip"><img src="./assets/img/icons/github.webp" alt="GitHub" /><span>GitHub</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/vsc.webp" alt="Visual Studio Code" /><span>VS Code</span></div>
-							<div class="skill-chip"><img src="./assets/img/icons/filezilla.webp" alt="Filezilla" /><span>FileZilla</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="skills-panel" id="panel-soft">
-				<div class="soft-skills-grid">
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-							<circle cx="12" cy="7" r="4" />
-						</svg>
-						<h4>Autonome</h4>
-						<p>Je sais avancer seule sur un projet, de la recherche à la mise en ligne.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="12" cy="12" r="10" />
-							<circle cx="12" cy="12" r="6" />
-							<circle cx="12" cy="12" r="2" />
-						</svg>
-						<h4>Perfectionniste</h4>
-						<p>Je vise juste, et j'apprends avec le temps à savoir quand m'arrêter.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-							<path d="M6 12v5c3 3 9 3 12 0v-5" />
-						</svg>
-						<h4>Pédagogue</h4>
-						<p>Je forme mes clients à l'utilisation de leur back-office, sans jargon.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M16 3h5v5" />
-							<path d="M8 21H3v-5" />
-							<path d="M21 3 14 10" />
-							<path d="M3 21l7-7" />
-						</svg>
-						<h4>Adaptable</h4>
-						<p>Je passe d'une étude UX au débogage d'un back-office PrestaShop dans la même journée.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" /></svg>
-						<h4>Sang-froid</h4>
-						<p>Je garde mon calme face à l'imprévu, dans la limite du raisonnable.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-							<circle cx="9" cy="7" r="4" />
-							<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-							<path d="M16 3.13a4 4 0 0 1 0 7.75" />
-						</svg>
-						<h4>Esprit d'équipe</h4>
-						<p>J'aime travailler avec des coéquipiers bosseurs et de confiance.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></svg>
-						<h4>Empathique</h4>
-						<p>Je me mets à la place de l'utilisateur, du client ou du collègue avant d'agir.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-							<path d="M9 18h6" />
-							<path d="M10 22h4" />
-						</svg>
-						<h4>Curieuse</h4>
-						<p>Je recherche toujours la cohérence et la logique, ce qui me pousse à apprendre en continu et à échanger avec les développeurs.</p>
-					</div>
-					<div class="soft-skill-card">
-						<svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-							<path d="M4 22V15" />
-						</svg>
-						<h4>Déterminée</h4>
-						<p>Je défends mes idées, mais je sais repartir de zéro si besoin, sans m'entêter à outrance.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="realisations" id="projets">
-			<div class="container">
-				<div class="arg"><h2>Projets principaux</h2></div>
-				<a href="./proxidriver.html">
-					<div class="box-project light" id="box-project-1">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-1">
-							<label>UX UI design</label>
-							<div class="title-project">
-								<h2 class="btn">Proxidriver</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Application métier pour les livreurs</p>
-						</div>
-					</div>
-				</a>
-				<a href="./project-os.html">
-					<div class="box-project" id="box-project-2">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-2">
-							<label>UX UI Case Study</label>
-							<div class="title-project">
-								<h2 class="btn">ProjectOS</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Outil de génération de projet en collaboration avec l'IA.</p>
-						</div>
-					</div>
-				</a>
-				<a href="./trail-and-tail.html">
-					<div class="box-project light" id="box-project-3">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-3">
-							<label> UX UI Case Study</label>
-							<div class="title-project">
-								<h2 class="btn">Trail & Tail</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Application mobile de canicross, pour créer des binômes coureur-chien adaptés.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-		</section>
-		<section class="realisations" id="projets-secondaires">
-			<div class="container">
-				<div class="arg"><h2>Projets secondaires</h2></div>
-				<div class="secondary-grid">
-				<a href="./boxy.html">
-					<div class="box-project" id="box-project-4">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-4">
-							<label> React | Vite</label>
-							<div class="title-project">
-								<h2 class="btn">Boxy Generator</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Générateur de box-shadow réalisé en React, Vite et Tailwind CSS</p>
-						</div>
-					</div>
-				</a>
-				<a href="./aether.html">
-					<div class="box-project light" id="box-project-5">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-5">
-							<label> UI design</label>
-							<div class="title-project">
-								<h2 class="btn">Aether VR</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: white" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Projet animation Figma</p>
-						</div>
-					</div>
-				</a>
-				<a href="./tiaa.html">
-					<div class="box-project" id="box-project-6">
-						<div class="img-project"></div>
-						<div class="item-project" id="item-project-6">
-							<label>Motion Design</label>
-							<div class="title-project">
-								<h2 class="btn">Tiaa</h2>
-								<svg class="arrow" viewBox="0 0 23 13">
-									<polygon style="stroke: black" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
-								</svg>
-							</div>
-							<p>Motion design du logo Tiaa</p>
-						</div>
-					</div>
-				</a>
-				</div>
-			</div>
-		</section>
 		<footer class="footer" id="footer">
 			<h2>On prend contact ?</h2>
 			<p style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap">
@@ -359,12 +363,12 @@
 			</p>
 			<p style="position: absolute; bottom: 0; margin: auto; width: 100%">&copy; Pauline Thelliez</p>
 		</footer>
-		<button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
-			<svg class="" viewBox="0 0 23 13">
+		<button class="back-to-up" onclick="scrollToTop()" id="back-to-up" type="button" aria-label="Retour en haut de la page">
+			<svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
 				<polygon style="stroke: #000" points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "></polygon>
 			</svg>
 		</button>
-		<div class="cursor"></div>
+		<div class="cursor" aria-hidden="true"></div>
 		<!--script-->
 
 		<script src="./assets/js/style.js"></script>

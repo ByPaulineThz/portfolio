@@ -74,8 +74,11 @@ function toggleTopButton() {
 }
 // BACK TO UP
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
 }
+// Masque le bouton (et le retire de la navigation clavier) dès le chargement, pas seulement au premier scroll
+if (document.getElementById("back-to-up")) toggleTopButton();
 
 //NAVBAR
 let prevScrollpos = window.pageYOffset;
@@ -123,24 +126,42 @@ window.onscroll = function () {
   toggleTopButton();
 };
 
-const skillsTabs = document.querySelectorAll(".skills-tab");
-if (skillsTabs.length > 0) {
-  skillsTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      document
-        .querySelectorAll(".skills-tab")
-        .forEach((t) => t.classList.remove("active"));
-      document
-        .querySelectorAll(".skills-panel")
-        .forEach((p) => p.classList.remove("active"));
+// ONGLETS (motif ARIA "tabs" : clic, flèches gauche/droite, Début/Fin)
+// Chaque onglet a data-tab="xxx" et pilote le panneau #panel-xxx
+function initTabs(tabs) {
+  if (tabs.length === 0) return;
 
-      tab.classList.add("active");
+  const activate = (tab, moveFocus) => {
+    tabs.forEach((t) => {
+      const selected = t === tab;
+      t.classList.toggle("active", selected);
+      t.setAttribute("aria-selected", String(selected));
+      t.tabIndex = selected ? 0 : -1;
       document
-        .getElementById(`panel-${tab.dataset.tab}`)
-        .classList.add("active");
+        .getElementById(`panel-${t.dataset.tab}`)
+        .classList.toggle("active", selected);
+    });
+    if (moveFocus) tab.focus();
+  };
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => activate(tab, false));
+    tab.addEventListener("keydown", (e) => {
+      let next;
+      if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+      else if (e.key === "ArrowLeft")
+        next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === "Home") next = tabs[0];
+      else if (e.key === "End") next = tabs[tabs.length - 1];
+      if (next) {
+        e.preventDefault();
+        activate(next, true);
+      }
     });
   });
 }
+
+initTabs(Array.from(document.querySelectorAll(".skills-tab")));
 
 // --- MODAL CERTIFICATIONS ---
 if (window.location.href.match(/about.html/)) {
@@ -153,6 +174,7 @@ if (window.location.href.match(/about.html/)) {
 
   const certifImages = Array.from(document.querySelectorAll(".certification"));
   let currentIndex = 0;
+  let lastFocused = null; // élément à refocaliser à la fermeture de la modale
 
   function showImage(index) {
     if (index < 0) {
@@ -165,10 +187,12 @@ if (window.location.href.match(/about.html/)) {
 
     const currentImg = certifImages[currentIndex];
     modalImg.src = currentImg.src;
+    modalImg.alt = currentImg.alt;
     captionText.innerHTML = currentImg.alt;
   }
 
   function openModal(index) {
+    lastFocused = document.activeElement;
     modal.style.display = "block";
     if (typeof toggleMobileButton !== "undefined")
       toggleMobileButton.style.display = "none";
@@ -176,6 +200,7 @@ if (window.location.href.match(/about.html/)) {
     if (typeof navbar !== "undefined") navbar.style.display = "none";
 
     showImage(index);
+    spanClose.focus();
   }
 
   function closeModal() {
@@ -184,6 +209,7 @@ if (window.location.href.match(/about.html/)) {
       toggleMobileButton.style.display = "";
     if (typeof logo !== "undefined") logo.style.display = "block";
     if (typeof navbar !== "undefined") navbar.style.display = "block";
+    if (lastFocused) lastFocused.focus();
   }
 
   certifImages.forEach((img, index) => {
@@ -209,6 +235,40 @@ if (window.location.href.match(/about.html/)) {
       closeModal();
     }
   };
+
+  // Clavier : Entrée / Espace sur les images et les boutons de la modale
+  const activateOnKey = (el, action) =>
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        action();
+      }
+    });
+  certifImages.forEach((img, index) =>
+    activateOnKey(img, () => openModal(index)),
+  );
+  activateOnKey(spanClose, closeModal);
+  activateOnKey(prevBtn, () => showImage(currentIndex - 1));
+  activateOnKey(nextBtn, () => showImage(currentIndex + 1));
+
+  // Modale ouverte : Échap ferme, flèches naviguent, Tab reste dans la modale
+  document.addEventListener("keydown", (e) => {
+    if (modal.style.display !== "block") return;
+    if (e.key === "Escape") closeModal();
+    else if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+    else if (e.key === "ArrowRight") showImage(currentIndex + 1);
+    else if (e.key === "Tab") {
+      const first = spanClose;
+      const last = nextBtn;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 
 let startX = 0;
 let endX = 0;
@@ -263,16 +323,12 @@ function handleSwipe() {
   endX = 0;
 }};
 
-document.querySelectorAll(".flow-tab").forEach((tab) => {
-  tab.addEventListener("click", () => {
-    document
-      .querySelectorAll(".flow-tab")
-      .forEach((t) => t.classList.remove("active"));
-    document
-      .querySelectorAll(".flow-panel")
-      .forEach((p) => p.classList.remove("active"));
+initTabs(Array.from(document.querySelectorAll(".flow-tab")));
 
-    tab.classList.add("active");
-    document.getElementById(`panel-${tab.dataset.tab}`).classList.add("active");
+// Vidéos en lecture automatique : arrêtées si l'utilisateur demande de réduire les animations
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("video[autoplay]").forEach((video) => {
+    video.removeAttribute("autoplay");
+    video.pause();
   });
-});
+}

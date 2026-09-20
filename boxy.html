@@ -28,12 +28,15 @@
 	Promis, aucune div n'a été maltraité durant la création de ce site.
 	-->
   <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
     <header class="header" id="header">
-      <a href="./index.html" class="logo">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
         <svg
           id="logotype"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
         >
           <defs>
             <style>
@@ -42,7 +45,7 @@
               }
             </style>
           </defs>
-          <g id="" data-name="Calque 2">
+          <g data-name="Calque 2">
             <g id="Calque_1-2" data-name="Calque 1">
               <path
                 class="cls-1"
@@ -83,7 +86,7 @@
           </g>
         </svg>
       </a>
-      <nav class="nav-bar desktop" id="navbarDesktop">
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
         <ul class="nav-list">
           <li class="nav-list-item">
             <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
@@ -99,7 +102,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -107,7 +109,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-bar mobile" id="navbarMobile">
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
         <button
           class="toggle-menu"
           type="button"
@@ -134,7 +136,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -155,119 +156,124 @@
         </div>
       </nav>
     </header>
-    <main class="home projet" id="project_1">
-      <div class="row">
-        <div class="main-txt fadeInDown">
-          <span>React Vite</span>
-          <h1>Boxy - Générateur de Box Shadow CSS</h1>
-          <p>
-            Un outil web interactif conçu pour personnaliser, visualiser et
-            exporter facilement des ombres CSS en temps réel. Aucune IA utilisée
-            pour ce projet.
-          </p>
+    <main id="main" tabindex="-1">
+      <div class="home projet" id="project_1">
+        <div class="row">
+          <div class="main-txt fadeInDown">
+            <span>React Vite</span>
+            <h1>Boxy - Générateur de Box Shadow CSS</h1>
+            <p>
+              Un outil web interactif conçu pour personnaliser, visualiser et
+              exporter facilement des ombres CSS en temps réel. Aucune IA utilisée
+              pour ce projet.
+            </p>
+          </div>
+          <div class="main-img">
+            <img
+              src="./assets/img/boxy/boxy-generator.webp"
+              alt="Aperçu de l'outil Boxy, générateur d'ombres CSS"
+            />
+          </div>
         </div>
-        <div class="main-img">
-          <img
-            src="./assets/img/boxy/boxy-generator.webp"
-            alt="Boxy generator screenshot"
-          />
+      </div>
+      <section class="elements" aria-label="Informations clés du projet">
+        <div class="element element-1">
+          <span>Rôle</span>
+          <p>UI Designer, Développeur front-end</p>
+        </div>
+
+        <div class="element element-3">
+          <span>Livrables</span>
+          <p>Interface React</p>
+        </div>
+        <div class="element element-4">
+          <span>Outils utilisés</span>
+          <p>React, Redux Toolkit, Vite, VS code, Tailwind, Github</p>
+        </div>
+      </section>
+      <div class="part-1">
+        <div class="process">
+          <div class="content" style="margin-top: 0">
+            <h2>Contexte du projet</h2>
+            <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
+              Ce projet est né d'une formation React suivie sur Udemy, pour mettre
+              en pratique mes compétences en développement front-end au-delà de la
+              théorie. Je suis allée plus loin que l'exercice de base pour en
+              faire une vraie pièce de portfolio : personnalisation du design,
+              organisation du code, et mise en ligne.
+            </p>
+          </div>
+
+          <div class="content">
+            <h2>Pourquoi ces choix techniques</h2>
+            <ul>
+              <li>
+                <b>React</b> permet à l'interface de réagir instantanément : dès
+                qu'on modifie un réglage (flou, taille, couleur), l'aperçu se met
+                à jour en temps réel.
+              </li>
+              <li>
+                <b>Redux Toolkit</b> garde en mémoire tous les réglages de l'ombre
+                (position, flou, étendue, couleur, opacité) au même endroit, pour
+                être sûre qu'ils restent toujours cohérents entre eux et avec le
+                code CSS généré.
+              </li>
+              <li>
+                <b>Vite</b> rend le développement plus rapide et plus fluide : le
+                site se recharge presque instantanément à chaque modification, ce
+                qui facilite les allers-retours pendant la création.
+              </li>
+            </ul>
+            <br />
+            <h2>Défi principal</h2>
+            <p>
+              Le plus difficile a été de faire en sorte que tout bouge ensemble,
+              sans accroc : dès qu'on déplace un curseur, l'aperçu visuel ET le
+              code CSS affiché doivent
+              <b>se mettre à jour instantanément et rester synchronisés.</b>
+              C'est ce qui m'a poussée à mieux structurer mes données avec Redux
+              Toolkit, plutôt que de tout gérer de façon éparpillée.
+            </p>
+          </div>
+          <div class="content">
+            <h2>Ce que j'en retiens</h2>
+            <p>
+              Au-delà du suivi du cours, ce projet m'a permis de manipuler
+              concrètement la gestion des données avec Redux Toolkit, et de
+              comprendre l'intérêt d'un outil moderne comme Vite sur un cas
+              concret plutôt que théorique.
+            </p>
+          </div>
+          <a
+            href="https://github.com/ByPaulineThz/Boxy-Project"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir le projet sur GitHub (s'ouvre dans un nouvel onglet)"
+            style="margin-bottom: 3rem"
+            class="btn-underline"
+          >
+            <span class="sun">Voir le projet</span></a
+          >
+        </div>
+      </div>
+      <div class="part-3">
+        <div class="process">
+          <div class="content flex">
+            <video
+              width="1080"
+              controls
+              loop
+              muted
+              aria-label="Vidéo de démonstration de l'outil Boxy"
+              poster="assets/img/boxy/boxy.webp"
+              style="border-radius: 20px"
+            >
+              <source src="assets/video/boxy.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </main>
-    <div class="elements">
-      <div class="element element-1">
-        <span>Rôle</span>
-        <p>UI Designer, Développeur front-end</p>
-      </div>
-
-      <div class="element element-3">
-        <span>Livrables</span>
-        <p>Interface React</p>
-      </div>
-      <div class="element element-4">
-        <span>Outils utilisés</span>
-        <p>React, Redux Toolkit, Vite, VS code, Tailwind, Github</p>
-      </div>
-    </div>
-    <div class="part-1">
-      <div class="process">
-        <div class="content" style="margin-top: 0">
-          <h2>Contexte du projet</h2>
-          <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
-            Ce projet est né d'une formation React suivie sur Udemy, pour mettre
-            en pratique mes compétences en développement front-end au-delà de la
-            théorie. Je suis allée plus loin que l'exercice de base pour en
-            faire une vraie pièce de portfolio : personnalisation du design,
-            organisation du code, et mise en ligne.
-          </p>
-        </div>
-
-        <div class="content">
-          <h2>Pourquoi ces choix techniques</h2>
-          <ul>
-            <li>
-              <b>React</b> permet à l'interface de réagir instantanément : dès
-              qu'on modifie un réglage (flou, taille, couleur), l'aperçu se met
-              à jour en temps réel.
-            </li>
-            <li>
-              <b>Redux Toolkit</b> garde en mémoire tous les réglages de l'ombre
-              (position, flou, étendue, couleur, opacité) au même endroit, pour
-              être sûre qu'ils restent toujours cohérents entre eux et avec le
-              code CSS généré.
-            </li>
-            <li>
-              <b>Vite</b> rend le développement plus rapide et plus fluide : le
-              site se recharge presque instantanément à chaque modification, ce
-              qui facilite les allers-retours pendant la création.
-            </li>
-          </ul>
-          <br />
-          <h2>Défi principal</h2>
-          <p>
-            Le plus difficile a été de faire en sorte que tout bouge ensemble,
-            sans accroc : dès qu'on déplace un curseur, l'aperçu visuel ET le
-            code CSS affiché doivent
-            <b>se mettre à jour instantanément et rester synchronisés.</b>
-            C'est ce qui m'a poussée à mieux structurer mes données avec Redux
-            Toolkit, plutôt que de tout gérer de façon éparpillée.
-          </p>
-        </div>
-        <div class="content">
-          <h2>Ce que j'en retiens</h2>
-          <p>
-            Au-delà du suivi du cours, ce projet m'a permis de manipuler
-            concrètement la gestion des données avec Redux Toolkit, et de
-            comprendre l'intérêt d'un outil moderne comme Vite sur un cas
-            concret plutôt que théorique.
-          </p>
-        </div>
-        <a
-          href="https://github.com/ByPaulineThz/Boxy-Project"
-          target="_blank"
-          style="margin-bottom: 3rem"
-          class="btn-underline"
-        >
-          <h3 class="sun"><span>Voir le projet</span></h3></a
-        >
-      </div>
-    </div>
-    <div class="part-3">
-      <div class="process">
-        <div class="content flex">
-          <video
-            width="1080"
-            controls
-            loop
-            muted
-            poster="assets/img/boxy/boxy.webp"
-            style="border-radius: 20px"
-          >
-            <source src="assets/video/boxy.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-    </div>
     <footer class="footer" id="footer">
       <h2>On prend contact ?</h2>
       <p
@@ -287,15 +293,21 @@
       </p>
       <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
     </footer>
-    <button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
-      <svg class="" viewBox="0 0 23 13">
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
         <polygon
           style="stroke: #000"
           points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
         ></polygon>
       </svg>
     </button>
-    <div class="cursor"></div>
+    <div class="cursor" aria-hidden="true"></div>
     <script src="./assets/js/style.js"></script>
   </body>
 </html>

@@ -21,7 +21,6 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
     <title>Project OS | Usercase UX UI</title>
-    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projet.css" />
   </head>
@@ -30,12 +29,15 @@
   On prend contact ?
   -->
   <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
     <header class="header" id="header">
-      <a href="./index.html" class="logo">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
         <svg
           id="logotype"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
         >
           <defs>
             <style>
@@ -43,7 +45,7 @@
               <!-- .cls-2{fill: #fff} -->
             </style>
           </defs>
-          <g id="" data-name="Calque 2">
+          <g data-name="Calque 2">
             <g id="Calque_1-2" data-name="Calque 1">
               <path
                 class="cls-1"
@@ -84,7 +86,7 @@
           </g>
         </svg>
       </a>
-      <nav class="nav-bar desktop" id="navbarDesktop">
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
         <ul class="nav-list">
           <li class="nav-list-item">
             <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
@@ -100,7 +102,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -108,7 +109,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-bar mobile" id="navbarMobile">
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
         <button
           class="toggle-menu"
           type="button"
@@ -135,7 +136,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -156,530 +156,537 @@
         </div>
       </nav>
     </header>
-    <main class="home projet" id="project_1">
-      <div class="row">
-        <div class="main-txt fadeInDown">
-          <span>UX/UI Case Study</span>
-          <h1>ProjectOS</h1>
+    <main id="main" tabindex="-1">
+      <div class="home projet" id="project_1">
+        <div class="row">
+          <div class="main-txt fadeInDown">
+            <span lang="en">UX/UI Case Study</span>
+            <h1>ProjectOS</h1>
+            <p>
+              Projet personnel : Un copilote intelligent qui analyse le cahier des
+              charges, automatise la configuration initiale et laisse le contrôle
+              final au chef de projet.
+            </p>
+          </div>
+          <div class="main-img">
+            <img
+              src="./assets/img/projectOs/cover-projectos.webp"
+              alt="Aperçu de l'application ProjectOS"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="elements" aria-label="Informations clés du projet">
+        <div class="element element-1">
+          <span>Rôle</span>
+          <p>Product designer (research, UX, UI, prototypage)</p>
+        </div>
+        <div class="element element-2">
+          <span>Cibles</span>
           <p>
-            Projet personnel : Un copilote intelligent qui analyse le cahier des
-            charges, automatise la configuration initiale et laisse le contrôle
-            final au chef de projet.
+            Freelances, agences et équipes produits lançant régulièrement de
+            nouveaux projets.
           </p>
         </div>
-        <div class="main-img">
-          <img
-            src="./assets/img/projectOs/cover-projectos.webp"
-            alt="ProjectOS"
-          />
+        <div class="element element-3">
+          <span>Livrables</span>
+          <p>
+            User research, architecture d’information, wireframes, design system,
+            prototype.
+          </p>
         </div>
-      </div>
-    </main>
-    <div class="elements">
-      <div class="element element-1">
-        <span>Rôle</span>
-        <p>Product designer (research, UX, UI, prototypage)</p>
-      </div>
-      <div class="element element-2">
-        <span>Cibles</span>
-        <p>
-          Freelances, agences et équipes produits lançant régulièrement de
-          nouveaux projets.
-        </p>
-      </div>
-      <div class="element element-3">
-        <span>Livrables</span>
-        <p>
-          User research, architecture d’information, wireframes, design system,
-          prototype.
-        </p>
-      </div>
-      <div class="element element-4">
-        <span>Outils utilisés</span>
-        <p>
-          Figma (Figma AI)
+        <div class="element element-4">
+          <span>Outils utilisés</span>
+          <p>
+            Figma (Figma AI)
 
-          <br />
-          Gemini (Cadrage UX)
-        </p>
-      </div>
-    </div>
-    <div class="part-1">
-      <div class="process">
-        <div
-          class="content"
-          style="border-left: solid var(--sun) 5px; padding-left: 15px"
-        >
-          <h2>Un projet qui a évolué</h2>
-          <h3>L'idée de départ</h3>
-          <p>
-            Au lancement du projet, ProjectOS était pensé comme une plateforme
-            classique pour centraliser les dossiers et utiliser des modèles
-            préremplis (templates). L'objectif était simplement d'éviter de
-            réinventer la roue à chaque nouveau projet.
-          </p>
-          <br />
-          <h3>Pourquoi ce changement de cap ?</h3>
-          <p>
-            Face à l'évolution rapide du marché et à la place centrale de l'IA
-            dans nos métiers, j'ai réalisé que les templates restaient trop
-            rigides. J'ai donc fait évoluer le concept vers un copilote IA : au
-            lieu de faire remplir des formulaires, l'outil analyse directement
-            le cahier des charges et prépare tout le projet, tout en laissant le
-            contrôle final au chef de projet.
-          </p>
-          <br />
-          <h3>Une conception pensée en collaboration avec l'IA</h3>
-          <p>
-            Pour mener à bien cette transformation, j'ai choisi de travailler
-            main dans la main avec l'IA à chaque étape de mon workflow : Gemini
-            pour challenger mes idées, cadrer la stratégie et structurer les
-            textes UX, puis Figma AI pour explorer rapidement les premières
-            intentions visuelles.
-          </p>
-          <br />
-          <h3>Ce que cette démarche montre</h3>
-          <p>
-            Ma capacité à remettre en question mes choix de design, à faire
-            pivoter un produit et à adopter une posture de designer augmenté,
-            capable d'utiliser l'IA comme un vrai levier de réflexion et de
-            productivité.
+            <br />
+            Gemini (Cadrage UX)
           </p>
         </div>
-        <div class="content eco">
-          <h2>Benchmark</h2>
+      </section>
+      <div class="part-1">
+        <div class="process">
+          <div
+            class="content"
+            style="border-left: solid var(--sun) 5px; padding-left: 15px"
+          >
+            <h2>Un projet qui a évolué</h2>
+            <h3>L'idée de départ</h3>
+            <p>
+              Au lancement du projet, ProjectOS était pensé comme une plateforme
+              classique pour centraliser les dossiers et utiliser des modèles
+              préremplis (templates). L'objectif était simplement d'éviter de
+              réinventer la roue à chaque nouveau projet.
+            </p>
+            <br />
+            <h3>Pourquoi ce changement de cap ?</h3>
+            <p>
+              Face à l'évolution rapide du marché et à la place centrale de l'IA
+              dans nos métiers, j'ai réalisé que les templates restaient trop
+              rigides. J'ai donc fait évoluer le concept vers un copilote IA : au
+              lieu de faire remplir des formulaires, l'outil analyse directement
+              le cahier des charges et prépare tout le projet, tout en laissant le
+              contrôle final au chef de projet.
+            </p>
+            <br />
+            <h3>Une conception pensée en collaboration avec l'IA</h3>
+            <p>
+              Pour mener à bien cette transformation, j'ai choisi de travailler
+              main dans la main avec l'IA à chaque étape de mon workflow : Gemini
+              pour challenger mes idées, cadrer la stratégie et structurer les
+              textes UX, puis Figma AI pour explorer rapidement les premières
+              intentions visuelles.
+            </p>
+            <br />
+            <h3>Ce que cette démarche montre</h3>
+            <p>
+              Ma capacité à remettre en question mes choix de design, à faire
+              pivoter un produit et à adopter une posture de designer augmenté,
+              capable d'utiliser l'IA comme un vrai levier de réflexion et de
+              productivité.
+            </p>
+          </div>
+          <div class="content eco">
+            <h2 id="benchmark-titre">Benchmark</h2>
+            <p>
+              Les outils actuels (Jira, Asana, Monday) sont d'excellents carnets
+              de bord, mais ils restent chronophages au démarrage et aveugles à la
+              santé de l'équipe.
+            </p>
+            <br />
+            <div class="table-container" tabindex="0" role="region" aria-labelledby="benchmark-titre">
+              <table class="benchmark-table">
+                <caption class="sr-only">
+                  Comparatif entre les outils traditionnels (Jira, Asana, Monday) et Project OS
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Axe d'analyse</th>
+                    <th scope="col">
+                      Outils traditionnels <span>(Jira, Asana, Monday)</span>
+                    </th>
+                    <th scope="col">Notre plateforme <span>(Project OS)</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feature-title">Lancement de projet</td>
+                    <td>
+                      <strong>Manuel &amp; chronophage</strong>
+                      <p>
+                        Saisie répétitive des cartes, devis et fiches clients (1 à
+                        2h perdues).
+                      </p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Automatisé &amp; assisté</strong>
+                      <p>
+                        L'IA analyse le cahier des charges et pré-remplit le
+                        projet en 10 secondes.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Gestion de la charge</td>
+                    <td>
+                      <strong>Statique</strong>
+                      <p>
+                        Risque élevé de surcharger un membre de l'équipe ou
+                        d'affecter du travail durant ses congés.
+                      </p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Dynamique &amp; humaine</strong>
+                      <p>
+                        Attribution automatique selon la charge réelle et les
+                        congés renseignés.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Posture de l'utilisateur</td>
+                    <td>
+                      <strong>Exécutant</strong>
+                      <p>
+                        L'humain fait tout le travail de création et de
+                        configuration à la main.
+                      </p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Superviseur</strong>
+                      <p>
+                        L'IA propose, le chef de projet valide, ajuste ou corrige
+                        en quelques clics.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Ressenti UX / UI</td>
+                    <td>
+                      <strong>Complexe &amp; austère</strong>
+                      <p>
+                        Formulaires denses, tableaux de bord froids et rigides.
+                      </p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Engageant &amp; ludique</strong>
+                      <p>
+                        Interface moderne, interactions fluides et visuellement
+                        clarifiées.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <h3>
+              <span class="highlighted"
+                >L'opportunité UX ne réside pas dans l'ajout de fonctionnalités
+                complexes, mais dans la simplification du démarrage et le respect
+                de la charge mentale des équipes.</span
+              >
+            </h3>
+          </div>
+          <br />
+        </div>
+      </div>
+      <div class="part-2">
+        <div class="process">
+          <h2>Personas</h2>
+          <br />
           <p>
-            Les outils actuels (Jira, Asana, Monday) sont d'excellents carnets
-            de bord, mais ils restent chronophages au démarrage et aveugles à la
-            santé de l'équipe.
+            Pour concevoir une plateforme adaptée aux réalités du terrain, deux
+            profils clés ont été identifiés.
           </p>
           <br />
-          <div class="table-container">
-            <table class="benchmark-table">
-              <thead>
-                <tr>
-                  <th>Axe d'analyse</th>
-                  <th>
-                    Outils traditionnels <span>(Jira, Asana, Monday)</span>
-                  </th>
-                  <th>Notre plateforme <span>(Project OS)</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feature-title">Lancement de projet</td>
-                  <td>
-                    <strong>Manuel &amp; chronophage</strong>
-                    <p>
-                      Saisie répétitive des cartes, devis et fiches clients (1 à
-                      2h perdues).
-                    </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Automatisé &amp; assisté</strong>
-                    <p>
-                      L'IA analyse le cahier des charges et pré-remplit le
-                      projet en 10 secondes.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Gestion de la charge</td>
-                  <td>
-                    <strong>Statique</strong>
-                    <p>
-                      Risque élevé de surcharger un membre de l'équipe ou
-                      d'affecter du travail durant ses congés.
-                    </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Dynamique &amp; humaine</strong>
-                    <p>
-                      Attribution automatique selon la charge réelle et les
-                      congés renseignés.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Posture de l'utilisateur</td>
-                  <td>
-                    <strong>Exécutant</strong>
-                    <p>
-                      L'humain fait tout le travail de création et de
-                      configuration à la main.
-                    </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Superviseur</strong>
-                    <p>
-                      L'IA propose, le chef de projet valide, ajuste ou corrige
-                      en quelques clics.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Ressenti UX / UI</td>
-                  <td>
-                    <strong>Complexe &amp; austère</strong>
-                    <p>
-                      Formulaires denses, tableaux de bord froids et rigides.
-                    </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Engageant &amp; ludique</strong>
-                    <p>
-                      Interface moderne, interactions fluides et visuellement
-                      clarifiées.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+          <div class="personas-container">
+            <!-- Persona 1 -->
+            <article class="persona-card">
+              <header class="persona-header">
+                <img
+                  src="./assets/img/projectOs/persona-1-lg.webp"
+                  alt="Portrait de Marc"
+                />
+                <div class="persona-title">
+                  <h3>Marc, 34 ans</h3>
+                  <p lang="en">Lead Project Manager</p>
+                </div>
+              </header>
+
+              <div class="persona-body">
+                <blockquote class="persona-quote">
+                  « Je veux passer mon temps à piloter les projets, pas à chercher
+                  des infos éparpillées ou copier des cartes. »
+                </blockquote>
+
+                <div class="persona-section">
+                  <h4>Frustrations</h4>
+                  <ul>
+                    <li>
+                      <strong>Information fragmentée :</strong> Coordonnées, devis
+                      et briefs dispersés entre mails, Drive et logiciels de
+                      suivi.
+                    </li>
+                    <li>
+                      <strong>Saisie répétitive :</strong> Perte de temps à
+                      recréer manuellement les fiches clients et les tâches.
+                    </li>
+                    <li>
+                      <strong>Manque de visibilité :</strong> Risque d'attribuer
+                      du travail à des collaborateurs déjà occupés ou en congé.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="persona-section">
+                  <h4>Besoins clés</h4>
+                  <ul>
+                    <li>
+                      <strong>Espace unique :</strong> Centraliser fiches clients,
+                      devis, planning et suivi de projet au même endroit.
+                    </li>
+                    <li>
+                      <strong>Génération automatique :</strong> Lancer un projet
+                      pré-rempli par l'IA en quelques secondes.
+                    </li>
+                    <li>
+                      <strong>Supervision totale :</strong> Garder la main pour
+                      valider et ajuster chaque suggestion avant diffusion.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Persona 2 -->
+            <article class="persona-card">
+              <header class="persona-header">
+                <img
+                  src="./assets/img/projectOs/persona-2-lg.webp"
+                  alt="Portrait de Léa"
+                />
+                <div class="persona-title">
+                  <h3>Léa, 27 ans</h3>
+                  <p lang="en">UI/UX Designer</p>
+                </div>
+              </header>
+
+              <div class="persona-body">
+                <blockquote class="persona-quote">
+                  « J'ai juste besoin de savoir où trouver mes briefs et de
+                  travailler sur un planning sans surcharge ni sollicitations en
+                  congé. »
+                </blockquote>
+
+                <div class="persona-section">
+                  <h4>Frustrations</h4>
+                  <ul>
+                    <li>
+                      <strong>Perte de contexte :</strong> Devoir réclamer les
+                      accès, les coordonnées clients ou le devis validé pour
+                      comprendre un projet.
+                    </li>
+                    <li>
+                      <strong>Planning irréaliste :</strong> Surcharge de travail
+                      due à une mauvaise estimation des disponibilités.
+                    </li>
+                    <li>
+                      <strong>Interruption des congés :</strong> Sollicitations ou
+                      tâches assignées pendant ses jours de repos.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="persona-section">
+                  <h4>Besoins clés</h4>
+                  <ul>
+                    <li>
+                      <strong>Source unique de vérité :</strong> Retrouver toutes
+                      les pièces du projet (devise, contacts, tâches) en un clic.
+                    </li>
+                    <li>
+                      <strong>Charge équilibrée :</strong> Planning réaliste
+                      généré selon sa charge réelle et ses congés déclarés.
+                    </li>
+                    <li>
+                      <strong>Interface fluide :</strong> Poser ses jours
+                      d'absence et consulter ses tâches du jour en toute
+                      simplicité.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
           <br />
           <h3>
-            <span class="highlighted"
-              >L'opportunité UX ne réside pas dans l'ajout de fonctionnalités
-              complexes, mais dans la simplification du démarrage et le respect
-              de la charge mentale des équipes.</span
+            <span class="highlighted">
+              La centralisation des données (devis, contacts, planning) et la
+              génération assistée par IA permettent de répondre au besoin de gain
+              de temps de Marc tout en garantissant le respect du rythme de
+              travail de Léa.</span
             >
           </h3>
         </div>
-        <br />
       </div>
-    </div>
-    <div class="part-2">
-      <div class="process">
-        <h2>Personas</h2>
-        <br />
-        <p>
-          Pour concevoir une plateforme adaptée aux réalités du terrain, deux
-          profils clés ont été identifiés.
-        </p>
-        <br />
+      <div class="part-3" style="padding: 50px 0">
+        <div class="process">
+          <div class="flow-header">
+            <h2><span lang="en">User Flow</span> : Parcours de création assisté par l'IA</h2>
+            <p>
+              Comment le chef de projet passe du cahier des charges au lancement
+              automatisé en 4 étapes clés.
+            </p>
+          </div>
 
-        <div class="personas-container">
-          <!-- Persona 1 -->
-          <article class="persona-card">
-            <header class="persona-header">
-              <img
-                src="./assets/img/projectOs/persona-1-lg.webp"
-                alt="Persona Chef de projets"
-              />
-              <div class="persona-title">
-                <h3>Marc, 34 ans</h3>
-                <p>Lead Project Manager</p>
+          <div class="flow-grid" role="list">
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">1</span>
+                <span class="step-tag">Entrée</span>
               </div>
-            </header>
+              <span class="step-actor"><span aria-hidden="true">👤</span> Chef de projet</span>
+              <h3 class="step-title">Import du document</h3>
+              <ul class="step-list">
+                <li>Glisser-déposer du cahier des charges (PDF / Word).</li>
+                <li>
+                  Option : ajout d'une note vocale ou de contraintes spécifiques.
+                </li>
+              </ul>
+            </div>
 
-            <div class="persona-body">
-              <blockquote class="persona-quote">
-                « Je veux passer mon temps à piloter les projets, pas à chercher
-                des infos éparpillées ou copier des cartes. »
-              </blockquote>
-
-              <div class="persona-section">
-                <h4>Frustrations</h4>
-                <ul>
-                  <li>
-                    <strong>Information fragmentée :</strong> Coordonnées, devis
-                    et briefs dispersés entre mails, Drive et logiciels de
-                    suivi.
-                  </li>
-                  <li>
-                    <strong>Saisie répétitive :</strong> Perte de temps à
-                    recréer manuellement les fiches clients et les tâches.
-                  </li>
-                  <li>
-                    <strong>Manque de visibilité :</strong> Risque d'attribuer
-                    du travail à des collaborateurs déjà occupés ou en congé.
-                  </li>
-                </ul>
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">2</span>
+                <span class="step-tag">Automatique</span>
               </div>
+              <span class="step-actor actor-ia"><span aria-hidden="true">⚡</span> Moteur IA</span>
+              <h3 class="step-title">Analyse &amp; Génération</h3>
+              <ul class="step-list">
+                <li>Détection ou création de la fiche client dans l'annuaire.</li>
+                <li>Calcul du devis estimatif selon la grille tarifaire.</li>
+                <li>
+                  Découpage des tâches &amp; attribution selon la charge et les
+                  congés.
+                </li>
+              </ul>
+            </div>
 
-              <div class="persona-section">
-                <h4>Besoins clés</h4>
-                <ul>
-                  <li>
-                    <strong>Espace unique :</strong> Centraliser fiches clients,
-                    devis, planning et suivi de projet au même endroit.
-                  </li>
-                  <li>
-                    <strong>Génération automatique :</strong> Lancer un projet
-                    pré-rempli par l'IA en quelques secondes.
-                  </li>
-                  <li>
-                    <strong>Supervision totale :</strong> Garder la main pour
-                    valider et ajuster chaque suggestion avant diffusion.
-                  </li>
-                </ul>
+            <div class="flow-step active" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">3</span>
+                <span class="step-tag">Écran Clé</span>
+              </div>
+              <span class="step-actor"><span aria-hidden="true">👤</span> Chef de projet + IA</span>
+              <h3 class="step-title">Revue &amp; Validation</h3>
+              <ul class="step-list">
+                <li>Vérification des infos client et ajustement du devis.</li>
+                <li>Ajustement du Kanban proposé (<span lang="en">drag &amp; drop</span> fluide).</li>
+              </ul>
+              <div class="highlight-box">
+                <span aria-hidden="true">💡</span> <strong>Étape Charnière :</strong> L'humain garde le contrôle
+                final sur les propositions de l'IA.
               </div>
             </div>
-          </article>
 
-          <!-- Persona 2 -->
-          <article class="persona-card">
-            <header class="persona-header">
-              <img
-                src="./assets/img/projectOs/persona-2-lg.webp"
-                alt="Persona Chef de projets"
-              />
-              <div class="persona-title">
-                <h3>Léa, 27 ans</h3>
-                <p>UI/UX Designer</p>
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">4</span>
+                <span class="step-tag">Sortie</span>
               </div>
-            </header>
-
-            <div class="persona-body">
-              <blockquote class="persona-quote">
-                « J'ai juste besoin de savoir où trouver mes briefs et de
-                travailler sur un planning sans surcharge ni sollicitations en
-                congé. »
-              </blockquote>
-
-              <div class="persona-section">
-                <h4>Frustrations</h4>
-                <ul>
-                  <li>
-                    <strong>Perte de contexte :</strong> Devoir réclamer les
-                    accès, les coordonnées clients ou le devis validé pour
-                    comprendre un projet.
-                  </li>
-                  <li>
-                    <strong>Planning irréaliste :</strong> Surcharge de travail
-                    due à une mauvaise estimation des disponibilités.
-                  </li>
-                  <li>
-                    <strong>Interruption des congés :</strong> Sollicitations ou
-                    tâches assignées pendant ses jours de repos.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="persona-section">
-                <h4>Besoins clés</h4>
-                <ul>
-                  <li>
-                    <strong>Source unique de vérité :</strong> Retrouver toutes
-                    les pièces du projet (devise, contacts, tâches) en un clic.
-                  </li>
-                  <li>
-                    <strong>Charge équilibrée :</strong> Planning réaliste
-                    généré selon sa charge réelle et ses congés déclarés.
-                  </li>
-                  <li>
-                    <strong>Interface fluide :</strong> Poser ses jours
-                    d'absence et consulter ses tâches du jour en toute
-                    simplicité.
-                  </li>
-                </ul>
-              </div>
+              <span class="step-actor"><span aria-hidden="true">🚀</span> Système &amp; Équipe</span>
+              <h3 class="step-title">Lancement &amp; Dispatch</h3>
+              <ul class="step-list">
+                <li>Projet activé et devis archivé.</li>
+                <li>Client enregistré dans l'annuaire central.</li>
+                <li>
+                  Notification des membres avec planning respectant leurs congés.
+                </li>
+              </ul>
             </div>
-          </article>
+          </div>
         </div>
-        <br />
-        <h3>
-          <span class="highlighted">
-            La centralisation des données (devis, contacts, planning) et la
-            génération assistée par IA permettent de répondre au besoin de gain
-            de temps de Marc tout en garantissant le respect du rythme de
-            travail de Léa.</span
-          >
-        </h3>
       </div>
-    </div>
-    <div class="part-3" style="padding: 50px 0">
-      <div class="process">
-        <div class="flow-header">
-          <h2>User Flow : Parcours de création assisté par l'IA</h2>
+      <div class="part-3">
+        <div class="process">
+          <h2>Wireframes et Exploration UX</h2>
           <p>
-            Comment le chef de projet passe du cahier des charges au lancement
-            automatisé en 4 étapes clés.
+            Avant de travailler la couche visuelle, j'ai conçu les wireframes pour
+            poser l'architecture de l'information et valider l'ergonomie des 4
+            écrans clés. L'objectif était de
+            <b>répondre précisément aux besoins identifiés</b> lors de la phase de
+            recherche
+          </p>
+          <ul>
+            <li>
+              <b>Penser l'espace "Copilote" </b>: Structurer la zone de contrôle
+              IA de manière claire pour que le chef de projet comprenne
+              instantanément ce qui a été extrait du cahier des charges (devis,
+              fiches client, tâches).
+            </li>
+            <li>
+              <b>Hiérarchiser l'information</b> : Mettre en avant l'étape de
+              validation (Supervision) et faciliter la consultation du Kanban sans
+              surcharger l'écran.
+            </li>
+            <li>
+              <b>Garantir la lisibilité de l'équipe</b> : Intégrer visuellement la
+              charge de travail et les congés des collaborateurs au moment de
+              l'attribution des cartes.
+            </li>
+          </ul>
+          <br />
+          <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
+            Cette étape m'a permis de valider : La logique de navigation, la
+            disposition des composants et la fluidité du parcours utilisateur
+            avant toute décision esthétique.
           </p>
         </div>
+      </div>
 
-        <div class="flow-grid">
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">1</span>
-              <span class="step-tag">Entrée</span>
-            </div>
-            <span class="step-actor">👤 Chef de projet</span>
-            <h3 class="step-title">Import du document</h3>
-            <ul class="step-list">
-              <li>Glisser-déposer du cahier des charges (PDF / Word).</li>
-              <li>
-                Option : ajout d'une note vocale ou de contraintes spécifiques.
-              </li>
-            </ul>
-          </div>
-
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">2</span>
-              <span class="step-tag">Automatique</span>
-            </div>
-            <span class="step-actor actor-ia">⚡ Moteur IA</span>
-            <h3 class="step-title">Analyse & Génération</h3>
-            <ul class="step-list">
-              <li>Détection ou création de la fiche client dans l'annuaire.</li>
-              <li>Calcul du devis estimatif selon la grille tarifaire.</li>
-              <li>
-                Découpage des tâches & attribution selon la charge et les
-                congés.
-              </li>
-            </ul>
-          </div>
-
-          <div class="flow-step active">
-            <div class="step-badge-wrapper">
-              <span class="step-number">3</span>
-              <span class="step-tag">Écran Clé</span>
-            </div>
-            <span class="step-actor">👤 Chef de projet + IA</span>
-            <h3 class="step-title">Revue & Validation</h3>
-            <ul class="step-list">
-              <li>Vérification des infos client et ajustement du devis.</li>
-              <li>Ajustement du Kanban proposé (drag & drop fluide).</li>
-            </ul>
-            <div class="highlight-box">
-              💡 <strong>Étape Charnière :</strong> L'humain garde le contrôle
-              final sur les propositions de l'IA.
-            </div>
-          </div>
-
-          <div class="flow-step">
-            <div class="step-badge-wrapper">
-              <span class="step-number">4</span>
-              <span class="step-tag">Sortie</span>
-            </div>
-            <span class="step-actor">🚀 Système & Équipe</span>
-            <h3 class="step-title">Lancement & Dispatch</h3>
-            <ul class="step-list">
-              <li>Projet activé et devis archivé.</li>
-              <li>Client enregistré dans l'annuaire central.</li>
-              <li>
-                Notification des membres avec planning respectant leurs congés.
-              </li>
-            </ul>
-          </div>
+      <div class="wireframes desktop">
+        <img src="./assets/img/projectOs/wireframe_1.webp" alt="Wireframe, écran clé 1 sur 4" />
+        <img src="./assets/img/projectOs/wireframe_2.webp" alt="Wireframe, écran clé 2 sur 4" />
+        <img src="./assets/img/projectOs/wireframe_3.webp" alt="Wireframe, écran clé 3 sur 4" />
+        <img src="./assets/img/projectOs/wireframe_4.webp" alt="Wireframe, écran clé 4 sur 4" />
+      </div>
+      <div class="part-3">
+        <div class="process">
+          <h2>Prototypage avec Figma AI + Ajustements UI</h2>
+          <p>
+            Pour passer des wireframes à la maquette haute fidélité, j'ai utilisé
+            l'agent IA de Figma comme un accélérateur de production, tout en
+            gardant une supervision totale sur le rendu final. Au préalable, j'ai
+            configuré mon Design System en y intégrant mes variables de couleurs
+            et mes typographies.
+          </p>
+          <ul>
+            <li>
+              <b>Un prompt précis :</b> J'ai explicitement indiqué dans mon prompt
+              d'appliquer cette charte graphique et d'adopter un style UI à la
+              fois clair, moderne et ludique.
+            </li>
+            <li>
+              <b>La génération automatique</b> : Figma AI a ainsi généré une
+              première structure visuelle directement alignée sur la palette et
+              l'esprit souhaités.
+            </li>
+            <li>
+              <b>Mes ajustements de Product Designer :</b> J'ai ensuite affiné le
+              rendu en revoyant les contrastes, les wordings, restructurer les
+              espaces de respiration, ajuster la hiérarchie visuelle et vérifier
+              l'ergonomie globale des composants.
+            </li>
+          </ul>
+          <br />
+          <a
+            href="https://www.figma.com/proto/fl25gEc4qcxkPL7PkhDqcS/ProjectOS?node-id=72-313&amp;p=f&amp;t=UcnW05kxXqxlWonv-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=72%3A313"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir le prototype (s'ouvre dans un nouvel onglet)"
+            style="margin-bottom: 3rem"
+            class="btn-underline"
+            ><span class="sun">Voir le prototype</span></a
+          >
         </div>
       </div>
-    </div>
-    <div class="part-3">
-      <div class="process">
-        <h2>Wireframes et Exploration UX</h2>
-        <p>
-          Avant de travailler la couche visuelle, j'ai conçu les wireframes pour
-          poser l'architecture de l'information et valider l'ergonomie des 4
-          écrans clés. L'objectif était de
-          <b>répondre précisément aux besoins identifiés</b> lors de la phase de
-          recherche
-        </p>
-        <ul>
-          <li>
-            <b>Penser l'espace "Copilote" </b>: Structurer la zone de contrôle
-            IA de manière claire pour que le chef de projet comprenne
-            instantanément ce qui a été extrait du cahier des charges (devis,
-            fiches client, tâches).
-          </li>
-          <li>
-            <b>Hiérarchiser l'information</b> : Mettre en avant l'étape de
-            validation (Supervision) et faciliter la consultation du Kanban sans
-            surcharger l'écran.
-          </li>
-          <li>
-            <b>Garantir la lisibilité de l'équipe</b> : Intégrer visuellement la
-            charge de travail et les congés des collaborateurs au moment de
-            l'attribution des cartes.
-          </li>
-        </ul>
-        <br />
-        <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
-          Cette étape m'a permis de valider : La logique de navigation, la
-          disposition des composants et la fluidité du parcours utilisateur
-          avant toute décision esthétique.
-        </p>
-      </div>
-    </div>
 
-    <div class="wireframes desktop">
-      <img src="./assets/img/projectOs/wireframe_1.webp" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_2.webp" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_3.webp" alt="Wireframes" />
-      <img src="./assets/img/projectOs/wireframe_4.webp" alt="Wireframes" />
-    </div>
-    <div class="part-3">
-      <div class="process">
-        <h2>Prototypage avec Figma AI + Ajustements UI</h2>
-        <p>
-          Pour passer des wireframes à la maquette haute fidélité, j'ai utilisé
-          l'agent IA de Figma comme un accélérateur de production, tout en
-          gardant une supervision totale sur le rendu final. Au préalable, j'ai
-          configuré mon Design System en y intégrant mes variables de couleurs
-          et mes typographies.
-        </p>
-        <ul>
-          <li>
-            <b>Un prompt précis :</b> J'ai explicitement indiqué dans mon prompt
-            d'appliquer cette charte graphique et d'adopter un style UI à la
-            fois clair, moderne et ludique.
-          </li>
-          <li>
-            <b>La génération automatique</b> : Figma AI a ainsi généré une
-            première structure visuelle directement alignée sur la palette et
-            l'esprit souhaités.
-          </li>
-          <li>
-            <b>Mes ajustements de Product Designer :</b> J'ai ensuite affiné le
-            rendu en revoyant les contrastes, les wordings, restructurer les
-            espaces de respiration, ajuster la hiérarchie visuelle et vérifier
-            l'ergonomie globale des composants.
-          </li>
-        </ul>
-        <br />
-        <a
-          href="https://www.figma.com/proto/fl25gEc4qcxkPL7PkhDqcS/ProjectOS?node-id=72-313&p=f&t=UcnW05kxXqxlWonv-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=72%3A313"
-          target="_blank"
-          style="margin-bottom: 3rem"
-          class="btn-underline"
-          ><h3 class="sun"><span>Voir le prototype</span></h3></a
-        >
+      <div class="prototype desktop">
+        <img src="./assets/img/projectOs/step-1-hifi.webp" alt="Maquette haute fidélité, écran clé 1 sur 4" />
+        <img src="./assets/img/projectOs/step-2-hifi.webp" alt="Maquette haute fidélité, écran clé 2 sur 4" />
+        <img src="./assets/img/projectOs/step-3-hifi.webp" alt="Maquette haute fidélité, écran clé 3 sur 4" />
+        <img src="./assets/img/projectOs/step-4-hifi.webp" alt="Maquette haute fidélité, écran clé 4 sur 4" />
       </div>
-    </div>
-
-    <div class="prototype desktop">
-      <img src="./assets/img/projectOs/step-1-hifi.webp" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-2-hifi.webp" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-3-hifi.webp" alt="Prototype" />
-      <img src="./assets/img/projectOs/step-4-hifi.webp" alt="Prototype" />
-    </div>
-    <div class="part-5">
-      <div class="process">
-        <h2>Bilan et enseignement</h2>
-        <p>
-          Ce projet prouve qu'un outil dopé à l'IA ne fonctionne que si
-          l'utilisateur conserve la maîtrise de ses choix. L'enjeu UX majeur
-          n'était pas de tout automatiser, mais de créer une interface de
-          validation simple, transparente et rassurante.
-        </p>
-        <p>Ce que j'en retiens pour ma pratique :</p>
-        <ul>
-          <li>
-            <b> Créer de la confiance </b>: Donner de la visibilité sur ce que
-            fait l'IA est essentiel pour que l'utilisateur adopte l'outil sans
-            crainte de perdre le contrôle.
-          </li>
-          <li>
-            <b>Un workflow plus rapide </b>: Collaborer avec des outils IA
-            (Gemini et Figma AI) accélère les phases de recherche et
-            d'exploration visuelle, ce qui permet de passer plus de temps sur
-            l'ergonomie, les besoins utilisateurs et la valeur métier.
-          </li>
-        </ul>
+      <div class="part-5">
+        <div class="process">
+          <h2>Bilan et enseignement</h2>
+          <p>
+            Ce projet prouve qu'un outil dopé à l'IA ne fonctionne que si
+            l'utilisateur conserve la maîtrise de ses choix. L'enjeu UX majeur
+            n'était pas de tout automatiser, mais de créer une interface de
+            validation simple, transparente et rassurante.
+          </p>
+          <p>Ce que j'en retiens pour ma pratique :</p>
+          <ul>
+            <li>
+              <b> Créer de la confiance </b>: Donner de la visibilité sur ce que
+              fait l'IA est essentiel pour que l'utilisateur adopte l'outil sans
+              crainte de perdre le contrôle.
+            </li>
+            <li>
+              <b>Un workflow plus rapide </b>: Collaborer avec des outils IA
+              (Gemini et Figma AI) accélère les phases de recherche et
+              d'exploration visuelle, ce qui permet de passer plus de temps sur
+              l'ergonomie, les besoins utilisateurs et la valeur métier.
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
+    </main>
     <footer class="footer" id="footer">
       <h2>On prend contact ?</h2>
       <p
@@ -699,15 +706,21 @@
       </p>
       <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
     </footer>
-    <button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
-      <svg class="" viewBox="0 0 23 13">
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
         <polygon
           style="stroke: #000"
           points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
         ></polygon>
       </svg>
     </button>
-    <div class="cursor"></div>
+    <div class="cursor" aria-hidden="true"></div>
     <script src="./assets/js/style.js"></script>
 
   </body>

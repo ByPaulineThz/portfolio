@@ -30,12 +30,15 @@
   -->
 
   <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
     <header class="header" id="header">
-      <a href="./index.html" class="logo">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
         <svg
           id="logotype"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
         >
           <defs>
             <style>
@@ -43,7 +46,7 @@
               <!-- .cls-2{fill: #fff} -->
             </style>
           </defs>
-          <g id="" data-name="Calque 2">
+          <g data-name="Calque 2">
             <g id="Calque_1-2" data-name="Calque 1">
               <path
                 class="cls-1"
@@ -84,7 +87,7 @@
           </g>
         </svg>
       </a>
-      <nav class="nav-bar desktop" id="navbarDesktop">
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
         <ul class="nav-list">
           <li class="nav-list-item">
             <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
@@ -100,7 +103,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -108,7 +110,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-bar mobile" id="navbarMobile">
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
         <button class="toggle-menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbarMobile">
           <span class="line line1"></span>
           <span class="line line2"></span>
@@ -129,7 +131,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -150,166 +151,171 @@
         </div>
       </nav>
     </header>
-    <main class="home projet" id="project_1">
-      <div class="row">
-        <div class="main-txt fadeInDown">
-          <span>UI design</span>
-          <h1>
-            Aether <br />
-            VR Travel & Exploration
-          </h1>
-          <p>
-            Un projet UI qui explore et met en pratique les différents
-            <b>effets et animations disponibles sur Figma. </b>
-          </p>
+    <main id="main" tabindex="-1">
+      <div class="home projet" id="project_1">
+        <div class="row">
+          <div class="main-txt fadeInDown">
+            <span>UI design</span>
+            <h1>
+              Aether <br />
+              <span lang="en">VR Travel &amp; Exploration</span>
+            </h1>
+            <p>
+              Un projet UI qui explore et met en pratique les différents
+              <b>effets et animations disponibles sur Figma. </b>
+            </p>
+          </div>
+          <div class="main-img">
+            <img
+              src="./assets/img/aether/aether.webp"
+              alt="Aperçu de l'application Aether VR Travel &amp; Exploration"
+            />
+          </div>
         </div>
-        <div class="main-img">
-          <img
-            src="./assets/img/aether/aether.webp"
-            alt="Aether VR Travel & Exploration"
-          />
+      </div>
+      <section class="elements" aria-label="Informations clés du projet">
+        <div class="element element-1">
+          <span>Rôle</span>
+          <p>UI Designer</p>
+        </div>
+
+        <div class="element element-3">
+          <span>Livrables</span>
+          <p>Maquettes UI, vidéo mockup</p>
+        </div>
+        <div class="element element-4">
+          <span>Outils utilisés</span>
+          <p>Figma, After Effect</p>
+        </div>
+      </section>
+      <div class="part-1">
+        <div class="process">
+          <div class="content" style="margin-top: 0">
+            <h2>Concept</h2>
+            <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
+              Aether est un concept d'application de réservation de voyages
+              immersifs en réalité virtuelle (VR), conçu pour explorer des lieux
+              inaccessibles comme la surface de Mars depuis chez soi.
+            </p>
+          </div>
+
+          <div class="content">
+            <h2>Objectif</h2>
+            <p>
+              L'objectif était de travailler les<b
+                >fonctionnalités avancées de Figma</b
+              >
+              pour créer <b>un prototype vivant et ultra-fluide </b>:
+            </p>
+            <ul>
+              <li>
+                <span class="highlighted"><b>Smart Animate</b></span> : des
+                transitions fluides où les éléments se transforment d'un écran à
+                l'autre.
+              </li>
+
+              <li>
+                <span class="highlighted"><b>Effet de profondeur</b></span> : des
+                animations en parallaxe pour renforcer le côté immersif dès
+                l'accueil.
+              </li>
+              <li>
+                <span class="highlighted"><b>Micro-interactions</b></span> : des
+                boutons et états interactifs dynamiques pour donner un feedback
+                visuel immédiat à chaque clic.
+              </li>
+            </ul>
+          </div>
+          <a
+            href="https://www.figma.com/design/EzMIFEPEVav4cC0862HEKy/Aether-VR-Travel---Exploration?node-id=0-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir le projet Figma (s'ouvre dans un nouvel onglet)"
+            style="margin-bottom: 3rem"
+            class="btn-underline"
+            ><span class="sun">Voir le projet Figma</span></a
+          >
+        </div>
+      </div>
+      <div class="part-aether">
+        <div class="process">
+          <div class="flex">
+            <video
+              width="1080"
+              controls
+              autoplay loop muted playsinline
+              aria-label="Vidéo de démonstration du prototype Aether"
+              poster="assets/img/aether/aether-poster.webp"
+              class="aether-video"
+            >
+              <source src="assets/video/aether-square.mp4" type="video/mp4" />
+              <!-- <source src="assets/video/aether.ogg" type="video/ogg" /> -->
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="part-3">
+        <div class="process">
+          <div class="content flex aether-screens">
+            <img
+              src="./assets/img/aether/1.webp"
+              alt="Onboarding"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/2.webp"
+              alt="Carrousel voyages"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/3.webp"
+              alt="Bottom Sheet - Ajout rapide au panier"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/4.webp"
+              alt="Fiche voyage sur Mars"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/5.webp"
+              alt="Détails voyage sur Mars"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/6.webp"
+              alt="Panier"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/7.webp"
+              alt="Suppression produit panier"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/8.webp"
+              alt="Page de recherche"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/9.webp"
+              alt="Rédaction de la recherche"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/10.webp"
+              alt="Actualisation du bouton de résultats"
+              class="aether-picture"
+            />
+            <img
+              src="./assets/img/aether/11.webp"
+              alt="Liste des résultats"
+              class="aether-picture"
+            />
+          </div>
         </div>
       </div>
     </main>
-    <div class="elements">
-      <div class="element element-1">
-        <span>Rôle</span>
-        <p>UI Designer</p>
-      </div>
-
-      <div class="element element-3">
-        <span>Livrables</span>
-        <p>Maquettes UI, vidéo mockup</p>
-      </div>
-      <div class="element element-4">
-        <span>Outils utilisés</span>
-        <p>Figma, After Effect</p>
-      </div>
-    </div>
-    <div class="part-1">
-      <div class="process">
-        <div class="content" style="margin-top: 0">
-          <h2>Concept</h2>
-          <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
-            Aether est un concept d'application de réservation de voyages
-            immersifs en réalité virtuelle (VR), conçu pour explorer des lieux
-            inaccessibles comme la surface de Mars depuis chez soi.
-          </p>
-        </div>
-
-        <div class="content">
-          <h2>Objectif</h2>
-          <p>
-            L'objectif était de travailler les<b
-              >fonctionnalités avancées de Figma</b
-            >
-            pour créer <b>un prototype vivant et ultra-fluide </b>:
-          </p>
-          <ul>
-            <li>
-              <span class="highlighted"><b>Smart Animate</b></span> : des
-              transitions fluides où les éléments se transforment d'un écran à
-              l'autre.
-            </li>
-
-            <li>
-              <span class="highlighted"><b>Effet de profondeur</b></span> : des
-              animations en parallaxe pour renforcer le côté immersif dès
-              l'accueil.
-            </li>
-            <li>
-              <span class="highlighted"><b>Micro-interactions</b></span> : des
-              boutons et états interactifs dynamiques pour donner un feedback
-              visuel immédiat à chaque clic.
-            </li>
-          </ul>
-        </div>
-        <a
-          href="https://www.figma.com/design/EzMIFEPEVav4cC0862HEKy/Aether-VR-Travel---Exploration?node-id=0-1"
-          target="_blank"
-		  style="margin-bottom:3rem"
-          class="btn-underline"
-          ><h3 class="sun"><span>Voir le projet Figma</span></h3></a
-        >
-      </div>
-    </div>
-    <div class="part-aether">
-      <div class="process">
-        <div class="flex">
-          <video
-            width="1080"
-            controls
-            autoplay loop muted playsinline
-            poster="assets/img/aether/aether-poster.webp"
-            class="aether-video"
-          >
-            <source src="assets/video/aether-square.mp4" type="video/mp4" />
-            <!-- <source src="assets/video/aether.ogg" type="video/ogg" /> -->
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="part-3">
-      <div class="process">
-        <div class="content flex aether-screens">
-          <img
-            src="./assets/img/aether/1.webp"
-            alt="Onboarding"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/2.webp"
-            alt="Carrousel voyages"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/3.webp"
-            alt="Bottom Sheet - Ajout rapide au panier"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/4.webp"
-            alt="Fiche voyage sur Mars"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/5.webp"
-            alt="Détails voyage sur MArs"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/6.webp"
-            alt="Panier"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/7.webp"
-            alt="Suppression produit panier"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/8.webp"
-            alt="Page de recherche"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/9.webp"
-            alt="Rédaction de la recherche"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/10.webp"
-            alt="Actualisation du bouton de résulats"
-            class="aether-picture"
-          />
-          <img
-            src="./assets/img/aether/11.webp"
-            alt="Liste des résultats"
-            class="aether-picture"
-          />
-        </div>
-      </div>
-    </div>
     <footer class="footer" id="footer">
       <h2>On prend contact ?</h2>
       <p
@@ -329,15 +335,21 @@
       </p>
       <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
     </footer>
-    <button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
-      <svg class="" viewBox="0 0 23 13">
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
         <polygon
           style="stroke: #000"
           points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
         ></polygon>
       </svg>
     </button>
-    <div class="cursor"></div>
+    <div class="cursor" aria-hidden="true"></div>
     <script src="./assets/js/style.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@
   --sun: #edb441;
   --snow: #fffbfcff;
   --lightsun: #edb44177;
+  --sun-text: #8a5f00; /* jaune foncé pour le texte sur fond clair (contraste 5,6:1) */
 }
 
 * {
@@ -86,6 +87,61 @@ label {
 }
 .sun {
   color: var(--sun) !important
+}
+/*ACCESSIBILITÉ*/
+/* Texte réservé aux lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* Lien d'évitement : visible uniquement au focus clavier */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 0.75rem 1.25rem;
+  background: var(--raisin-black);
+  color: #fff;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+/* Focus clavier : double contour (trait sombre + halo blanc), lisible sur fond clair comme sombre */
+:focus-visible {
+  outline: 3px solid var(--raisin-black);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff;
+}
+/* <main> reçoit le focus via le lien d'évitement : pas de cadre */
+main:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* Texte jaune sur fond clair : version plus foncée pour respecter le contraste */
+.presentation .sun,
+.presentation-bis .sun {
+  color: var(--sun-text) !important;
+}
+/* Réglage système « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 /*HEADER NAV*/
 
@@ -230,8 +286,9 @@ body.menu-open {
     -webkit-tap-highlight-color: transparent;
   }
   .toggle-menu:focus-visible {
-    outline: 2px solid var(--sun);
+    outline: 2px solid var(--raisin-black);
     outline-offset: 2px;
+    box-shadow: 0 0 0 4px #fff; /* halo blanc : visible aussi sur le fond sombre de l'intro */
     border-radius: 8px;
   }
   .logo {
@@ -341,7 +398,7 @@ body.menu-open {
   }
 }
 /*MAIN HOME*/
-main.home {
+.home {
   /* border-bottom-left-radius: 80px;
   border-bottom-right-radius: 80px; */
   /* background: radial-gradient(var(--parisien), #2b3b34); */
@@ -367,7 +424,7 @@ main.home {
     background-position: 0% 50%;
   }
 }
-main.home .row {
+.home .row {
   margin: auto;
   display: flex;
   align-items: center;
@@ -510,8 +567,10 @@ main.home .row {
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .btn:hover:after,
+.btn:focus-visible:after,
 .btn.active:after,
-.box-project:hover .btn:after {
+.box-project:hover .btn:after,
+a:focus-visible .box-project .btn:after {
   transform: scaleX(1);
   transform-origin: left center;
 }
@@ -544,18 +603,35 @@ font-size:28px
     -webkit-transform 450ms ease;
 }
 
-.box-project:hover {
+.box-project:hover,
+a:focus-visible .box-project {
   transform: scale(1.01);
+}
+/* Focus clavier : le cadre entoure la carte entière plutôt que le lien */
+.realisations a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+.realisations a:focus-visible .box-project {
+  outline: 3px solid var(--raisin-black);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px #fff;
 }
 #box-project-1:hover,
 #box-project-3:hover,
-#box-project-5:hover {
+#box-project-5:hover,
+a:focus-visible #box-project-1,
+a:focus-visible #box-project-3,
+a:focus-visible #box-project-5 {
   background-color: var(--parisien);
   border: 2px solid var(--parisien);
 }
 #box-project-2:hover,
 #box-project-4:hover,
-#box-project-6:hover {
+#box-project-6:hover,
+a:focus-visible #box-project-2,
+a:focus-visible #box-project-4,
+a:focus-visible #box-project-6 {
   border: 2px solid var(--sun);
   background-color: var(--sun);
 }
@@ -613,7 +689,10 @@ font-size:28px
 
 .box-project.light:hover label,
 .box-project.light:hover h2,
-.box-project.light:hover p {
+.box-project.light:hover p,
+a:focus-visible .box-project.light label,
+a:focus-visible .box-project.light h2,
+a:focus-visible .box-project.light p {
   color: #fff;
 }
 
@@ -688,7 +767,8 @@ font-size:28px
   margin-left: 15px;
   transition: all ease-in 0.4s;
 }
-.box-project:hover .arrow {
+.box-project:hover .arrow,
+a:focus-visible .box-project .arrow {
   opacity: 1 !important;
   transform: matrix(1, 0, 0, 1, 10, 0);
   visibility: inherit !important;
@@ -791,13 +871,15 @@ font-size:28px
 }
 
 .btn-underline span:after,
-.btn-underline:hover span:before {
+.btn-underline:hover span:before,
+.btn-underline:focus-visible span:before {
   transform: scaleX(0);
   transform-origin: right center;
   transition-delay: 0s;
 }
 
-.btn-underline:hover span:after {
+.btn-underline:hover span:after,
+.btn-underline:focus-visible span:after {
   transform: scaleX(1);
   transform-origin: left center;
   transition-delay: 0.1s;
@@ -837,13 +919,13 @@ font-size:28px
 
 .skills-tab:hover {
   opacity: 1;
-  color: var(--lightsun);
-    border-bottom-color: var(--lightsun);
+  color: var(--raisin-black);
+  border-bottom-color: var(--lightsun);
 }
 
 .skills-tab.active {
   opacity: 1;
-  color: var(--sun);
+  color: var(--raisin-black);
   border-bottom-color: var(--sun);
 }
 

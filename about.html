@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <title>Portfolio | Pauline Thz</title>
+    <title>À propos | Portfolio Pauline Thz</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,12 +29,15 @@
     Rejoignez-moi sur LinkedIn ou envoyez-moi un email !
 -->
   <body class="body-about">
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
     <header class="header" id="header">
-      <a href="./index.html" class="logo">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
         <svg
           id="logotype"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
         >
           <defs>
             <style>
@@ -42,7 +45,7 @@
               <!-- .cls-2{fill: #fff} -->
             </style>
           </defs>
-          <g id="" data-name="Calque 2">
+          <g data-name="Calque 2">
             <g id="Calque_1-2" data-name="Calque 1">
               <path
                 class="cls-1"
@@ -83,13 +86,14 @@
           </g>
         </svg>
       </a>
-      <nav class="nav-bar desktop" id="navbarDesktop">
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
         <ul class="nav-list">
           <li class="nav-list-item">
             <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
           </li>
           <li class="nav-list-item">
             <a href="./about.html" class="nav-link nav-link-lg btn active"
+              aria-current="page"
               >A propos</a
             >
           </li>
@@ -101,7 +105,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -109,7 +112,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="nav-bar mobile" id="navbarMobile">
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
         <button
           class="toggle-menu"
           type="button"
@@ -126,7 +129,7 @@
             <a href="./index.html" class="nav-link btn">Accueil</a>
           </li>
           <li class="nav-list-item">
-            <a href="./about.html" class="nav-link btn active">A propos</a>
+            <a href="./about.html" class="nav-link btn active" aria-current="page">A propos</a>
           </li>
           <li class="nav-list-item">
             <a href="./index.html#projets" class="nav-link nav-link-lg btn"
@@ -136,7 +139,6 @@
           <li class="nav-list-item">
             <a
               href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
               download
               class="nav-link btn sun"
               >Télécharger CV</a
@@ -157,169 +159,187 @@
         </div>
       </nav>
     </header>
-    <main class="about">
-      <div class="row">
-        <div class="main-txt about-txt fadeInDown">
-          <span>Et si...</span>
-          <h1>Nous faisions connaissance</h1>
+    <main id="main" tabindex="-1">
+      <div class="about">
+        <div class="row">
+          <div class="main-txt about-txt fadeInDown">
+            <span>Et si...</span>
+            <h1>Nous faisions connaissance</h1>
+            <p>
+              Enchantée, je suis Pauline Thelliez, Product Designer UX/UI et
+              Développeuse Front-End, basée à Cambrai dans les Hauts-de-France.
+            </p>
+            <div class="main-btn">
+              <a href="./index.html#projets" class="btn-underline"
+                ><span>Voir les projets</span></a
+              >
+              <a
+                href="./assets/pdf/CV_Pauline_Thelliez.pdf"
+                download
+                class="btn-underline btn-light"
+                ><span>Télécharger le CV</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="presentation">
+        <img
+          src="./assets/img/about/a_propos_2.webp"
+          class="about-img"
+          alt="Photo de Pauline Thelliez"
+        />
+        <div class="arg">
+          <h2>De 2019 à 2021</h2>
+          <h3 class="sun">Placer l'utilisateur au centre</h3>
           <p>
-            Enchantée, je suis Pauline Thelliez, Product Designer UX/UI et
-            Développeuse Front-End, basée à Cambrai dans les Hauts-de-France.
+            Après une
+            <b>licence professionnelle en e-commerce et marketing numérique</b>,
+            j’ai voulu me concentrer sur le cœur du digital :
+            <b>l’utilisateur final</b>. Mon objectif au quotidien est de
+            <b
+              >concevoir des solutions simples, fluides et centrées sur leurs
+              besoins réels.</b
+            >
+            <br /><br />
+            Pour affiner cette vision, j’ai obtenu un
+            <b>Master en design graphique et d’interaction (Mention Très Bien)</b
+            >. À la suite de mes études, l’agence web qui m’accueillait en stage
+            m’a proposé mon premier poste d'UX/UI Designer. Une opportunité idéale
+            que j'ai acceptée pour lancer ma carrière !
           </p>
-          <div class="main-btn">
-            <a href="./index.html#projets" class="btn-underline"
-              ><span>Voir les projets</span></a
-            >
-            <a
-              href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-              target="_blank"
-              download
-              class="btn-underline btn-light"
-              ><span>Télécharger le CV</span></a
-            >
-          </div>
-        </div>
-      </div>
-    </main>
-    <section class="presentation">
-      <img
-        src="./assets/img/about/a_propos_2.webp"
-        class="about-img"
-        alt="Photo Pauline"
-      />
-      <div class="arg">
-        <h2>De 2019 à 2021</h2>
-        <h3 class="sun">Placer l'utilisateur au centre</h3>
-        <p>
-          Après une
-          <b>licence professionnelle en e-commerce et marketing numérique</b>,
-          j’ai voulu me concentrer sur le cœur du digital :
-          <b>l’utilisateur final</b>. Mon objectif au quotidien est de
-          <b
-            >concevoir des solutions simples, fluides et centrées sur leurs
-            besoins réels.</b
+          <br />
+
+          <h2>Depuis 2021</h2>
+          <h3 class="sun">Design d'interface et maîtrise technique</h3>
+          <p>
+            Au sein de l’agence, j’ai développé une forte polyvalence sur des
+            <b>projets variés</b> : applications métiers (dashboards,
+            back-office), e-commerce et applications mobiles. <br /><br />
+            Pour garantir la faisabilité de mes designs, j’ai
+            <b>approfondi le développement web</b>. Aujourd'hui, je crée des
+            <b>thèmes sur-mesure</b> (WordPress, PrestaShop, full custom PHP) et
+            je conçois des interfaces modernes avec <b>React</b>
+            (Mantine, Material UI, intégration d'APIs). Cette double compétence me
+            permet de faire un vrai pont entre le design et la réalité technique.
+          </p>
+          <br />
+
+          <h2>Et maintenant...</h2>
+          <h3 class="sun">Cap sur le Product Design</h3>
+          <p>
+            Passionnée par l’<b>apprentissage en continu</b>, je souhaite
+            aujourd'hui canaliser cette polyvalence vers mon cœur de métier :
+            <b>le Product Design</b>. <br /><br />
+            Mon ambition est de rejoindre une équipe produit stimulante où je
+            pourrai mettre à profit ma double culture Design x Dev, concevoir des
+            outils à forte valeur ajoutée et continuer d'évoluer dans un
+            environnement collaboratif.
+          </p>
+          <br />
+
+          <h2>Un petit recap' ?</h2>
+          <a
+            href="./assets/pdf/CV_Pauline_Thelliez.pdf"
+            download
+            class="btn-underline"
           >
-          <br /><br />
-          Pour affiner cette vision, j’ai obtenu un
-          <b>Master en design graphique et d’interaction (Mention Très Bien)</b
-          >. À la suite de mes études, l’agence web qui m’accueillait en stage
-          m’a proposé mon premier poste d'UX/UI Designer. Une opportunité idéale
-          que j'ai acceptée pour lancer ma carrière !
-        </p>
-        <br />
+            <span class="sun">Téléchargez mon CV</span>
+          </a>
+          <br />
+          <br />
 
-        <h2>Depuis 2021</h2>
-        <h3 class="sun">Design d'interface et maîtrise technique</h3>
-        <p>
-          Au sein de l’agence, j’ai développé une forte polyvalence sur des
-          <b>projets variés</b> : applications métiers (dashboards,
-          back-office), e-commerce et applications mobiles. <br /><br />
-          Pour garantir la faisabilité de mes designs, j’ai
-          <b>approfondi le développement web</b>. Aujourd'hui, je crée des
-          <b>thèmes sur-mesure</b> (WordPress, PrestaShop, full custom PHP) et
-          je conçois des interfaces modernes avec <b>React</b>
-          (Mantine, Material UI, intégration d'APIs). Cette double compétence me
-          permet de faire un vrai pont entre le design et la réalité technique.
-        </p>
-        <br />
-
-        <h2>Et maintenant...</h2>
-        <h3 class="sun">Cap sur le Product Design</h3>
-        <p>
-          Passionnée par l’<b>apprentissage en continu</b>, je souhaite
-          aujourd'hui canaliser cette polyvalence vers mon cœur de métier :
-          <b>le Product Design</b>. <br /><br />
-          Mon ambition est de rejoindre une équipe produit stimulante où je
-          pourrai mettre à profit ma double culture Design x Dev, concevoir des
-          outils à forte valeur ajoutée et continuer d'évoluer dans un
-          environnement collaboratif.
-        </p>
-        <br />
-
-        <h2>Un petit recap' ?</h2>
-        <a
-          href="./assets/pdf/CV_Pauline_Thelliez.pdf"
-          target="_blank"
-          download
-          class="btn-underline"
-        >
-          <h3 class="sun"><span>Téléchargez mon CV</span></h3>
-        </a>
-        <br />
-        <br />
-
-        <h2>Certifications</h2>
-        <div>
-          <img
-            id="certifJavascript"
-            src="./assets/img/certif/udemy-certification-javascript.webp"
-            alt="Certification Udemy JavaScript"
-            class="certification"
-          />
-          <img
-            id="certifFigma"
-            src="./assets/img/certif/udemy-certification-figma.webp"
-            alt="Certification Udemy Figma"
-            class="certification"
-          />
-          <img
-            id="certifReact"
-            src="./assets/img/certif/udemy-certification-react.webp"
-            alt="Certification Udemy React"
-            class="certification"
-          />
-
-          <!-- Structure de la Modal -->
-          <div id="certifModal" class="modal">
-            <span class="close">&times;</span>
-
-            <!-- Boutons de navigation -->
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-
+          <h2>Certifications</h2>
+          <div>
             <img
-              class="modal-content"
-              id="certification"
-              alt="Certification agrandie"
+              id="certifJavascript"
+              src="./assets/img/certif/udemy-certification-javascript.webp"
+              alt="Certification Udemy JavaScript"
+              class="certification"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="Agrandir : Certification Udemy JavaScript"
             />
-            <div id="caption"></div>
+            <img
+              id="certifFigma"
+              src="./assets/img/certif/udemy-certification-figma.webp"
+              alt="Certification Udemy Figma"
+              class="certification"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="Agrandir : Certification Udemy Figma"
+            />
+            <img
+              id="certifReact"
+              src="./assets/img/certif/udemy-certification-react.webp"
+              alt="Certification Udemy React"
+              class="certification"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="Agrandir : Certification Udemy React"
+            />
+
+            <!-- Structure de la Modal -->
+            <div
+              id="certifModal"
+              class="modal"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Certification agrandie"
+            >
+              <span class="close" role="button" tabindex="0" aria-label="Fermer">&times;</span>
+
+              <!-- Boutons de navigation -->
+              <a class="prev" role="button" tabindex="0" aria-label="Certification précédente">&#10094;</a>
+              <a class="next" role="button" tabindex="0" aria-label="Certification suivante">&#10095;</a>
+
+              <img
+                class="modal-content"
+                id="certification"
+                alt="Certification agrandie"
+              />
+              <div id="caption" aria-hidden="true"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="presentation-bis">
-      <div class="arg">
-        <h2>Mes centres d'intérêts</h2>
-        <h3 class="sun">Au-delà des écrans</h3>
-        <p>
-          En dehors du pro, je suis passionnée par le cinéma, la littérature,
-          les animaux et les voyages. Mais ce qui m'anime le plus, c'est
-          <b>l'éducation canine, le running et le bien-être en général.</b> Ce
-          sont des activités qui me <b>challengent au quotidien</b> et me
-          poussent à <b>toujours aller un plus loin </b>: rééduquer mon chien
-          adopté en refuge, préparer ma prochaine course ou simplement chercher
-          à progresser, un objectif après l'autre.
-        </p>
-      </div>
-      <div class="hoobie-img">
-        <div class="hoobie-content">
-          <img
-            src="./assets/img/about/foulees_du_riot.webp"
-            alt="Les Foulées du Riot"
-            class="hoobie"
-          />
-          <div class="hoobie-info">Les Foulées du Riot 2026</div>
+      </section>
+      <section class="presentation-bis">
+        <div class="arg">
+          <h2>Mes centres d'intérêts</h2>
+          <h3 class="sun">Au-delà des écrans</h3>
+          <p>
+            En dehors du pro, je suis passionnée par le cinéma, la littérature,
+            les animaux et les voyages. Mais ce qui m'anime le plus, c'est
+            <b>l'éducation canine, le running et le bien-être en général.</b> Ce
+            sont des activités qui me <b>challengent au quotidien</b> et me
+            poussent à <b>toujours aller un plus loin </b>: rééduquer mon chien
+            adopté en refuge, préparer ma prochaine course ou simplement chercher
+            à progresser, un objectif après l'autre.
+          </p>
         </div>
-        <div class="hoobie-content">
-          <img
-            src="./assets/img/about/education_canine.webp"
-            alt="Education canine"
-            class="hoobie"
-          />
-          <div class="hoobie-info">Rééducation canine complète</div>
+        <div class="hoobie-img">
+          <div class="hoobie-content">
+            <img
+              src="./assets/img/about/foulees_du_riot.webp"
+              alt="Les Foulées du Riot 2026"
+              class="hoobie"
+            />
+            <div class="hoobie-info">Les Foulées du Riot 2026</div>
+          </div>
+          <div class="hoobie-content">
+            <img
+              src="./assets/img/about/education_canine.webp"
+              alt="Rééducation canine complète"
+              class="hoobie"
+            />
+            <div class="hoobie-info">Rééducation canine complète</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <footer class="footer" id="footer">
       <h2>On prend contact ?</h2>
       <p
@@ -341,15 +361,21 @@
         &copy; Pauline Thelliez
       </p>
     </footer>
-    <button class="back-to-up" onclick="scrollToTop()" id="back-to-up">
-      <svg class="" viewBox="0 0 23 13">
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
         <polygon
           style="stroke: #000"
           points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
         ></polygon>
       </svg>
     </button>
-    <div class="cursor"></div>
+    <div class="cursor" aria-hidden="true"></div>
     <script src="./assets/js/style.js"></script>
   </body>
 </html>
