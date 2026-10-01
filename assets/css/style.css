@@ -588,6 +588,10 @@ a:focus-visible .box-project .btn:after {
 }
 
 /*REALISATIONS*/
+.secondary-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 660px;
+}
 .realisations {
   padding: 10px;
 }
