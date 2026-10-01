@@ -410,7 +410,7 @@
 }
 
 .benchmark-table th:last-child {
-  background-color: #edb4412e;
+  background-color: var(--lightsun);
   color: var(--sun-text);
 }
 

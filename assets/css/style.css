@@ -11,7 +11,7 @@
   --lion: #b48557;
   --sun: #edb441;
   --snow: #fffbfcff;
-  --lightsun: #edb44177;
+  --lightsun: #edb4412e;
   --sun-text: #8a5f00; /* jaune foncé pour le texte sur fond clair (contraste 5,6:1) */
 }
 
@@ -731,6 +731,31 @@ a:focus-visible .box-project.light p {
   width: 80%;
 }
 
+.element-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.element-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--ebb);
+  border-radius: 24px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.element-chip span {
+  font-family: var(--paragraphe);
+  font-size: 14px;
+  font-weight: 500;
+  color: #252525;
+}
+
 @media (max-width: 730px) {
   .box-project {
     flex-direction: column;
@@ -953,7 +978,6 @@ a:focus-visible .box-project .arrow {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin-top: 30px;
 }
 
 .skills-group h3 {
@@ -1019,8 +1043,8 @@ a:focus-visible .box-project .arrow {
 
 .soft-skill-card {
   flex: 1 1 200px;
-  max-width: 220px;
-  background: var(--ebb);
+  max-width: 160px;
+  background: var(--lightsun);
   border-radius: 16px;
   padding: 20px;
   transition:
@@ -1033,22 +1057,22 @@ a:focus-visible .box-project .arrow {
   transform: translateY(-2px);
 }
 
-.soft-skill-card i {
+.soft-skill-card svg {
   font-size: 22px;
-  color: var(--raisin-black);
+  color: var(--sun-text);
   margin-bottom: 10px;
   display: block;
   transition: color 0.2s ease;
 }
 
-.soft-skill-card:hover i {
+.soft-skill-card:hover svg {
   color: #fff;
 }
 
 .soft-skill-card h4 {
   font-family: var(--title);
   font-size: 16px;
-  color: #252525;
+  color: var(--sun-text);;
   margin-bottom: 4px;
   transition: color 0.2s ease;
 }
@@ -1414,4 +1438,11 @@ footer {
   font-size: 14px;
   position: absolute;
   transition: all 0.3s ease-in-out;
+}
+
+/*PROJECT META (rôle et livrables sous la description d'un projet)*/
+.item-project p.project-meta {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 4px;
 }
