@@ -623,7 +623,6 @@ a:focus-visible .box-project .btn:after {
 a:focus-visible .box-project {
   transform: scale(1.01);
 }
-/* Focus clavier : le cadre entoure la carte entière plutôt que le lien */
 .realisations a:focus-visible {
   outline: none;
   box-shadow: none;
@@ -702,6 +701,7 @@ a:focus-visible #box-project-6 {
   background-position: center;
 }
 
+
 .box-project.light:hover label,
 .box-project.light:hover h2,
 .box-project.light:hover p,
@@ -764,7 +764,8 @@ a:focus-visible .box-project.light p {
   .box-project {
     flex-direction: column;
     width: 90%;
-    height: 440px;
+    height: auto;
+    padding-top:20px;
     margin-bottom: 30px;
   }
   .realisations {
@@ -777,9 +778,12 @@ a:focus-visible .box-project.light p {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
+  .box-project .img-project {
+   min-height:200px!important
+  }
 }
 .item-project {
-  padding: 20px 0 50px;
+  padding: 20px 0 20px;
   width: auto;
   display: flex;
   margin: auto auto auto 25px;
@@ -861,6 +865,7 @@ a:focus-visible .box-project .arrow {
 @media (max-width: 500px) {
   .secondary-grid {
     grid-template-columns: 1fr;
+    gap:50px
   }
 }
 /*BUTTONS*/
