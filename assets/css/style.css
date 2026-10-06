@@ -677,7 +677,6 @@ a:focus-visible #box-project-6 {
 }
 #box-project-3 .img-project {
   background: url("../img/trail_tail/trail_and_tail.webp");
-  padding: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -786,7 +785,7 @@ a:focus-visible .box-project.light p {
   }
 }
 .item-project {
-  padding: 20px 0 20px;
+  padding: 20px 10px;
   width: auto;
   display: flex;
   margin: auto auto auto 25px;
