@@ -517,6 +517,9 @@ body.menu-open {
     width: fit-content;
     min-width: 300px;
   }
+  .home .main-img {
+    max-width: 300px!important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -543,8 +546,8 @@ body.menu-open {
 .main-txt h2 {
   font-size: 1.5rem;
 }
-.main-img {
-  max-width: 300px;
+.home .main-img {
+  max-width: 440px;
   max-height: 40vh;
 }
 .main .btn {
@@ -865,7 +868,7 @@ a:focus-visible .box-project .arrow {
 @media (max-width: 500px) {
   .secondary-grid {
     grid-template-columns: 1fr;
-    gap:50px
+    gap:50px;
   }
 }
 /*BUTTONS*/
