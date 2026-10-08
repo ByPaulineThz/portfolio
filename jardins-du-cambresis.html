@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FAVICON-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Portfolio Pauline Thz" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <title>Les Jardins du Cambrésis, refonte d'un site vitrine | Pauline Thelliez</title>
+    <meta
+      name="description"
+      content="Refonte d'un site vitrine statique pour un paysagiste de Cambrai : design minimaliste, Astro, GSAP, accessibilité et SEO local. Projet de Pauline Thelliez."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/projet.css" />
+  </head>
+  <!--
+	Promis, aucune div n'a été maltraité durant la création de ce site.
+	-->
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <header class="header" id="header">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
+        <svg
+          id="logotype"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #f9b233;
+              }
+            </style>
+          </defs>
+          <g data-name="Calque 2">
+            <g id="Calque_1-2" data-name="Calque 1">
+              <path
+                class="cls-1"
+                d="M29,13.64h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,9.31,33.32h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,29,13.64Z"
+                transform="translate(-4.33 42.62) rotate(-90)"
+              />
+              <path
+                class="cls-1"
+                d="M9.31,45.54h0A19.68,19.68,0,0,1,29,65.22v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,9.31,45.54v0A0,0,0,0,1,9.31,45.54Z"
+                transform="translate(74.53 36.24) rotate(90)"
+              />
+              <path
+                class="cls-1"
+                d="M4.08,29.41h0A19.68,19.68,0,0,1,23.76,49.09v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,4.08,29.41v0A0,0,0,0,1,4.08,29.41Z"
+                transform="translate(51.51 57.16) rotate(135)"
+              />
+              <path
+                class="cls-1"
+                d="M25.59,6.67h0A19.68,19.68,0,0,1,45.27,26.36v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,6.67v0A0,0,0,0,1,25.59,6.67Z"
+                transform="translate(48.8 53.24) rotate(-135)"
+              />
+              <path
+                class="cls-1"
+                d="M25.59,52.32h0A19.68,19.68,0,0,1,45.27,72v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,52.32v0A0,0,0,0,1,25.59,52.32Z"
+                transform="translate(16.53 131.16) rotate(-135)"
+              />
+              <path
+                class="cls-1"
+                d="M36.34,46.53a7.54,7.54,0,0,1-3.24-.74,7.05,7.05,0,1,1,6.09-12.72,6.93,6.93,0,0,1,3.4,9.4l0,.07A6.8,6.8,0,0,1,36.34,46.53ZM36,36.86a2.33,2.33,0,0,0-2.15,1.49,2.43,2.43,0,0,0,1.26,3.35,2.52,2.52,0,1,0,2.17-4.54A2.94,2.94,0,0,0,36,36.86Z"
+              />
+              <path
+                class="cls-2"
+                id="p"
+                fill="#fff"
+                d="M90,11.44a21.33,21.33,0,0,0-9.31-8.35A33.92,33.92,0,0,0,65.52,0L38.64,0s0,0,0,0C44.31,5.76,46.17,14.91,44,22.7a12.83,12.83,0,0,0,1.42,10.86,9.67,9.67,0,0,1,.43,10.36c-2.09,3.6-3.18,7.77-2.05,11.77C46,63.36,44.29,72.3,38.74,78H51.39V46.33H65.52q9.65,0,15.82-3.31a21,21,0,0,0,9-8.58,23.68,23.68,0,0,0,2.8-11.22A22.87,22.87,0,0,0,90,11.44ZM76.41,32.58q-3.6,3.31-10.89,3.31H51.39V10.43H65.52Q80,10.43,80,23.22,80,29.28,76.41,32.58Z"
+              />
+            </g>
+          </g>
+        </svg>
+      </a>
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./about.html" class="nav-link nav-link-lg btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
+              >Projets</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a
+              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
+              download
+              class="nav-link btn sun"
+              >Télécharger CV</a
+            >
+          </li>
+          <li class="nav-list-icon">
+						<a href="tel:0631007416"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone preview-icon"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></a>
+					</li>
+					<li class="nav-list-icon">
+						<a href="mailto:thelliezpauline@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail preview-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+					</li>
+        </ul>
+      </nav>
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
+        <button
+          class="toggle-menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navbarMobile"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="./index.html" class="nav-link btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./about.html" class="nav-link btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
+              >Projets</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a
+              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
+              download
+              class="nav-link btn sun"
+              >Télécharger CV</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-contact">
+          <h2>On prend contact ?</h2>
+          <p>
+            <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+              ><span>thelliezpauline@gmail.com</span></a
+            >
+            <a href="tel:0631007416" class="btn-underline"
+              ><span>06 31 00 74 16</span></a
+            >
+            <a
+              href="https://www.linkedin.com/in/pauline-thelliez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg ></a>
+          </p>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="home projet" id="project_1">
+        <div class="row">
+          <div class="main-txt fadeInDown">
+            <span>Astro, GSAP</span>
+            <h1>Les Jardins du Cambrésis</h1>
+            <p>
+              Refonte du site vitrine d'un paysagiste de Cambrai : une page
+              unique, minimaliste et 100 % statique, pensée pour un large public
+              et sans back-office. Du design à la mise en ligne, avec un soin
+              particulier pour le référencement local et l'accessibilité.
+            </p>
+          </div>
+          <div class="main-img">
+            <img
+              src="./assets/img/jdc/jardins-du-cambresis.png"
+              alt="Aperçu du site Les Jardins du Cambrésis sur ordinateur et sur mobile"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="elements" aria-label="Informations clés du projet">
+        <div class="element element-1">
+          <span>Rôle</span>
+          <p>Product designer UX/UI, développeuse front-end</p>
+        </div>
+
+        <div class="element element-3">
+          <span>Livrables</span>
+          <p>Maquettes Figma, site statique responsive, pages légales</p>
+        </div>
+        <div class="element element-4">
+          <span>Outils utilisés</span>
+          <p>
+            Astro, GSAP, Figma, Web3Forms, Fontsource, Lucide, GitHub,
+            Cloudflare Pages
+          </p>
+        </div>
+      </section>
+      <div class="part-1">
+        <div class="process">
+          <div class="content" style="margin-top: 0">
+            <h2>Contexte du projet</h2>
+            <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
+              Les Jardins du Cambrésis, paysagiste à Cambrai, voulait une
+              vitrine claire pour présenter ses services à des publics très
+              différents : particuliers, entreprises et copropriétés. Le cahier
+              des charges était net : un design minimaliste, un contenu
+              statique et aucun back-office à maintenir, donc pas de WordPress.
+              J'ai pris en charge le projet de bout en bout : maquettes,
+              développement, référencement et mise en ligne.
+            </p>
+          </div>
+
+          <div class="content">
+            <h2>Un design minimaliste, pensé pour tous</h2>
+            <p>
+              Pour parler à tout le monde, j'ai gardé une page unique au
+              parcours court : les engagements, les domaines d'expertise et les
+              réalisations, puis le contact. Les avis Google sont mis en avant
+              dès l'accueil pour rassurer, et le header reste visible pour que
+              le téléphone et le bouton de contact soient toujours à portée de
+              main. Une palette sobre (vert profond, crème, une touche
+              d'orange) et deux typographies, Fraunces pour les titres et Work
+              Sans pour le texte, donnent un ton naturel sans jamais prendre le
+              pas sur les photos.
+            </p>
+          </div>
+
+          <div class="content">
+            <h2>Pourquoi ces choix techniques</h2>
+            <p>
+              Les contraintes du client auraient pu se satisfaire d'un site en
+              HTML classique. J'ai choisi Astro pour garder la simplicité d'un
+              site statique tout en gagnant ce qui fait la maintenabilité d'un
+              projet moderne : des composants réutilisables, un layout partagé
+              et un code organisé. J'avais écarté une application React
+              complète, trop lourde pour une page vitrine et moins naturelle
+              pour le référencement.
+            </p>
+            <ul>
+              <li>
+                <b>Astro</b> génère des pages HTML statiques, sans serveur ni
+                back-office, et n'embarque du JavaScript que là où il est utile.
+                Le contenu est lisible directement par les moteurs de
+                recherche, un point essentiel pour un commerce local.
+              </li>
+              <li>
+                <b>Contenu dans le code</b> : textes, services et avis sont
+                versionnés avec Git. La contrepartie est que chaque mise à jour
+                passe par un déploiement, un compromis cohérent pour un site
+                dont le contenu évolue peu.
+              </li>
+              <li>
+                <b>GSAP</b> anime l'apparition des sections et le changement
+                d'onglet de façon sobre, et se désactive pour les personnes qui
+                ont réduit les animations dans leur système.
+              </li>
+              <li>
+                <b>Fontsource</b> héberge les polices avec le site : aucune
+                requête vers un service tiers et un chargement maîtrisé.
+              </li>
+              <li>
+                <b>Web3Forms</b> reçoit les messages du formulaire de contact
+                sans serveur à maintenir, en cohérence avec une architecture
+                entièrement statique.
+              </li>
+              <li>
+                <b>GitHub et Cloudflare Pages</b> déploient le site
+                automatiquement à chaque mise à jour, ce qui permet de présenter
+                une préproduction en ligne en attendant le nom de domaine.
+              </li>
+            </ul>
+          </div>
+
+          <div class="content">
+            <h2>Accessibilité, SEO et performance</h2>
+            <ul>
+              <li>
+                <b>Accessibilité</b> : site utilisable au clavier et avec un
+                lecteur d'écran. Lien d'évitement, onglets d'expertise conformes
+                au pattern ARIA avec navigation aux flèches, galerie photo
+                construite sur l'élément dialog natif (focus maîtrisé, fermeture
+                avec Échap), formulaire avec labels et saisie assistée.
+              </li>
+              <li>
+                <b>SEO local</b> : titre et description propres à chaque page,
+                URL canonique, balises Open Graph, données structurées de type
+                entreprise locale, sitemap et fichier robots.txt. J'ai
+                volontairement exclu la note d'avis des données structurées :
+                Google ne l'exploite pas pour des avis publiés par l'entreprise
+                elle-même.
+              </li>
+              <li>
+                <b>Performance</b> : images optimisées et dimensionnées par
+                Astro, image d'accueil chargée en priorité, polices
+                auto-hébergées et JavaScript limité aux interactions.
+              </li>
+            </ul>
+          </div>
+
+          <div class="content">
+            <h2>Défi principal</h2>
+            <p>
+              Le plus délicat a été de rendre le site vivant (animations,
+              onglets, galerie) sans sacrifier
+              <b>l'accessibilité ni la performance.</b>
+              Chaque interaction a été reprise sous l'angle du clavier et des
+              lecteurs d'écran : les onglets suivent le pattern ARIA, la
+              galerie s'appuie sur un élément natif plutôt que sur une surcouche
+              maison, et les animations s'effacent pour qui le demande. Ce
+              travail, mené une fois le site construit, m'a convaincue qu'il
+              vaut mieux l'intégrer dès la maquette.
+            </p>
+          </div>
+
+          <div class="content">
+            <h2>Ce que j'en retiens</h2>
+            <p>
+              Ce projet m'a permis de partir des contraintes du client plutôt
+              que d'un outil choisi par habitude, et d'arbitrer entre
+              simplicité, maintenabilité et performance. Il m'a aussi confirmé
+              que l'accessibilité et le SEO sont des critères de conception à
+              part entière. Le site est actuellement en préproduction sur
+              Cloudflare Pages ; la mise en ligne définitive suivra dès que le
+              nom de domaine sera finalisé.
+            </p>
+            <p>
+              Le code source est hébergé dans un dépôt privé : je le partage
+              volontiers sur demande.
+            </p>
+          </div>
+          <a
+            href="https://jardins-cambresis.thelliezpauline.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir le site en préproduction (s'ouvre dans un nouvel onglet)"
+            style="margin-bottom: 3rem"
+            class="btn-underline"
+          >
+            <span class="sun">Voir le site en préproduction</span></a
+          >
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <h2>On prend contact ?</h2>
+      <p
+        style="
+          display: flex;
+          gap: 25px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+          ><span>thelliezpauline@gmail.com</span></a
+        >
+        <a href="tel:0631007416" class="btn-underline"
+          ><span>06 31 00 74 16</span></a
+        >
+        <a
+              href="https://www.linkedin.com/in/pauline-thelliez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg ></a>
+      </p>
+      <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
+    </footer>
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+        <polygon
+          style="stroke: #000"
+          points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+        ></polygon>
+      </svg>
+    </button>
+    <div class="cursor" aria-hidden="true"></div>
+    <script src="./assets/js/style.js"></script>
+  </body>
+</html>

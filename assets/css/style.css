@@ -605,6 +605,7 @@ a:focus-visible .box-project .btn:after {
 }
 .realisations#projets-secondaires h2 {
   font-size: 28px;
+  line-height: normal;
 }
 .box-project {
   margin: 10px auto;
@@ -638,9 +639,11 @@ a:focus-visible .box-project {
 #box-project-1:hover,
 #box-project-3:hover,
 #box-project-5:hover,
+#box-project-7:hover,
 a:focus-visible #box-project-1,
 a:focus-visible #box-project-3,
-a:focus-visible #box-project-5 {
+a:focus-visible #box-project-5 
+a:focus-visible #box-project-7{
   background-color: var(--parisien);
   border: 2px solid var(--parisien);
 }
@@ -668,7 +671,7 @@ a:focus-visible #box-project-6 {
   background-color: transparent;
 }
 #box-project-2 .img-project {
-  background-image: url("../img/projectOs/cover-projectos.webp");
+  background-image: url("../img/noka/noka_matcha.png");
   background-size: cover;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -683,11 +686,12 @@ a:focus-visible #box-project-6 {
   background-size: 90%;
 }
 #box-project-4 .img-project {
-  background: url("../img/boxy/boxy-generator.webp");
-  padding: 10px;
+  background-image: url("../img/projectOs/cover-projectos.webp");
+  background-size: cover;
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: transparent;
 }
 #box-project-5 .img-project {
   background: url("../img/aether/aether.webp");
@@ -698,6 +702,13 @@ a:focus-visible #box-project-6 {
 
 #box-project-6 .img-project {
   background: url("../img/tiaa/cover-tiaa.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box-project-7 .img-project {
+  background: url("../img/jdc/jardins-du-cambresis.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
