@@ -671,7 +671,7 @@ a:focus-visible #box-project-6 {
   background-color: transparent;
 }
 #box-project-2 .img-project {
-  background-image: url("../img/noka/noka_matcha.png");
+  background-image: url("../img/noka/noka_matcha.webp");
   background-size: cover;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -708,7 +708,7 @@ a:focus-visible #box-project-6 {
 }
 
 #box-project-7 .img-project {
-  background: url("../img/jdc/jardins-du-cambresis.png");
+  background: url("../img/jdc/jardins-du-cambresis.webp");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
