@@ -989,3 +989,9 @@
     transition: none;
   }
 }
+
+/* Listes à interlignage normal (textes longs) */
+.list-normal li {
+  line-height: normal;
+  margin-bottom: 10px;
+}
