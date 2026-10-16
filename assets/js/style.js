@@ -1,134 +1,220 @@
-//Juste pour le fun
+/* ==========================================================================
+   Portfolio Pauline Thelliez — interactions
+   Chaque module vérifie la présence de ses éléments : le fichier est commun
+   à toutes les pages.
+   ========================================================================== */
+
+// Juste pour le fun
 console.log(
   "%c Hey toi le dev curieux ! 👋 ",
-  "background: #5a6d65; color:#fff ; font-size: 16px; font-weight: bold; padding: 8px; border-radius: 4px;",
+  "background:#20373b;color:#fafaf7;font-size:16px;font-weight:bold;padding:8px;border-radius:4px;",
 );
 console.log(
   "%cSi tu inspectes mon code, c'est qu'on a probablement des choses à se dire. On prend contact ? ",
-  "background: #edb441; color:#000 ; font-size: 16px; font-weight: bold; padding: 8px; border-radius: 4px;",
+  "background:#ffc64f;color:#20373b;font-size:16px;font-weight:bold;padding:8px;border-radius:4px;",
 );
 
-const cursor = document.querySelector(".cursor");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.top = `${e.clientY - 15}px`;
-  cursor.style.left = `${e.clientX - 15}px`;
-});
+/* ---------- Menu mobile ---------- */
+(() => {
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.getElementById("menu");
+  if (!toggle || !menu) return;
 
-document.addEventListener("click", () => {
-  cursor.classList.add("expand");
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
+  const closeBtn = menu.querySelector(".menu__close");
+  const focusables = () =>
+    menu.querySelectorAll('a[href], button:not([disabled])');
 
-document.addEventListener("click", () => {
-  cursor.classList.add("expand");
-  setTimeout(() => cursor.classList.remove("expand"), 500);
-});
+  function setMenu(open, { restoreFocus = true } = {}) {
+    menu.hidden = !open;
+    menu.classList.toggle("is-open", open);
+    document.body.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    if (open) {
+      closeBtn.focus();
+    } else if (restoreFocus) {
+      toggle.focus();
+    }
+  }
 
-var modal = document.getElementById("certifModal");
-//TOGGLE MENU MOBILE
-const toggleMobileButton = document.querySelector(".toggle-menu");
-const navBar = document.querySelector("#navbarMobile");
+  toggle.addEventListener("click", () => setMenu(true));
+  closeBtn.addEventListener("click", () => setMenu(false));
 
-function setMobileMenu(open) {
-  navBar.classList.toggle("toggle", open);
-  document.body.classList.toggle("menu-open", open);
-  toggleMobileButton.setAttribute("aria-expanded", String(open));
-  toggleMobileButton.setAttribute(
-    "aria-label",
-    open ? "Fermer le menu" : "Ouvrir le menu",
+  // Un lien (y compris une ancre de la page courante) referme le menu
+  menu.querySelectorAll("a").forEach((link) =>
+    link.addEventListener("click", () => setMenu(false, { restoreFocus: false })),
   );
-}
 
-toggleMobileButton.addEventListener("click", () => {
-  setMobileMenu(!navBar.classList.contains("toggle"));
-});
+  menu.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      setMenu(false);
+      return;
+    }
+    // Le focus reste piégé dans le menu tant qu'il est ouvert
+    if (e.key === "Tab") {
+      const items = focusables();
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 
-// Ferme le menu dès qu'on clique sur un lien (y compris les ancres de la page courante,
-// qui ne rechargent pas la page et laissaient donc le menu ouvert)
-navBar.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => setMobileMenu(false));
-});
+  // Repasse en desktop ou retour arrière depuis le cache : menu fermé
+  window
+    .matchMedia("(min-width: 901px)")
+    .addEventListener("change", (e) => e.matches && setMenu(false, { restoreFocus: false }));
+  window.addEventListener("pageshow", () => setMenu(false, { restoreFocus: false }));
+})();
 
-// Ferme avec la touche Échap
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") setMobileMenu(false);
-});
+/* ---------- Apparitions au défilement ---------- */
+(() => {
+  const items = document.querySelectorAll("[data-reveal], [data-reveal-mark]");
+  if (!items.length) return;
 
-// Ferme si on repasse en affichage desktop (rotation, redimensionnement)
-window.matchMedia("(min-width: 992px)").addEventListener("change", (e) => {
-  if (e.matches) setMobileMenu(false);
-});
+  // Décalage progressif pour les éléments d'un même groupe
+  document.querySelectorAll("[data-reveal-group]").forEach((group) => {
+    group.querySelectorAll("[data-reveal]").forEach((el, i) => {
+      el.style.setProperty("--delay", `${Math.min(i, 6) * 0.1}s`);
+    });
+  });
 
-// Retour arrière : le navigateur peut restaurer la page depuis son cache avec le menu encore ouvert
-window.addEventListener("pageshow", () => setMobileMenu(false));
-
-function toggleTopButton() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("back-to-up").classList.remove("none");
-  } else {
-    document.getElementById("back-to-up").classList.add("none");
-  }
-}
-// BACK TO UP
-function scrollToTop() {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-}
-// Masque le bouton (et le retire de la navigation clavier) dès le chargement, pas seulement au premier scroll
-if (document.getElementById("back-to-up")) toggleTopButton();
-
-//NAVBAR
-let prevScrollpos = window.pageYOffset;
-var logo = document.querySelector(".logo");
-var navbar = document.getElementById("navbarDesktop");
-window.onscroll = function () {
-  let currentScrollpos = window.pageYOffset;
-  const links = document.getElementsByClassName("nav-link-lg");
-  const toggleLine = document.getElementsByClassName("line");
-  const logotype = document.getElementById("p");
-
-  if (prevScrollpos > currentScrollpos) {
-    navbar.style.top = "0";
-    logo.style.top = "0.5rem";
-  } else {
-    navbar.style.top = "-100px";
-    logo.style.top = "-100px";
+  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("is-visible"));
+    return;
   }
 
-  if (currentScrollpos <= 738) {
-    navbar.style.background = "transparent";
-    logotype.setAttribute("fill", "#fff");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
+  );
 
-    for (let i = 0; i < toggleLine.length; i++) {
-      toggleLine[i].style.background = "#fff";
-    }
+  items.forEach((el) => observer.observe(el));
+})();
 
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.color = "#fff";
-    }
-  } else {
-    navbar.style.background = "#fff";
-    logotype.setAttribute("fill", "#000");
+/* ---------- Frise du parcours : le trait se remplit au défilement ---------- */
+(() => {
+  const timeline = document.querySelector(".timeline");
+  const fill = timeline && timeline.querySelector(".timeline__fill");
+  if (!fill || reduceMotion.matches) return;
 
-    for (let i = 0; i < toggleLine.length; i++) {
-      toggleLine[i].style.background = "#000";
-    }
+  let ticking = false;
+  function update() {
+    const rect = timeline.getBoundingClientRect();
+    const view = window.innerHeight * 0.7;
+    const progress = Math.min(1, Math.max(0, (view - rect.top) / rect.height));
+    fill.style.setProperty("--progress", progress.toFixed(3));
+    ticking = false;
+  }
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    },
+    { passive: true },
+  );
+  update();
+})();
 
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.color = "#000";
-    }
+/* ---------- Index des projets (accueil) ---------- */
+(() => {
+  const rows = document.querySelectorAll(".project-row");
+  const cards = document.querySelectorAll(".project-card");
+  if (!rows.length || !cards.length) return;
+
+  function activate(index) {
+    rows.forEach((row, i) => row.classList.toggle("is-active", i === index));
+    cards.forEach((card, i) => {
+      const active = i === index;
+      card.classList.toggle("is-active", active);
+      card.setAttribute("aria-hidden", String(!active));
+      card.querySelectorAll("a").forEach((a) => (a.tabIndex = active ? 0 : -1));
+    });
   }
 
-  prevScrollpos = currentScrollpos;
-  toggleTopButton();
-};
+  rows.forEach((row, i) => {
+    const link = row.querySelector(".project-row__link");
+    row.addEventListener("mouseenter", () => activate(i));
+    link.addEventListener("focus", () => activate(i));
+  });
 
-// ONGLETS 
-function initTabs(tabs) {
-  if (tabs.length === 0) return;
+  activate(0);
+})();
+
+/* ---------- Pause des animations en boucle ---------- */
+(() => {
+  const buttons = document.querySelectorAll(".motion-toggle");
+  if (!buttons.length) return;
+
+  let paused = false;
+  try {
+    paused = localStorage.getItem("motion-paused") === "1";
+  } catch (e) {
+    /* stockage indisponible : on garde la valeur par défaut */
+  }
+
+  function apply() {
+    document.documentElement.classList.toggle("motion-paused", paused);
+    buttons.forEach((btn) => {
+      btn.setAttribute("aria-pressed", String(paused));
+      btn.querySelector(".motion-toggle__label").textContent = paused
+        ? "Relancer les animations"
+        : "Mettre en pause les animations";
+    });
+  }
+
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      paused = !paused;
+      try {
+        localStorage.setItem("motion-paused", paused ? "1" : "0");
+      } catch (e) {
+        /* rien */
+      }
+      apply();
+    }),
+  );
+  apply();
+})();
+
+/* ---------- Bouton retour en haut ---------- */
+(() => {
+  const btn = document.querySelector(".to-top");
+  if (!btn) return;
+
+  const update = () => {
+    btn.hidden = window.scrollY < 600;
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
+    const target = document.getElementById("main");
+    if (target) target.focus({ preventScroll: true });
+  });
+})();
+
+/* ---------- Onglets (parcours utilisateur) ---------- */
+(() => {
+  const tabs = Array.from(document.querySelectorAll(".flow-tab"));
+  if (!tabs.length) return;
 
   const activate = (tab, moveFocus) => {
     tabs.forEach((t) => {
@@ -136,9 +222,11 @@ function initTabs(tabs) {
       t.classList.toggle("active", selected);
       t.setAttribute("aria-selected", String(selected));
       t.tabIndex = selected ? 0 : -1;
-      document
-        .getElementById(`panel-${t.dataset.tab}`)
-        .classList.toggle("active", selected);
+      const panel = document.getElementById(`panel-${t.dataset.tab}`);
+      if (panel) {
+        panel.classList.toggle("active", selected);
+        panel.hidden = !selected;
+      }
     });
     if (moveFocus) tab.focus();
   };
@@ -148,8 +236,7 @@ function initTabs(tabs) {
     tab.addEventListener("keydown", (e) => {
       let next;
       if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
-      else if (e.key === "ArrowLeft")
-        next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
       else if (e.key === "Home") next = tabs[0];
       else if (e.key === "End") next = tabs[tabs.length - 1];
       if (next) {
@@ -158,172 +245,50 @@ function initTabs(tabs) {
       }
     });
   });
-}
 
-initTabs(Array.from(document.querySelectorAll(".skills-tab")));
+  activate(tabs.find((t) => t.classList.contains("active")) || tabs[0], false);
+})();
 
-// --- MODAL CERTIFICATIONS ---
-// if (window.location.href.match(/about.html/)) {
-//   const modal = document.getElementById("certifModal");
-//   const modalImg = document.getElementById("certification");
-//   const captionText = document.getElementById("caption");
-//   const spanClose = document.getElementsByClassName("close")[0];
-//   const prevBtn = document.querySelector(".prev");
-//   const nextBtn = document.querySelector(".next");
+/* ---------- Capture longue repliable (« Voir plus ») ---------- */
+document.querySelectorAll(".case-figure-wrap").forEach((wrap) => {
+  const frame = wrap.querySelector(".case-figure-frame");
+  const img = frame && frame.querySelector("img");
+  const btn = wrap.querySelector(".case-figure-toggle");
+  const figure = wrap.closest("figure");
+  if (!frame || !btn) return;
 
-//   const certifImages = Array.from(document.querySelectorAll(".certification"));
-//   let currentIndex = 0;
-//   let lastFocused = null; 
+  let expanded = false;
 
-//   function showImage(index) {
-//     if (index < 0) {
-//       currentIndex = certifImages.length - 1; 
-//     } else if (index >= certifImages.length) {
-//       currentIndex = 0; 
-//     } else {
-//       currentIndex = index;
-//     }
+  const checkShort = () => {
+    if (!expanded) {
+      wrap.classList.toggle("is-short", frame.scrollHeight <= frame.clientHeight + 1);
+    }
+  };
 
-//     const currentImg = certifImages[currentIndex];
-//     modalImg.src = currentImg.src;
-//     modalImg.alt = currentImg.alt;
-//     captionText.innerHTML = currentImg.alt;
-//   }
+  const setState = (open) => {
+    expanded = open;
+    wrap.classList.toggle("is-expanded", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.querySelector("span").textContent = open ? "Voir moins" : "Voir plus";
+    frame.style.maxHeight = open ? `${frame.scrollHeight}px` : "";
+    if (!open && figure && figure.getBoundingClientRect().top < 0) {
+      figure.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "start" });
+    }
+  };
 
-//   function openModal(index) {
-//     lastFocused = document.activeElement;
-//     modal.style.display = "block";
-//     if (typeof toggleMobileButton !== "undefined")
-//       toggleMobileButton.style.display = "none";
-//     if (typeof logo !== "undefined") logo.style.display = "none";
-//     if (typeof navbar !== "undefined") navbar.style.display = "none";
+  btn.addEventListener("click", () => setState(!expanded));
 
-//     showImage(index);
-//     spanClose.focus();
-//   }
+  if (img && !img.complete) {
+    img.addEventListener("load", checkShort);
+    img.addEventListener("error", checkShort);
+  } else {
+    checkShort();
+  }
+  window.addEventListener("resize", checkShort);
+});
 
-//   function closeModal() {
-//     modal.style.display = "none";
-//     if (typeof toggleMobileButton !== "undefined")
-//       toggleMobileButton.style.display = "";
-//     if (typeof logo !== "undefined") logo.style.display = "block";
-//     if (typeof navbar !== "undefined") navbar.style.display = "block";
-//     if (lastFocused) lastFocused.focus();
-//   }
-
-//   certifImages.forEach((img, index) => {
-//     img.onclick = function () {
-//       openModal(index);
-//     };
-//   });
-
-//   prevBtn.onclick = (e) => {
-//     e.stopPropagation();
-//     showImage(currentIndex - 1);
-//   };
-
-//   nextBtn.onclick = (e) => {
-//     e.stopPropagation();
-//     showImage(currentIndex + 1);
-//   };
-
-//   spanClose.onclick = closeModal;
-
-//   modal.onclick = function (e) {
-//     if (e.target === modal) {
-//       closeModal();
-//     }
-//   };
-
-//   const activateOnKey = (el, action) =>
-//     el.addEventListener("keydown", (e) => {
-//       if (e.key === "Enter" || e.key === " ") {
-//         e.preventDefault();
-//         action();
-//       }
-//     });
-//   certifImages.forEach((img, index) =>
-//     activateOnKey(img, () => openModal(index)),
-//   );
-//   activateOnKey(spanClose, closeModal);
-//   activateOnKey(prevBtn, () => showImage(currentIndex - 1));
-//   activateOnKey(nextBtn, () => showImage(currentIndex + 1));
-
-//   document.addEventListener("keydown", (e) => {
-//     if (modal.style.display !== "block") return;
-//     if (e.key === "Escape") closeModal();
-//     else if (e.key === "ArrowLeft") showImage(currentIndex - 1);
-//     else if (e.key === "ArrowRight") showImage(currentIndex + 1);
-//     else if (e.key === "Tab") {
-//       const first = spanClose;
-//       const last = nextBtn;
-//       if (e.shiftKey && document.activeElement === first) {
-//         e.preventDefault();
-//         last.focus();
-//       } else if (!e.shiftKey && document.activeElement === last) {
-//         e.preventDefault();
-//         first.focus();
-//       }
-//     }
-//   });
-
-// let startX = 0;
-// let endX = 0;
-// let isDragging = false;
-
-// modal.addEventListener('touchstart', (e) => {
-//   startX = e.touches[0].clientX;
-// }, { passive: true });
-
-// modal.addEventListener('touchend', (e) => {
-//   endX = e.changedTouches[0].clientX;
-//   handleSwipe();
-// }, { passive: true });
-
-
-
-// modalImg.addEventListener('dragstart', (e) => e.preventDefault());
-
-// modal.addEventListener('mousedown', (e) => {
-//   if (e.target.closest('.prev') || e.target.closest('.next') || e.target.closest('.close')) return;
-  
-//   isDragging = true;
-//   startX = e.clientX;
-// });
-
-
-// document.addEventListener('mousemove', (e) => {
-//   if (!isDragging) return;
-//   endX = e.clientX;
-// });
-
-// document.addEventListener('mouseup', (e) => {
-//   if (!isDragging) return;
-//   isDragging = false;
-//   handleSwipe();
-// });
-
-
-// function handleSwipe() {
-//   const threshold = 50;
-//   const deltaX = startX - endX;
-
-//   if (Math.abs(deltaX) > threshold) {
-//     if (deltaX > 0) {
-//       showImage(currentIndex + 1); 
-//     } else {
-//       showImage(currentIndex - 1); 
-//     }
-//   }
-
-//   startX = 0;
-//   endX = 0;
-// }};
-
-initTabs(Array.from(document.querySelectorAll(".flow-tab")));
-
-// Vidéos en lecture automatique : arrêtées si l'utilisateur demande de réduire les animations
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+/* ---------- Vidéos : pas de lecture automatique si l'utilisateur réduit les animations ---------- */
+if (reduceMotion.matches) {
   document.querySelectorAll("video[autoplay]").forEach((video) => {
     video.removeAttribute("autoplay");
     video.pause();

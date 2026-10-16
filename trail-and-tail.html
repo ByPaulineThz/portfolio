@@ -2,238 +2,95 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--FAVICON-->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trail & Tail</title>
+    <meta name="description" content="Une application mobile qui met en relation des binômes coureur-chien selon le tempérament et le niveau sportif de leur duo, pour permettre à un chien…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trail & Tail" />
+    <meta property="og:description" content="Une application mobile qui met en relation des binômes coureur-chien selon le tempérament et le niveau sportif de leur duo, pour permettre à un chien…" />
+    <meta property="og:url" content="https://bypaulinethz.github.io/portfolio/trail-and-tail.html" />
+    <meta property="og:image" content="https://bypaulinethz.github.io/portfolio/assets/img/trail_tail/trail_and_tail.webp" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="Portfolio Pauline Thz" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pauline Thelliez" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-
-    <title>Trail &amp; Tail</title>
+    <meta name="theme-color" content="#fafaf7" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..600&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;family=Syne:wght@700&amp;display=swap" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/projet.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
-  <!--  Coucou petit curieux ! Puisque tu es arrivé jusqu'ici, pourquoi on ne discuterait pas un peu ? On prend contact ?  -->
+  <!--Hey ! C'est qui le plus curieux de nous deux ?
+  Si tu inspectes mon code, c'est qu'on a probablement des choses à se dire. On prend contact ?
+  -->
   <body>
     <a href="#main" class="skip-link">Aller au contenu principal</a>
-    <header class="header" id="header">
-      <a
-        href="./index.html"
-        class="logo"
-        aria-label="Pauline Thelliez, retour à l'accueil"
-      >
-        <svg
-          id="logotype"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 93.12 77.96"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <defs>
-            <style>
-              .cls-1 {
-                fill: #f9b233;
-              }
-            </style>
-          </defs>
-          <g data-name="Calque 2">
-            <g id="Calque_1-2" data-name="Calque 1">
-              <path
-                class="cls-1"
-                d="M29,13.64h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,9.31,33.32h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,29,13.64Z"
-                transform="translate(-4.33 42.62) rotate(-90)"
-              />
-              <path
-                class="cls-1"
-                d="M9.31,45.54h0A19.68,19.68,0,0,1,29,65.22v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,9.31,45.54v0A0,0,0,0,1,9.31,45.54Z"
-                transform="translate(74.53 36.24) rotate(90)"
-              />
-              <path
-                class="cls-1"
-                d="M4.08,29.41h0A19.68,19.68,0,0,1,23.76,49.09v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,4.08,29.41v0A0,0,0,0,1,4.08,29.41Z"
-                transform="translate(51.51 57.16) rotate(135)"
-              />
-              <path
-                class="cls-1"
-                d="M25.59,6.67h0A19.68,19.68,0,0,1,45.27,26.36v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,6.67v0A0,0,0,0,1,25.59,6.67Z"
-                transform="translate(48.8 53.24) rotate(-135)"
-              />
-              <path
-                class="cls-1"
-                d="M25.59,52.32h0A19.68,19.68,0,0,1,45.27,72v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,52.32v0A0,0,0,0,1,25.59,52.32Z"
-                transform="translate(16.53 131.16) rotate(-135)"
-              />
-              <path
-                class="cls-1"
-                d="M36.34,46.53a7.54,7.54,0,0,1-3.24-.74,7.05,7.05,0,1,1,6.09-12.72,6.93,6.93,0,0,1,3.4,9.4l0,.07A6.8,6.8,0,0,1,36.34,46.53ZM36,36.86a2.33,2.33,0,0,0-2.15,1.49,2.43,2.43,0,0,0,1.26,3.35,2.52,2.52,0,1,0,2.17-4.54A2.94,2.94,0,0,0,36,36.86Z"
-              />
-              <path
-                class="cls-2"
-                id="p"
-                fill="#fff"
-                d="M90,11.44a21.33,21.33,0,0,0-9.31-8.35A33.92,33.92,0,0,0,65.52,0L38.64,0s0,0,0,0C44.31,5.76,46.17,14.91,44,22.7a12.83,12.83,0,0,0,1.42,10.86,9.67,9.67,0,0,1,.43,10.36c-2.09,3.6-3.18,7.77-2.05,11.77C46,63.36,44.29,72.3,38.74,78H51.39V46.33H65.52q9.65,0,15.82-3.31a21,21,0,0,0,9-8.58,23.68,23.68,0,0,0,2.8-11.22A22.87,22.87,0,0,0,90,11.44ZM76.41,32.58q-3.6,3.31-10.89,3.31H51.39V10.43H65.52Q80,10.43,80,23.22,80,29.28,76.41,32.58Z"
-              />
-            </g>
-          </g>
-        </svg>
-      </a>
-      <nav
-        class="nav-bar desktop"
-        id="navbarDesktop"
-        aria-label="Navigation principale"
-      >
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="./about.html" class="nav-link nav-link-lg btn">A propos</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
-              >Projets</a
-            >
-          </li>
-          <li class="nav-list-item">
-            <a
-              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
-              download
-              class="nav-link btn sun"
-              >Télécharger CV</a
-            >
-          </li>
-          <li class="nav-list-icon">
-						<a href="tel:0631007416"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone preview-icon"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></a>
-					</li>
-					<li class="nav-list-icon">
-						<a href="mailto:thelliezpauline@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail preview-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-					</li>
-        </ul>
-      </nav>
-      <nav
-        class="nav-bar mobile"
-        id="navbarMobile"
-        aria-label="Navigation mobile"
-      >
-        <button
-          class="toggle-menu"
-          type="button"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-          aria-controls="navbarMobile"
-        >
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
+    <header class="site-header">
+      <div class="container site-header__inner anim-fade d1">
+        <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l’accueil">pauline thelliez<span class="logo__dot" aria-hidden="true"></span></a>
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li><a href="./index.html" class="nav__link">Accueil</a></li>
+            <li><a href="./about.html" class="nav__link">À propos</a></li>
+            <li><a href="./index.html#projets" class="nav__link" aria-current="page">Projets</a></li>
+          </ul>
+          <a href="./assets/pdf/CV-Pauline-Thelliez.pdf" class="btn btn--ink" download>Télécharger CV <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span class="sr-only"> (PDF)</span></a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
         </button>
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="./index.html" class="nav-link btn">Accueil</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="./about.html" class="nav-link btn">A propos</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
-              >Projets</a
-            >
-          </li>
-          <li class="nav-list-item">
-            <a
-              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
-              download
-              class="nav-link btn sun"
-              >Télécharger CV</a
-            >
-          </li>
-        </ul>
-
-        <div class="nav-contact">
-          <h2>On prend contact ?</h2>
-          <p>
-            <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
-              ><span>thelliezpauline@gmail.com</span></a
-            >
-            <a href="tel:0631007416" class="btn-underline"
-              ><span>06 31 00 74 16</span></a
-            >
-            <a
-              href="https://www.linkedin.com/in/pauline-thelliez/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-underline"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-linkedin"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                /></svg ></a>
-          </p>
-        </div>
-      </nav>
+      </div>
     </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="menu__top">
+        <span class="logo" aria-hidden="true">pauline thelliez<span class="logo__dot"></span></span>
+        <button type="button" class="menu__close" aria-label="Fermer le menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <nav aria-label="Navigation mobile">
+        <ul class="menu__list">
+          <li><a href="./index.html" class="menu__link">Accueil<span aria-hidden="true">01</span></a></li>
+          <li><a href="./about.html" class="menu__link">À propos<span aria-hidden="true">02</span></a></li>
+          <li><a href="./index.html#projets" class="menu__link" aria-current="page">Projets<span aria-hidden="true">03</span></a></li>
+        </ul>
+      </nav>
+      <div class="menu__footer">
+        <a href="./assets/pdf/CV-Pauline-Thelliez.pdf" class="btn btn--lg btn--saffron" download>Télécharger mon CV<span class="sr-only"> (PDF)</span></a>
+        <a href="mailto:thelliezpauline@gmail.com" class="btn btn--lg btn--outline-light">thelliezpauline@gmail.com</a>
+      </div>
+    </div>
+
     <main id="main" tabindex="-1">
-      <div class="home projet" id="project_1">
-        <div class="row">
-          <div class="main-txt fadeInDown">
-            <span lang="en">UX UI Case Study</span>
-            <h1>Trail &amp; Tail</h1>
-            <p>
-              Une application mobile qui met en relation des binômes
+      <div class="container case-hero">
+        <a href="./index.html#projets" class="back-link anim-fade d1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Tous les projets</a>
+        <div class="case-hero__head">
+          <div class="case-hero__titles">
+            <p class="case-tag anim-fade d2">UX UI Case Study</p>
+            <h1 class="case-title"><span class="line"><span class="anim-rise d2 mark anim-grow">Trail & Tail</span></span></h1>
+          </div>
+          <div class="case-hero__lead anim-fade d3"><p>Une application mobile qui met en relation des binômes
               coureur-chien selon le tempérament et le niveau sportif de leur
               duo, pour permettre à un chien réactif ou en rééducation de
               rejoindre un run en toute sérénité. Projet personnel, conçu avec
-              l'appui de l'IA comme outil de recherche et de prototypage.
-            </p>
-          </div>
-          <div class="main-img">
-            <img
-              src="./assets/img/trail_tail/trail_and_tail.webp"
-              alt="Aperçu de l'application Trail &amp; Tail"
-            />
-          </div>
+              l'appui de l'IA comme outil de recherche et de prototypage.</p></div>
         </div>
+        <figure class="case-cover anim-fade d3"><img src="./assets/img/trail_tail/trail_and_tail.webp" alt="Aperçu de l'application Trail & Tail" fetchpriority="high" /></figure>
+        <dl class="case-facts anim-fade d4" aria-label="Informations clés du projet"><div><dt>Rôle</dt><dd>UX UI Designer</dd></div><div><dt>Cibles</dt><dd>Propriétaires de chiens réactifs, en rééducation ou sportifs</dd></div><div><dt>Livrables</dt><dd>Wireframes, Prototype Figma</dd></div><div><dt>Outils utilisés</dt><dd>Figma, Claude</dd></div></dl>
       </div>
-      <section class="elements" aria-label="Informations clés du projet">
-        <div class="element element-1">
-          <span>Rôle</span>
-          <p>UX UI Designer</p>
-        </div>
-        <div class="element element-2">
-          <span>Cibles</span>
-          <p>Propriétaires de chiens réactifs, en rééducation ou sportifs</p>
-        </div>
-        <div class="element element-3">
-          <span>Livrables</span>
-          <p>Wireframes, Prototype Figma</p>
-        </div>
-        <div class="element element-4">
-          <span>Outils utilisés</span>
-          <p>Figma, Claude</p>
-        </div>
-      </section>
-      <div class="part-1">
-        <div class="process">
-          <div class="content" style="margin-top: 0">
-            <h2>Contexte / problématique réelle</h2>
-            <p style="border-left: solid var(--sun) 5px; padding-left: 15px">
-              <b>Beaucoup de propriétaires courent avec leur chien,</b> (moi la
+
+      <div class="case-body">
+        <section aria-labelledby="contexte-problematique-reelle" class="case-block">
+<div class="process">
+
+
+
+<div class="content">
+<div class="content__lead"><h2 id="contexte-problematique-reelle">Contexte / problématique réelle</h2><div class="callout"><p><b>Beaucoup de propriétaires courent avec leur chien,</b> (moi la
               première) mais les groupes de running canin existants sont
               <b>pensés pour des chiens sociables et bien dans leurs pattes.</b>
               Un propriétaire avec un chien réactif, craintif, senior ou en
@@ -241,608 +98,524 @@
               <b> évite ces groupes par peur d'un incident </b>(croisement
               imprévu, sursollicitation), et se retrouve à courir seul, alors
               même que
-              <b
-                >le contact avec d'autres binômes compatibles serait bénéfique
-                pour le chien</b
-              >
-              comme pour son maître. <br />
-              <br />Aujourd'hui,
-              <b
-                >aucun outil ne permet de filtrer un run ou un partenaire selon
-                le tempérament du chien,</b
-              >
-              pas seulement selon l'allure de course.
-            </p>
-          </div>
+              <b>le contact avec d'autres binômes compatibles serait bénéfique
+                pour le chien</b>
+              comme pour son maître.</p><p>Aujourd'hui,
+              <b>aucun outil ne permet de filtrer un run ou un partenaire selon
+                le tempérament du chien,</b>
+              pas seulement selon l'allure de course.</p></div><aside aria-labelledby="story-title" class="story">
+<p class="story__label">À l'origine du projet</p>
+<h3 class="story__title" id="story-title">L'idée est née sur le terrain, lors d'une session de canicross.</h3>
+<p>
+                J'y ai participé avec ma chienne, alors réactive, aux côtés
+                d'autres chiens qui ne s'entendaient pas toujours entre eux.
+                J'ai constaté que ces incompatibilités pouvaient
+                <b>générer des tensions dans le groupe</b>.
+              </p>
+<p>
+                Nous n'avions pas non plus tous le même niveau : à certaines
+                étapes, une partie du groupe s'arrêtait pour attendre les autres
+                avant de reprendre le parcours. C'est dommage quand on a
+                <b>des objectifs de performance</b>. C'est en observant ces
+                comportements que l'idée de Trail &amp; Tail a émergé.
+              </p>
+</aside></div>
 
-          <div class="content">
-            <h2><i lang="en">How Might We?</i></h2>
-            <h3>
-              <span class="highlighted"
-                >Comment permettre à un binôme coureur-chien de trouver des
+
+</div><div class="content">
+<div class="content__lead"><h2 id="how-might-we"><i lang="en">How Might We?</i></h2></div>
+<h3>
+<span class="highlighted">Comment permettre à un binôme coureur-chien de trouver des
                 partenaires de course et des parcours compatibles avec le
-                tempérament de son chien, en toute sérénité ?</span
-              >
-            </h3>
-          </div>
-          <div
-            class="content table-container"
-            tabindex="0"
-            role="region"
-            aria-labelledby="benchmark-titre"
-          >
-            <h2 id="benchmark-titre">Benchmark</h2>
-            <p>
-              Les solutions actuelles (Groupe Facebook, apps de running, clubs
-              canins) couvrent <b>un seul axe du besoin de nos utilisateurs</b>.
-              <br /><b
-                >Le social pour l'un, la performance pour l'autre, le
-                comportemental pour le dernier,</b
-              >
-              mais aucun ne couvre les 3 axes à la fois.
-            </p>
-            <br />
-            <table class="benchmark-table">
-              <caption class="sr-only">
+                tempérament de son chien, en toute sérénité ?</span>
+</h3>
+</div><div class="content">
+<div class="content__lead"><h2 id="benchmark-titre">Benchmark</h2><p>Les solutions actuelles (Groupe Facebook, apps de running, clubs
+              canins) couvrent <b>un seul axe du besoin de nos utilisateurs</b>. <b>Le social pour l'un, la performance pour l'autre, le
+                comportemental pour le dernier,</b>
+              mais aucun ne couvre les 3 axes à la fois.</p></div>
+
+
+<div aria-labelledby="benchmark-titre" class="table-container" role="region" tabindex="0"><table class="benchmark-table">
+<caption class="sr-only">
                 Comparatif entre les solutions actuelles (groupes Facebook,
                 applications de running, clubs canins) et Trail &amp; Tail
               </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Axe d'analyse</th>
-                  <th scope="col">
+<thead>
+<tr>
+<th scope="col">Axe d'analyse</th>
+<th scope="col">
                     Groupes Facebook <span>(running + chien)</span>
-                  </th>
-                  <th scope="col">Apps de running <span>(Strava)</span></th>
-                  <th scope="col">Clubs canins</th>
-                  <th scope="col">
+</th>
+<th scope="col">Apps de running <span>(Strava)</span></th>
+<th scope="col">Clubs canins</th>
+<th scope="col">
                     Notre plateforme <span>(Trail &amp; Tail)</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feature-title">Filtrage par tempérament</td>
-                  <td>
-                    <strong>Inexistant</strong>
-                    <p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="feature-title">Filtrage par tempérament</td>
+<td>
+<strong>Inexistant</strong>
+<p>
                       Dépend des messages postés au cas par cas, aucune
                       structuration.
                     </p>
-                  </td>
-                  <td>
-                    <strong>Absent</strong>
-                    <p>L'app ignore totalement la présence d'un chien.</p>
-                  </td>
-                  <td>
-                    <strong>Informel</strong>
-                    <p>
+</td>
+<td>
+<strong>Absent</strong>
+<p>L'app ignore totalement la présence d'un chien.</p>
+</td>
+<td>
+<strong>Informel</strong>
+<p>
                       Évoqué à l'oral avec l'éducateur, jamais en amont d'une
                       sortie.
                     </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Natif &amp; structuré</strong>
-                    <p>
+</td>
+<td class="highlight">
+<strong>Natif &amp; structuré</strong>
+<p>
                       Filtrage dès la création du profil (réactif, sociable,
                       senior, en rééducation...).
                     </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Sécurité du croisement</td>
-                  <td>
-                    <strong>Aucune anticipation</strong>
-                    <p>Découverte du contexte directement sur place.</p>
-                  </td>
-                  <td>
-                    <strong>Non pertinent</strong>
-                    <p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Sécurité du croisement</td>
+<td>
+<strong>Aucune anticipation</strong>
+<p>Découverte du contexte directement sur place.</p>
+</td>
+<td>
+<strong>Non pertinent</strong>
+<p>
                       L'app n'est pas pensée pour un croisement entre deux
                       chiens.
                     </p>
-                  </td>
-                  <td>
-                    <strong>Cadré en séance</strong>
-                    <p>
+</td>
+<td>
+<strong>Cadré en séance</strong>
+<p>
                       Géré par l'éducateur, uniquement pendant les séances
                       encadrées.
                     </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Anticipée &amp; signalée</strong>
-                    <p>
+</td>
+<td class="highlight">
+<strong>Anticipée &amp; signalée</strong>
+<p>
                       Alerte de compatibilité avant le run et signalement des
                       croisements à venir.
                     </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Communauté locale</td>
-                  <td>
-                    <strong>Large &amp; non filtrée</strong>
-                    <p>Tous niveaux et tous profils de chiens mélangés.</p>
-                  </td>
-                  <td>
-                    <strong>Centrée performance</strong>
-                    <p>Communauté existante, mais sans dimension canine.</p>
-                  </td>
-                  <td>
-                    <strong>Restreinte</strong>
-                    <p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Communauté locale</td>
+<td>
+<strong>Large &amp; non filtrée</strong>
+<p>Tous niveaux et tous profils de chiens mélangés.</p>
+</td>
+<td>
+<strong>Centrée performance</strong>
+<p>Communauté existante, mais sans dimension canine.</p>
+</td>
+<td>
+<strong>Restreinte</strong>
+<p>
                       Limitée aux adhérents du club, peu flexible en spontané.
                     </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Ciblée &amp; en temps réel</strong>
-                    <p>
+</td>
+<td class="highlight">
+<strong>Ciblée &amp; en temps réel</strong>
+<p>
                       Binômes coureur-chien compatibles, localement et
                       instantanément.
                     </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="feature-title">Suivi de progression</td>
-                  <td>
-                    <strong>Aucun</strong>
-                    <p>Pas d'outil de suivi intégré.</p>
-                  </td>
-                  <td>
-                    <strong>Sportif uniquement</strong>
-                    <p>Allure, distance, dénivelé, sans dimension canine.</p>
-                  </td>
-                  <td>
-                    <strong>Comportemental</strong>
-                    <p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Suivi de progression</td>
+<td>
+<strong>Aucun</strong>
+<p>Pas d'outil de suivi intégré.</p>
+</td>
+<td>
+<strong>Sportif uniquement</strong>
+<p>Allure, distance, dénivelé, sans dimension canine.</p>
+</td>
+<td>
+<strong>Comportemental</strong>
+<p>
                       Possible avec l'éducateur, mais déconnecté du running.
                     </p>
-                  </td>
-                  <td class="highlight">
-                    <strong>Croisé &amp; complet</strong>
-                    <p>
+</td>
+<td class="highlight">
+<strong>Croisé &amp; complet</strong>
+<p>
                       Progression sportive du binôme et évolution du
                       comportement du chien en contexte social.
                     </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="part-2">
-        <div class="process">
-          <h2>Personas</h2>
-          <br />
-          <p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div></div>
+</section><section aria-labelledby="personas" class="case-block">
+<div class="process">
+
+
+
+
+
+
+
+<div class="content"><div class="content__lead"><h2 id="personas">Personas</h2><p>
             Pour concevoir une plateforme adaptée aux réalités du terrain,
             <b>deux profils clés</b> ont été identifiés.
-          </p>
-          <br />
+          </p></div><div class="personas-container">
 
-          <div class="personas-container">
-            <!-- Persona 1 -->
-            <article class="persona-card">
-              <header class="persona-header">
-                <img
-                  src="./assets/img/trail_tail/Camille.webp"
-                  alt="Camille et son berger australien"
-                />
-                <div class="persona-title">
-                  <h3>Camille, 29 ans</h3>
-                </div>
-              </header>
-
-              <div class="persona-body">
-                <p>
+<article class="persona-card">
+<header class="persona-header">
+<img alt="Camille et son berger australien" loading="lazy" src="./assets/img/trail_tail/Camille.webp"/>
+<div class="persona-title">
+<h3>Camille, 29 ans</h3>
+</div>
+</header>
+<div class="persona-body">
+<p>
                   Éducatrice en crèche, vit en ville, propriétaire d'un Berger
                   Australien de 3 ans, réactif envers les humains depuis un
                   incident en balade il y a un an.
                 </p>
-                <br />
-                <blockquote class="persona-quote">
+
+<blockquote class="persona-quote">
                   « J'adorerais courir avec d'autres binômes, mais je ne sais
                   jamais sur qui je vais tomber. Un seul mauvais croisement et
                   je passe ma soirée à gérer une crise plutôt qu'à profiter. »
                 </blockquote>
-                <div class="persona-section">
-                  <h4>Objectifs</h4>
-                  <ul>
-                    <li>
-                      <b>Sortir de l'isolement</b> du "je cours toujours seule
+<div class="persona-section">
+<h4>Objectifs</h4>
+<ul>
+<li>
+<b>Sortir de l'isolement</b> du "je cours toujours seule
                       avec mon chien"
                     </li>
-                    <li>
-                      <b>Progresser sur la sociabilisation</b> de son chien, à
+<li>
+<b>Progresser sur la sociabilisation</b> de son chien, à
                       son rythme, sans pression
                     </li>
-                    <li>
-                      <b>Trouver des créneaux/lieux</b> où le risque de
+<li>
+<b>Trouver des créneaux/lieux</b> où le risque de
                       croisement imprévu est minimal
                     </li>
-                  </ul>
-                </div>
-                <div class="persona-section">
-                  <h4>Frustrations</h4>
-                  <ul>
-                    <li>
+</ul>
+</div>
+<div class="persona-section">
+<h4>Frustrations</h4>
+<ul>
+<li>
                       Les groupes de running canin classiques ne précisent<b>
-                        jamais le tempérament des autres chiens</b
-                      >
+                        jamais le tempérament des autres chiens</b>
                       à l'avance
                     </li>
-                    <li>
+<li>
                       Doit systématiquement s'excuser ou se justifier quand elle
                       refuse une sortie de groupe
                     </li>
-                    <li>
-                      <b>Anxiété à l'idée d'un croisement</b> surprise sur un
+<li>
+<b>Anxiété à l'idée d'un croisement</b> surprise sur un
                       parcours non maîtrisé
                     </li>
-                  </ul>
-                </div>
-
-                <div class="persona-section">
-                  <h4>Besoins clés</h4>
-                  <ul>
-                    <li>
-                      <b>Filtrer les runs/binômes</b> par compatibilité
+</ul>
+</div>
+<div class="persona-section">
+<h4>Besoins clés</h4>
+<ul>
+<li>
+<b>Filtrer les runs/binômes</b> par compatibilité
                       tempérament (ex. "chiens calmes uniquement" ou "solo
                       accepté")
                     </li>
-                    <li>
-                      <b>Voir les infos d'un parcours</b> avant de s'engager
+<li>
+<b>Voir les infos d'un parcours</b> avant de s'engager
                       (affluence, présence probable d'autres chiens en liberté)
                     </li>
-                    <li>
+<li>
                       Pouvoir indiquer discrètement "chien réactif" sans que ce
                       soit <b>stigmatisant</b> dans l'interface
                     </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
+</ul>
+</div>
+</div>
+</article>
 
-            <!-- Persona 2 -->
-            <article class="persona-card">
-              <header class="persona-header">
-                <img
-                  src="./assets/img/trail_tail/Thomas.webp"
-                  alt="Thomas et sa chienne"
-                />
-                <div class="persona-title">
-                  <h3>Thomas, 34 ans</h3>
-                </div>
-              </header>
-              <p>
+<article class="persona-card">
+<header class="persona-header">
+<img alt="Thomas et sa chienne" loading="lazy" src="./assets/img/trail_tail/Thomas.webp"/>
+<div class="persona-title">
+<h3>Thomas, 34 ans</h3>
+</div>
+</header>
+<p>
                 Situation : Commercial itinérant, pratique le trail depuis 5
                 ans, propriétaire d'une Malinoise de 4 ans, très endurante,
                 habituée aux longues distances.
               </p>
-              <br />
-              <div class="persona-body">
-                <blockquote class="persona-quote">
+
+<div class="persona-body">
+<blockquote class="persona-quote">
                   « Ma chienne peut tenir 15 km sans broncher, mais je galère à
                   trouver des gens qui courent au même rythme qu'elle plutôt
                   qu'au rythme de leur propre chien »
                 </blockquote>
-
-                <div class="persona-section">
-                  <h4>Objectifs</h4>
-                  <ul>
-                    <li>
-                      <b>Progresser sur ses performances</b> (distance,
+<div class="persona-section">
+<h4>Objectifs</h4>
+<ul>
+<li>
+<b>Progresser sur ses performances</b> (distance,
                       dénivelé, allure) en gardant sa chienne comme partenaire
                       d'entraînement
                     </li>
-                    <li>
-                      <b>Trouver des binômes/groupes</b> de niveau sportif
+<li>
+<b>Trouver des binômes/groupes</b> de niveau sportif
                       élevé, pas juste "compatibles côté chien"
                     </li>
-                    <li>
-                      <b>Suivre l'évolution physique</b> de sa chienne en
+<li>
+<b>Suivre l'évolution physique</b> de sa chienne en
                       parallèle de la sienne
                     </li>
-                  </ul>
-                </div>
-
-                <div class="persona-section">
-                  <h4>Frustrations</h4>
-                  <ul>
-                    <li>
+</ul>
+</div>
+<div class="persona-section">
+<h4>Frustrations</h4>
+<ul>
+<li>
                       Les apps de running classiques (type Strava) suivent
-                      <b
-                        >sa performance à lui, jamais celle du duo avec sa
-                        chienne</b
-                      >
-                    </li>
-                    <li>
+                      <b>sa performance à lui, jamais celle du duo avec sa
+                        chienne</b>
+</li>
+<li>
                       Les groupes canins existants sont
-                      <b
-                        >souvent calibrés sur le rythme du chien le plus lent du
-                        groupe</b
-                      >
-                    </li>
-                    <li>
-                      <b
-                        >Manque de visibilité sur le niveau d'endurance réel des
-                        autres chiens</b
-                      >
+                      <b>souvent calibrés sur le rythme du chien le plus lent du
+                        groupe</b>
+</li>
+<li>
+<b>Manque de visibilité sur le niveau d'endurance réel des
+                        autres chiens</b>
                       avant de s'engager sur un parcours exigeant
                     </li>
-                  </ul>
-                </div>
-
-                <div class="persona-section">
-                  <h4>Besoins clés</h4>
-                  <ul>
-                    <li>
-                      <b>Filtrer par niveau sportif du binôme</b> (allure,
+</ul>
+</div>
+<div class="persona-section">
+<h4>Besoins clés</h4>
+<ul>
+<li>
+<b>Filtrer par niveau sportif du binôme</b> (allure,
                       distance, dénivelé), pas seulement par tempérament
                     </li>
-                    <li>
-                      <b>Suivi de progression croisé</b> humain + chien (allure,
+<li>
+<b>Suivi de progression croisé</b> humain + chien (allure,
                       distance cumulée, récupération)
                     </li>
-                    <li>
-                      <b>Rejoindre ou proposer</b> des runs orientés
+<li>
+<b>Rejoindre ou proposer</b> des runs orientés
                       performance, distincts des runs "détente/sociabilisation"
                     </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
-          <br />
-          <h3>
-            <span class="highlighted">
+</ul>
+</div>
+</div>
+</article>
+</div><h3>
+<span class="highlighted">
               Camille et Thomas démontrent que "filtrer par tempérament" n'est
               pas qu'une question de sécurité, c'est aussi un critère de
               performance.
             </span>
-          </h3>
-        </div>
-      </div>
-      <div class="part-3" style="margin-top: 35px">
-        <div class="process">
-          <div class="flow-header">
-            <h2>
-              <span lang="en">User Flow</span> : Parcours coureur &amp; hôte
-            </h2>
-            <p>
+</h3></div></div>
+</section><section aria-labelledby="user-flow-parcours-coureur-hote" class="case-block">
+<div class="process">
+
+
+
+
+<div class="content"><div class="content__lead"><h2 id="user-flow-parcours-coureur-hote">
+<span lang="en">User Flow</span> : Parcours coureur &amp; hôte
+            </h2><p>
               Deux parcours clés de l'application : trouver un run compatible ou
               en publier un pour la communauté.
-            </p>
-          </div>
-          <div
-            class="flow-tabs"
-            role="tablist"
-            aria-label="Parcours utilisateur"
-          >
-            <button
-              class="flow-tab active"
-              data-tab="chercheur"
-              type="button"
-              role="tab"
-              id="tab-chercheur"
-              aria-selected="true"
-              aria-controls="panel-chercheur"
-            >
+            </p></div><div aria-label="Parcours utilisateur" class="flow-tabs" role="tablist">
+<button aria-controls="panel-chercheur" aria-selected="true" class="flow-tab active" data-tab="chercheur" id="tab-chercheur" role="tab" type="button">
               Vue Chercheur
             </button>
-            <button
-              class="flow-tab"
-              data-tab="hote"
-              type="button"
-              role="tab"
-              id="tab-hote"
-              aria-selected="false"
-              aria-controls="panel-hote"
-              tabindex="-1"
-            >
+<button aria-controls="panel-hote" aria-selected="false" class="flow-tab" data-tab="hote" id="tab-hote" role="tab" tabindex="-1" type="button">
               Vue Hôte
             </button>
-          </div>
-          <div
-            class="flow-panel active"
-            id="panel-chercheur"
-            role="tabpanel"
-            aria-labelledby="tab-chercheur"
-            tabindex="0"
-          >
-            <div class="flow-grid" role="list">
-              <div class="flow-step" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">1</span>
-                  <span class="step-tag">Entrée</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">👤</span> Coureur</span
-                >
-                <h3 class="step-title">Création du profil binôme</h3>
-                <ul class="step-list">
-                  <li>
+</div><div aria-labelledby="tab-chercheur" class="flow-panel active" id="panel-chercheur" role="tabpanel" tabindex="0">
+<div class="flow-grid" role="list">
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">1</span>
+<span class="step-tag">Entrée</span>
+</div>
+<span class="step-actor"> Coureur</span>
+<h3 class="step-title">Création du profil binôme</h3>
+<ul class="step-list">
+<li>
                     Renseignement du <b>tempérament du chien</b> (réactif,
                     sociable, joueur, calme, en rééducation), âge, race, sexe et
                     niveau sportif (sédentaire, actif/sportif, extrême).
                   </li>
-                  <li>
+<li>
                     Indication du <b>niveau sportif du propriétaire</b> (allure
                     moyenne, distance moyenne) et calcul du
                     <b>niveau global</b>.
                   </li>
-                </ul>
-              </div>
-
-              <div class="flow-step" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">2</span>
-                  <span class="step-tag">Automatique</span>
-                </div>
-                <span class="step-actor actor-ia"
-                  ><span aria-hidden="true">⚡</span> Moteur de matching</span
-                >
-                <h3 class="step-title">Recherche &amp; Filtrage</h3>
-                <ul class="step-list">
-                  <li>
-                    <b
-                      >Croisement du tempérament, du niveau sportif avec les
-                      runs disponibles</b
-                    >
+</ul>
+</div>
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">2</span>
+<span class="step-tag">Automatique</span>
+</div>
+<span class="step-actor actor-ia"> Moteur de matching</span>
+<h3 class="step-title">Recherche &amp; Filtrage</h3>
+<ul class="step-list">
+<li>
+<b>Croisement du tempérament, du niveau sportif avec les
+                      runs disponibles</b>
                     à proximité et à l'affluence adapté.
                   </li>
-                  <li>
+<li>
                     Calcul d'un <b>score de compatibilité</b> pour chaque
                     proposition.
                   </li>
-                </ul>
-              </div>
-
-              <div class="flow-step active" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">3</span>
-                  <span class="step-tag">Écran Clé</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">👤</span> Coureur +
-                  <span aria-hidden="true">🐾</span> Communauté</span
-                >
-                <h3 class="step-title">Sélection &amp; Confirmation</h3>
-                <ul class="step-list">
-                  <li>
-                    <b>Consultation de la fiche du run</b> (date, heure, point
+</ul>
+</div>
+<div class="flow-step active" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">3</span>
+<span class="step-tag">Écran Clé</span>
+</div>
+<span class="step-actor"> Coureur +
+                   Communauté</span>
+<h3 class="step-title">Sélection &amp; Confirmation</h3>
+<ul class="step-list">
+<li>
+<b>Consultation de la fiche du run</b> (date, heure, point
                     de rendez-vous, parcours, distance, niveau, affluence,
                     profil des autres binômes).
                   </li>
-                  <li>
-                    <b>Demande de participation</b> auprès de l'hôte. Refus ou
+<li>
+<b>Demande de participation</b> auprès de l'hôte. Refus ou
                     acceptation et échange de message via la messagerie
                     intégrée.
                   </li>
-                </ul>
-                <div class="highlight-box">
-                  <span aria-hidden="true">💡</span>
-                  <strong>Étape Charnière :</strong> L'utilisateur garde la main
+</ul>
+<div class="highlight-box">
+
+<strong>Étape Charnière :</strong> L'utilisateur garde la main
                   sur la décision finale, même après un score de compatibilité
                   élevé.
                 </div>
-              </div>
-
-              <div class="flow-step" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">4</span>
-                  <span class="step-tag">Sortie</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">🚀</span> Binôme &amp;
-                  Communauté</span
-                >
-                <h3 class="step-title">Run &amp; Suivi</h3>
-                <ul class="step-list">
-                  <li>
+</div>
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">4</span>
+<span class="step-tag">Sortie</span>
+</div>
+<span class="step-actor"> Binôme &amp;
+                  Communauté</span>
+<h3 class="step-title">Run &amp; Suivi</h3>
+<ul class="step-list">
+<li>
                     Actualisation des <b>prochains parcours</b> en page
                     d'accueil.
                   </li>
-                  <li>
+<li>
                     Enregistrement de la sortie dans le
                     <b>suivi de progression croisé</b> (humain + chien).
                   </li>
-                  <li>
+<li>
                     Court <b>débriefing en fin de run</b> pour noter le
                     comportement du chien (écrans non prototypés).
                   </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="flow-panel"
-            id="panel-hote"
-            role="tabpanel"
-            aria-labelledby="tab-hote"
-            tabindex="0"
-          >
-            <p>
+</ul>
+</div>
+</div>
+</div><div aria-labelledby="tab-hote" class="flow-panel" id="panel-hote" role="tabpanel" tabindex="0">
+<p>
               Le parcours hôte a été conçu et détaillé (voir user flow
               ci-dessous), mais n'a pas été poussé jusqu'au prototype
               interactif, le prototype cliquable de ce projet se concentrant sur
               le parcours principal du chercheur de run.
             </p>
-            <br />
-            <div class="flow-grid" role="list">
-              <div class="flow-step" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">1</span>
-                  <span class="step-tag">Entrée</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">👤</span> Hôte</span
-                >
-                <h3 class="step-title">Création du run</h3>
-                <ul class="step-list">
-                  <li>
+
+<div class="flow-grid" role="list">
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">1</span>
+<span class="step-tag">Entrée</span>
+</div>
+<span class="step-actor"> Hôte</span>
+<h3 class="step-title">Création du run</h3>
+<ul class="step-list">
+<li>
                     Choix du parcours et renseignement des informations (date,
                     heure, niveau de difficulté, etc.)
                   </li>
-                </ul>
-              </div>
-
-              <div class="flow-step active" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">2</span>
-                  <span class="step-tag">Écran Clé</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">👤</span> Hôte</span
-                >
-                <h3 class="step-title">Paramétrage du groupe</h3>
-                <ul class="step-list">
-                  <li>
+</ul>
+</div>
+<div class="flow-step active" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">2</span>
+<span class="step-tag">Écran Clé</span>
+</div>
+<span class="step-actor"> Hôte</span>
+<h3 class="step-title">Paramétrage du groupe</h3>
+<ul class="step-list">
+<li>
                     Définition du <b>tempérament accepté</b> (ex. groupe 100%
                     Sociable).
                   </li>
-                  <li>Fixation de la taille maximale du groupe.</li>
-                </ul>
-                <div class="highlight-box">
-                  <span aria-hidden="true">💡</span> <b>Étape Charnière :</b> Le
+<li>Fixation de la taille maximale du groupe.</li>
+</ul>
+<div class="highlight-box">
+ <b>Étape Charnière :</b> Le
                   système applique ici les règles de matching définies en amont
                   : impossible d'accepter un second profil sensible sur le même
                   run.
                 </div>
-              </div>
-
-              <div class="flow-step" role="listitem">
-                <div class="step-badge-wrapper">
-                  <span class="step-number">3</span>
-                  <span class="step-tag">Sortie</span>
-                </div>
-                <span class="step-actor"
-                  ><span aria-hidden="true">🚀</span> Système &amp;
-                  Communauté</span
-                >
-                <h3 class="step-title">
+</div>
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">3</span>
+<span class="step-tag">Sortie</span>
+</div>
+<span class="step-actor"> Système &amp;
+                  Communauté</span>
+<h3 class="step-title">
                   Publication &amp; Gestion des demandes
                 </h3>
-                <ul class="step-list">
-                  <li>
+<ul class="step-list">
+<li>
                     Run visible dans les résultats de recherche des
                     <b>coureurs compatibles</b>.
                   </li>
-                  <li>
+<li>
                     Réception des <b>demandes de participation</b> via la
                     messagerie interne, validation par l'hôte.
                   </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="part-4" style="margin-top: 105px">
-        <div class="process">
-          <h2>Wireframes</h2>
-          <p>
+</ul>
+</div>
+</div>
+</div></div></div>
+</section><section aria-labelledby="wireframes" class="case-block">
+<div class="process">
+
+
+<div class="content"><div class="content__lead"><h2 id="wireframes">Wireframes</h2><p>
             Avant d'habiller l'interface, j'ai posé la structure du
             <b>parcours chercheur</b> en basse-fidélité :
             <b>de la recherche d'un run compatible à la fiche du run.</b> Cette
@@ -850,180 +623,108 @@
             <b>la logique du score de compatibilité</b> et
             <b>l'organisation des filtres</b>, avant de s'adonner au détail
             visuel.
-          </p>
-        </div>
-      </div>
-      <div class="wireframes app">
-        <img
-          src="./assets/img/trail_tail/wireframe_1.webp"
-          alt="Wireframes page d'accueil"
-        />
-        <img
-          src="./assets/img/trail_tail/wireframe_2.webp"
-          alt="Wireframes écran de recherche"
-        />
-        <img
-          src="./assets/img/trail_tail/wireframe_3.webp"
-          alt="Wireframes résultat des matchs"
-        />
-        <img
-          src="./assets/img/trail_tail/wireframe_4.webp"
-          alt="Wireframes détail d'un run"
-        />
-        <img
-          src="./assets/img/trail_tail/wireframe_5.webp"
-          alt="Wireframes profil utilisateur"
-        />
-      </div>
-      <div class="part-5" style="margin-top: 35px">
-        <div class="process">
-          <div class="content flex col">
-            <div class="explications">
-              <h2>Prototype</h2>
-              <p>
-                Le prototype interactif ci-dessous présente la<b
-                  >version haute-fidélité de l'application
+          </p></div></div></div>
+</section><div class="case-block"><div class="wireframes app">
+<img alt="Wireframes page d'accueil" loading="lazy" src="./assets/img/trail_tail/wireframe_1.webp"/>
+<img alt="Wireframes écran de recherche" loading="lazy" src="./assets/img/trail_tail/wireframe_2.webp"/>
+<img alt="Wireframes résultat des matchs" loading="lazy" src="./assets/img/trail_tail/wireframe_3.webp"/>
+<img alt="Wireframes détail d'un run" loading="lazy" src="./assets/img/trail_tail/wireframe_4.webp"/>
+<img alt="Wireframes profil utilisateur" loading="lazy" src="./assets/img/trail_tail/wireframe_5.webp"/>
+</div></div><section aria-labelledby="prototype" class="case-block">
+<div class="process">
+
+<div class="content flex col">
+<div class="explications">
+<h2 id="prototype">Prototype</h2>
+<p>Le prototype interactif ci-dessous présente la <b>version haute-fidélité de l'application
                 </b>
                 et couvre <b>le parcours principal du chercheur de run </b>:
                 création du profil, recherche/filtrage et consultation d'une
-                fiche run. <br /><br />
-                Le parcours hôte (publication d'un run) a été conçu et détaillé
+                fiche run.</p><p>Le parcours hôte (publication d'un run) a été conçu et détaillé
                 dans le user flow ci-dessus, mais n'a pas été poussé jusqu'au
                 prototype cliquable,
-                <b
-                  >cette étude se concentrant uniquement sur l'expérience du
-                  chercheur.</b
-                >
-              </p>
-              <br />
-              <p
-                style="
-                  margin-top: 10px;
-                  border-left: solid var(--sun) 5px;
-                  padding-left: 15px;
-                "
-              >
+                <b>cette étude se concentrant uniquement sur l'expérience du
+                  chercheur.</b></p>
+
+<p class="callout">
                 Cliquez sur Redémarrer de l'iframe pour visualiser le prototype
                 depuis son splash screen.
               </p>
-            </div>
-            <div class="prototype app">
-              <iframe
-                title="Prototype interactif de l'application Trail &amp; Tail (Figma)"
-                style="
-                  border: 1px solid rgba(0, 0, 0, 0.1);
-                  border-radius: 20px;
-                "
-                width="450"
-                height="920"
-                src="https://embed.figma.com/proto/EzMIFEPEVav4cC0862HEKy/PORTFOLIO-PROJET?node-id=516-1331&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=249%3A7064&amp;starting-point-node-id=429%3A2233&amp;embed-host=share"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="part-6" style="margin-top: 35px">
-        <div class="process">
-          <h2>Bilan et enseignements</h2>
-          <br />
-          <h3 class="sun">Une hypothèse remise en question</h3>
-          <br />
-          <p>
-            Au départ, je voulais
-            <b>faire matcher des chiens au tempérament similaire</b>.
-            <br /><br />Puis je me suis rappelée ma propre expérience et de mes
+</div>
+<div class="prototype app">
+<iframe allowfullscreen="" height="920" loading="lazy" src="https://embed.figma.com/proto/EzMIFEPEVav4cC0862HEKy/PORTFOLIO-PROJET?node-id=516-1331&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=249%3A7064&amp;starting-point-node-id=429%3A2233&amp;embed-host=share" title="Prototype interactif de l'application Trail &amp; Tail (Figma)"></iframe>
+</div>
+</div></div>
+</section><section aria-labelledby="bilan-et-enseignements" class="case-block">
+<div class="process">
+
+
+
+
+
+
+
+
+
+
+
+<div class="content"><div class="content__lead"><h2 id="bilan-et-enseignements">Bilan et enseignements</h2><h3>Une hypothèse remise en question</h3><p>Au départ, je voulais
+            <b>faire matcher des chiens au tempérament similaire</b>.</p><p>Puis je me suis rappelée ma propre expérience et de mes
             cours d'éducation canine :
-            <b
-              >deux chiens en rééducation réunis sur un même run créent plus de
-              risques qu'ils n'en résolvent</b
-            >. C'est pourquoi, le matching a été repensé autour de
+            <b>deux chiens en rééducation réunis sur un même run créent plus de
+              risques qu'ils n'en résolvent</b>. C'est pourquoi, le matching a été repensé autour de
             <b>la complémentarité</b> : un chien sociable en rôle de régulateur,
-            plutôt que de la similarité. <br /><br />Ainsi, j'ai constaté qu'une
-            <b
-              >bonne UX de matching ne peut pas se limiter à "faire correspondre
-              des tags"</b
-            >
+            plutôt que de la similarité.</p><p>Ainsi, j'ai constaté qu'une
+            <b>bonne UX de matching ne peut pas se limiter à "faire correspondre
+              des tags"</b>
             : elle doit s'appuyer sur <b>une vraie connaissance du terrain.</b>
-          </p>
-          <br />
-          <h3 class="sun">Deux problèmes = deux traitements</h3>
-          <br />
-          <p>
+            C'est d'ailleurs le terrain qui avait fait naître le projet, lors
+            de cette session de canicross.</p><h3>Deux problèmes = deux traitements</h3><p>
             La réactivité aux congénères et la réactivité aux humains sont
             <b>deux sujets différents</b>.
-          </p>
-          <ul>
-            <li>
+          </p><ul>
+<li>
               La première dépend du <b>groupe</b> (score de compatibilité).
             </li>
-            <li>
+<li>
               La seconde dépend de <b>l'environnement</b> (affluence, terrain,
               horaire).
             </li>
+</ul><p>
+<span class="highlighted"><b>Les fusionner dans un seul score aurait rendu l'information
+                illisible.</b></span>
+</p></div></div></div>
+</section>
+      </div>
+
+      <nav class="dark next-project" aria-label="Projet suivant">
+        <div class="container">
+          <article class="next-card" data-reveal>
+            <div class="next-card__body">
+              <p class="eyebrow">Projet suivant</p>
+              <p class="next-card__title"><a href="./project-os.html">ProjectOS</a></p>
+              <p class="next-card__cta" aria-hidden="true">Voir l’étude de cas <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+            <div class="next-card__media"><img src="./assets/img/projectOs/cover-projectos.webp" alt="" loading="lazy" /></div>
+          </article>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="site-footer site-footer--compact">
+      <div class="container">
+        <div class="site-footer__bottom">
+          <p class="site-footer__brand"><span class="logo">pauline thelliez<span class="logo__dot" aria-hidden="true"></span></span><span>© 2026</span></p>
+          <ul class="site-footer__nav">
+            <li><a href="mailto:thelliezpauline@gmail.com">thelliezpauline@gmail.com</a></li>
+            <li><a href="tel:0631007416">06 31 00 74 16</a></li>
+            <li><a href="https://www.linkedin.com/in/pauline-thelliez/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (nouvel onglet)</span></a></li>
           </ul>
-          <p>
-            <span class="highlighted"
-              ><b
-                >Les fusionner dans un seul score aurait rendu l'information
-                illisible.</b
-              ></span
-            >
-          </p>
         </div>
       </div>
-    </main>
-    <footer class="footer" id="footer">
-      <h2>On prend contact ?</h2>
-      <p
-        style="
-          display: flex;
-          gap: 25px;
-          justify-content: center;
-          flex-wrap: wrap;
-        "
-      >
-        <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
-          ><span>thelliezpauline@gmail.com</span></a
-        >
-        <a href="tel:0631007416" class="btn-underline"
-          ><span>06 31 00 74 16</span></a
-        >
-        <a
-          href="https://www.linkedin.com/in/pauline-thelliez/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-underline"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-linkedin"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-            /></svg
-        ></a>
-      </p>
-      <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
     </footer>
-    <button
-      class="back-to-up"
-      onclick="scrollToTop()"
-      id="back-to-up"
-      type="button"
-      aria-label="Retour en haut de la page"
-    >
-      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
-        <polygon
-          style="stroke: #000"
-          points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
-        ></polygon>
-      </svg>
-    </button>
-    <div class="cursor" aria-hidden="true"></div>
-    <script src="./assets/js/style.js"></script>
+
+    <button type="button" class="to-top" aria-label="Retour en haut de la page" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+    <script src="./assets/js/style.js" defer></script>
   </body>
 </html>
