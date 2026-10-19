@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>APORIE®, e-commerce immersif | Pauline Thelliez</title>
+    <meta name="description" content="Étude de cas UX/UI : APORIE®, e-commerce immersif d'une maison de parfum de niche. Benchmark, personas, carrousel des fragrances, fiche produit, panier et commande, décisions et compromis, prototype codé." />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="APORIE®, e-commerce immersif | Pauline Thelliez" />
+    <meta property="og:description" content="Étude de cas UX/UI : APORIE®, e-commerce immersif d'une maison de parfum de niche. Benchmark, personas, carrousel des fragrances, fiche produit, panier et commande, décisions et compromis, prototype codé." />
+    <meta property="og:url" content="https://bypaulinethz.github.io/portfolio/aporie.html" />
+    <meta property="og:image" content="https://bypaulinethz.github.io/portfolio/assets/img/aporie/aporie_apercu.webp" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pauline Thelliez" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#fafaf7" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..600&amp;family=DM+Sans:opsz,wght@9..40,400..700&amp;family=Syne:wght@700&amp;display=swap" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/projet.css" />
+    <script>document.documentElement.classList.add("js");</script>
+  </head>
+  <!--Hey ! C'est qui le plus curieux de nous deux ?
+  Si tu inspectes mon code, c'est qu'on a probablement des choses à se dire. On prend contact ?
+  -->
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <header class="site-header">
+      <div class="container site-header__inner anim-fade d1">
+        <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l’accueil">pauline thelliez<span class="logo__dot" aria-hidden="true"></span></a>
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li><a href="./index.html" class="nav__link">Accueil</a></li>
+            <li><a href="./about.html" class="nav__link">À propos</a></li>
+            <li><a href="./index.html#projets" class="nav__link" aria-current="page">Projets</a></li>
+          </ul>
+          <a href="./assets/pdf/CV-Pauline-Thelliez.pdf" class="btn btn--ink" download>Télécharger CV <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span class="sr-only"> (PDF)</span></a>
+        </nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="menu__top">
+        <span class="logo" aria-hidden="true">pauline thelliez<span class="logo__dot"></span></span>
+        <button type="button" class="menu__close" aria-label="Fermer le menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <nav aria-label="Navigation mobile">
+        <ul class="menu__list">
+          <li><a href="./index.html" class="menu__link">Accueil<span aria-hidden="true">01</span></a></li>
+          <li><a href="./about.html" class="menu__link">À propos<span aria-hidden="true">02</span></a></li>
+          <li><a href="./index.html#projets" class="menu__link" aria-current="page">Projets<span aria-hidden="true">03</span></a></li>
+        </ul>
+      </nav>
+      <div class="menu__footer">
+        <a href="./assets/pdf/CV-Pauline-Thelliez.pdf" class="btn btn--lg btn--saffron" download>Télécharger mon CV<span class="sr-only"> (PDF)</span></a>
+        <a href="mailto:thelliezpauline@gmail.com" class="btn btn--lg btn--outline-light">thelliezpauline@gmail.com</a>
+      </div>
+    </div>
+
+    <main id="main" tabindex="-1">
+      <div class="container case-hero">
+        <a href="./index.html#projets" class="back-link anim-fade d1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Tous les projets</a>
+        <div class="case-hero__head">
+          <div class="case-hero__titles">
+            <p class="case-tag anim-fade d2">UX/UI & Creative Dev Case Study</p>
+            <h1 class="case-title"><span class="line"><span class="anim-rise d2 mark anim-grow">APORIE®</span></span></h1>
+          </div>
+          <div class="case-hero__lead anim-fade d3"><p>Projet fictif : concilier l'univers immersif d'une maison de
+              parfum de niche et la rigueur d'un e-commerce. Marque, boutiques
+              et contenus sont inventés.</p></div>
+        </div>
+        <figure class="case-cover anim-fade d3"><img src="./assets/img/aporie/aporie_apercu.webp" alt="Page d'accueil du site APORIE® sur un ordinateur portable et un téléphone : titre blanc sur un fond holographique violet, avec un flacon de cristal en filigrane et deux boutons" fetchpriority="high" /></figure>
+        <dl class="case-facts anim-fade d4" aria-label="Informations clés du projet"><div><dt>Rôle</dt><dd>Product designer (benchmark, architecture, UI, prototype codé)</dd></div><div><dt>Cibles</dt><dd>Connaisseurs de parfum de niche, sensibles aux univers artistiques et à la rareté.</dd></div><div><dt>Livrables</dt><dd>Benchmark, personas, architecture, système visuel, prototype codé : accueil en 6 écrans, 3 fiches produits, panier, commande.</dd></div><div><dt>Outils utilisés</dt><dd>HTML, CSS, JavaScript, WebGL (three.js), esbuild</dd></div></dl>
+      </div>
+
+      <div class="case-body">
+        <section aria-labelledby="le-probleme-de-depart" class="case-block">
+<div class="process">
+
+<div class="content"><div class="content__lead"><h2 id="le-probleme-de-depart">Le problème de départ</h2><div class="callout">
+
+<h3>Un univers radical, des clients exigeants</h3>
+<p>
+              Le brief écarte le beige, l'or et le minimalisme déjà vu : le
+              visiteur doit entrer dans un univers, sans perdre l'information
+              qui lui permet d'acheter.
+            </p>
+<p>
+              Critère de chaque choix : surprendre des connaisseurs, et rester
+              lisible et efficace jusqu'à la commande.
+            </p>
+</div></div></div></div>
+</section><section aria-labelledby="methodologie-de-la-tension-au-prototype" class="case-block">
+<div class="process">
+
+
+<div class="content"><div class="content__lead"><h2 id="methodologie-de-la-tension-au-prototype">Méthodologie : de la tension au prototype</h2><p>Quatre étapes, où chaque décision répond à un constat.</p></div><div class="flow-grid" role="list">
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">1</span>
+<span class="step-tag">Cadrage</span>
+</div>
+<span class="step-actor">Problème</span>
+<h3 class="step-title">Nommer la tension</h3>
+<ul class="step-list">
+<li>Immersion contre conversion : le critère de tous les choix.</li>
+</ul>
+</div>
+<div class="flow-step active" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">2</span>
+<span class="step-tag">Diagnostic</span>
+</div>
+<span class="step-actor">Benchmark</span>
+<h3 class="step-title">Comparer le marché</h3>
+<ul class="step-list">
+<li>Quatre marques de parfum de niche, trois constats.</li>
+</ul>
+<div class="highlight-box">
+<strong>Étape charnière :</strong> le benchmark fait passer le
+                projet d'une vitrine à un e-commerce.
+              </div>
+</div>
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">3</span>
+<span class="step-tag">Décision</span>
+</div>
+<span class="step-actor">Principes</span>
+<h3 class="step-title">Poser les principes</h3>
+<ul class="step-list">
+<li>Trois proto-personas.</li>
+<li>L'univers à l'accueil, l'information sur la fiche.</li>
+</ul>
+</div>
+<div class="flow-step" role="listitem">
+<div class="step-badge-wrapper">
+<span class="step-number">4</span>
+<span class="step-tag">Conception</span>
+</div>
+<span class="step-actor">Prototype</span>
+<h3 class="step-title">Concevoir et coder</h3>
+<ul class="step-list">
+<li>Accueil, 3 fiches, panier, commande.</li>
+<li>Tests au clavier et sur mobile.</li>
+</ul>
+</div>
+</div></div></div>
+</section><section aria-labelledby="benchmark-titre" class="case-block">
+<div class="process">
+
+<div class="content">
+<div class="content__lead"><h2 id="benchmark-titre">Benchmark : des boutiques toutes semblables</h2><p>
+              Quatre marques de parfum de niche comparées sur leur modèle, leur template, leur univers et leur fiche produit.
+            </p></div>
+
+
+<div aria-labelledby="benchmark-titre" class="table-container" role="region" tabindex="0">
+<table class="benchmark-table">
+<caption class="sr-only">
+                  Benchmark de quatre marques de parfum de niche comparées à APORIE®
+                </caption>
+<thead>
+<tr>
+<th scope="col">Maisons de parfum</th>
+<th scope="col">Modèle</th>
+<th scope="col">Template</th>
+<th scope="col">Univers de marque</th>
+<th scope="col">Fiche produit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="feature-title">Contes de Parfums, Bu Feng, Sora Dora, Room1015</td>
+<td>E-commerce</td>
+<td>Luxe « traditionnel » : épuré, blanc, minimaliste</td>
+<td>Peu marqué</td>
+<td>Image, nom, contenance, type, description, notes, ingrédients, prix</td>
+</tr>
+<tr>
+<td class="feature-title">APORIE®</td>
+<td class="highlight"><strong>E-commerce</strong><p>Avec un accueil immersif</p></td>
+<td class="highlight"><strong>Surprenant mais lisible</strong><p>Fond holographique, étiquette blanche</p></td>
+<td class="highlight"><strong>Marqué</strong><p>Flacon 3D, éléments olfactifs</p></td>
+<td class="highlight"><strong>Mêmes informations</strong><p>Mieux ordonnées : achat d'abord, détails dans un accordéon</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</section><section aria-labelledby="utilisateurs" class="case-block">
+<div class="process">
+
+
+
+<div class="content"><div class="content__lead"><h2 id="utilisateurs">Utilisateurs</h2><p>
+            Des connaisseurs sensibles à l'image d'une maison et à la rareté.
+            Trois proto-personas issus du benchmark, à valider en entretien.
+          </p></div><div class="personas-container">
+<article class="persona-card">
+<header class="persona-header">
+<img alt="Portrait de Camille, 34 ans, directrice artistique" loading="lazy" src="./assets/img/aporie/persona-1.webp"/>
+<div class="persona-title">
+<h3>Camille</h3>
+<p>34 ans, directrice artistique</p>
+</div>
+</header>
+<div class="persona-body">
+<blockquote class="persona-quote">Un parfum, c'est une œuvre : je veux comprendre l'univers avant d'acheter.</blockquote>
+<div class="persona-section">
+<h4>Besoin clé</h4>
+<ul><li>Un univers cohérent et des notes lisibles.</li></ul>
+</div>
+<div class="persona-section">
+<h4>Réponse du site</h4>
+<ul><li>Un fond et un flacon 3D qui portent l'univers.</li></ul>
+</div>
+</div>
+</article>
+<article class="persona-card">
+<header class="persona-header">
+<img alt="Portrait de Hugo, 41 ans, collectionneur" loading="lazy" src="./assets/img/aporie/persona-2.webp"/>
+<div class="persona-title">
+<h3>Hugo</h3>
+<p>41 ans, collectionneur</p>
+</div>
+</header>
+<div class="persona-body">
+<blockquote class="persona-quote">Si c'est rare, je veux le savoir, et pouvoir l'acheter tout de suite.</blockquote>
+<div class="persona-section">
+<h4>Besoin clé</h4>
+<ul><li>Savoir où trouver un format rare, et l'acheter sans détour.</li></ul>
+</div>
+<div class="persona-section">
+<h4>Réponse du site</h4>
+<ul><li>Le stock de chaque boutique selon la contenance, et l'achat en un clic.</li></ul>
+</div>
+</div>
+</article>
+<article class="persona-card">
+<header class="persona-header">
+<img alt="Portrait d'Inès, 28 ans, photographe" loading="lazy" src="./assets/img/aporie/persona-3.webp"/>
+<div class="persona-title">
+<h3>Inès</h3>
+<p>28 ans, photographe</p>
+</div>
+</header>
+<div class="persona-body">
+<blockquote class="persona-quote">Je découvre les maisons sur mon téléphone, par l'image.</blockquote>
+<div class="persona-section">
+<h4>Besoin clé</h4>
+<ul><li>Une ambiance et un parcours simple sur mobile.</li></ul>
+</div>
+<div class="persona-section">
+<h4>Réponse du site</h4>
+<ul><li>Un carrousel au glissement, et le prix toujours à portée de pouce.</li></ul>
+</div>
+</div>
+</article>
+</div></div></div>
+</section><section aria-labelledby="parcours-et-structure" class="case-block">
+<div class="process">
+
+
+
+
+
+
+<div class="content"><div class="content__lead"><h2 id="parcours-et-structure">Parcours et structure</h2><p>
+            Le site tient en quatre niveaux : un accueil immersif, une fiche par
+            fragrance, un panier et une commande.
+          </p></div><ol class="aporie-arch">
+<li><b>Accueil immersif</b><span>6 écrans, dont un carrousel des 3 fragrances : découvrir, choisir</span></li>
+<li><b>Fiche produit</b><span>3 pages, détails en accordéon : s'informer</span></li>
+<li><b>Panier</b><span>Panneau sur toutes les pages : ajuster</span></li>
+<li><b>Commande</b><span>1 page en 3 étapes : finaliser</span></li>
+</ol><div class="aporie-seg">
+<h3>Le parcours principal</h3>
+<ol>
+<li><b>Découvrir :</b> l'accueil se parcourt salle par salle, un geste par salle.</li>
+<li><b>Choisir :</b> le carrousel fait glisser les trois fragrances ; l'étiquette donne le nom, les notes, la contenance, le prix et deux actions.</li>
+<li><b>S'informer :</b> la fiche détaille notes, ingrédients et disponibilité en boutique.</li>
+<li><b>Acheter :</b> « Ajouter au panier » ouvre le panier, puis la commande : coordonnées, livraison ou retrait en boutique.</li>
+</ol>
+<p>
+              Deux raccourcis : le bouton panier sur l'étiquette, et « Les autres
+              fragrances » en bas de chaque fiche.
+            </p>
+</div><div class="aporie-seg">
+<h3>La fiche produit</h3>
+<p>Les informations des concurrents, dans l'ordre de la décision :</p>
+<ol>
+<li><b>L'achat d'abord :</b> nom, prix, contenance et bouton, fixés en bas de l'écran sur mobile.</li>
+<li><b>La disponibilité en boutique,</b> selon la contenance choisie.</li>
+<li><b>Le détail</b> dans un accordéon, puis les autres fragrances.</li>
+</ol>
+</div><div class="aporie-seg">
+<h3>La commande</h3>
+<p>
+              Une page en trois étapes (coordonnées, livraison ou retrait en
+              boutique, paiement simulé), avec le récapitulatif toujours visible.
+            </p>
+</div></div></div>
+</section><section aria-labelledby="decisions-titre" class="case-block">
+<div class="process">
+
+<div class="content">
+<div class="content__lead"><h2 id="decisions-titre">Décisions de design et compromis</h2><p>Quatre décisions et leur compromis.</p></div>
+
+
+<div aria-labelledby="decisions-titre" class="table-container" role="region" tabindex="0">
+<table class="benchmark-table">
+<caption class="sr-only">
+                  Décisions de design, raisons et compromis assumés
+                </caption>
+<thead>
+<tr>
+<th scope="col">Décision</th>
+<th scope="col">Pourquoi</th>
+<th scope="col">Compromis assumé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="feature-title">Immersion à l'accueil, conversion sur la fiche</td>
+<td>
+<strong>Deux besoins, deux lieux</strong>
+<p>On vient pour l'univers, mais on achète sur une fiche complète.</p>
+</td>
+<td class="highlight">
+<strong>Deux modes de navigation</strong>
+<p>Une visite en 6 écrans, puis des pages classiques à faire cohabiter.</p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Les trois fragrances dans un carrousel</td>
+<td>
+<strong>Comparer sans quitter l'écran</strong>
+<p>Un glissement change de fragrance : le fond, le flacon et l'étiquette suivent.</p>
+</td>
+<td class="highlight">
+<strong>Un geste moins évident</strong>
+<p>Indication « Glisser » sur mobile, flèches, onglets et clavier en secours.</p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">La rareté mise en scène</td>
+<td>
+<strong>Là où l'on décide</strong>
+<p>Stock par boutique et par contenance, 4 flacons maximum par référence.</p>
+</td>
+<td class="highlight">
+<strong>Une promesse à tenir</strong>
+<p>Les stocks affichés devront rester fiables.</p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">L'accessibilité comme contrainte</td>
+<td>
+<strong>Lisible malgré le fond animé</strong>
+<p>Texte sur surface blanche, clavier, « réduire les animations » respecté.</p>
+</td>
+<td class="highlight">
+<strong>Un 3D exigeant</strong>
+<p>Site utilisable sans le 3D ; three.js reste à alléger.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</section><section aria-labelledby="pistes-titre" class="case-block">
+<div class="process">
+
+<div class="content">
+<div class="content__lead"><h2 id="pistes-titre">Pistes écartées</h2></div>
+
+<div aria-labelledby="pistes-titre" class="table-container" role="region" tabindex="0">
+<table class="benchmark-table">
+<caption class="sr-only">
+                  Pistes explorées, raisons de l'abandon et solution retenue
+                </caption>
+<thead>
+<tr>
+<th scope="col">Piste explorée</th>
+<th scope="col">Pourquoi je l'ai écartée</th>
+<th scope="col">Ce que j'ai retenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="feature-title">Scroll natif long sur l'accueil</td>
+<td>
+<strong>Transitions inachevées</strong>
+<p>Il fallait plusieurs gestes pour passer d'une salle à l'autre.</p>
+</td>
+<td class="highlight">
+<strong>Un geste, une salle</strong>
+<p>Menu, boutons et clavier en secours.</p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Description longue et notes détaillées sur l'étiquette</td>
+<td>
+<strong>Trop dense sur mobile</strong>
+<p>Elle doublonne avec la fiche et cache le flacon.</p>
+</td>
+<td class="highlight">
+<strong>Étiquette courte</strong>
+<p>Une phrase et trois notes ; le détail vit sur la fiche.</p>
+</td>
+</tr>
+<tr>
+<td class="feature-title">Lettres dorées, codes du luxe</td>
+<td>
+<strong>Écartées par le brief</strong>
+<p>Elles rapprochent la marque de ses concurrents.</p>
+</td>
+<td class="highlight">
+<strong>Or réduit à des filets</strong>
+<p>Sur fonds sombres, retirable en une variable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</section><section aria-labelledby="un-univers-visuel-le-reve-et-la-rigueur" class="case-block">
+<div class="process">
+
+
+
+
+<div class="content"><div class="content__lead"><h2 id="un-univers-visuel-le-reve-et-la-rigueur">Un univers visuel : le rêve et la rigueur</h2><p>
+            Le rêve (dégradés holographiques, silhouettes à contre-jour) contre
+            la rigueur (étiquettes sobres) : un fond onirique, une information
+            nette, et une couleur d'accent par fragrance.
+          </p></div><figure class="aporie-mood">
+<img alt="Moodboard APORIE : collage d'images holographiques et irisées, silhouettes à contre-jour, flacons de parfum dans les nuages, sites web aux univers cristallins et étiquettes sobres de bougies et de parfums." height="977" loading="lazy" src="./assets/img/aporie/aporie_moodboard.webp" width="1800"/>
+<figcaption>Moodboard du projet.</figcaption>
+</figure><div aria-hidden="true" class="aporie-cards">
+<div class="aporie-mini" style="--c:#d9583a"><b>01</b><span>La fièvre</span><small>Corail</small></div>
+<div class="aporie-mini" style="--c:#2f4fbf"><b>02</b><span>La lumière</span><small>Bleu</small></div>
+<div class="aporie-mini" style="--c:#7a0c1e"><b>03</b><span>Le cauchemar</span><small>Grenat</small></div>
+</div></div></div>
+</section><section aria-labelledby="prototype" class="case-block">
+<div class="process">
+
+
+<div class="content"><div class="content__lead"><h2 id="prototype">Prototype</h2><p>
+            Fiches produits, commande et panier, en desktop et en mobile.
+          </p><p><a aria-label="Voir le site APORIE® (s'ouvre dans un nouvel onglet)" class="link-arrow" href="https://aporie.thelliezpauline.workers.dev/" rel="noopener noreferrer" target="_blank">Voir le site <svg aria-hidden="true" class="icon" focusable="false" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></p></div></div></div>
+</section><div class="case-block"><div class="prototype desktop" style="--ar-ref: 1.6000">
+<img alt="Fiche produit desktop de La lumière : flacon de cristal irisé entouré de fleurs, d'une tranche d'orange et de cèdre sur un fond holographique bleu, et à droite la carte blanche avec le prix de 120 euros, les contenances 10, 30 et 50 ml, le bouton Ajouter au panier et la disponibilité dans quatre boutiques" loading="lazy" src="./assets/img/aporie/aporie_v2_fiche_desktop.webp" style="--ar: 1.6000"/>
+<img alt="Fiche produit mobile de La fièvre : flacon en haut sur fond corail, puis la carte avec le nom et le prix, et une barre fixée en bas de l'écran avec 55 euros, 10 ml et le bouton Ajouter au panier" loading="lazy" src="./assets/img/aporie/aporie_v2_fiche_mobile.webp" style="--ar: 0.5000"/>
+</div></div><div class="case-block"><div class="prototype desktop" style="--ar-ref: 1.6000">
+<img alt="Page de commande desktop : étapes Coordonnées et Livraison à gauche, et à droite le récapitulatif avec La lumière et Le cauchemar, la livraison offerte et un total de 250 euros" loading="lazy" src="./assets/img/aporie/aporie_v2_commande_desktop.webp" style="--ar: 1.6000"/>
+<img alt="Panier ouvert sur mobile : La lumière en 30 ml et Le cauchemar en 10 ml, dont la quantité est bloquée à 4, la mention 4 flacons maximum par référence, un total de 380 euros et le bouton Passer commande" loading="lazy" src="./assets/img/aporie/aporie_v2_panier_mobile.webp" style="--ar: 0.5000"/>
+</div></div>
+      </div>
+
+      <nav class="dark next-project" aria-label="Projet suivant">
+        <div class="container">
+          <article class="next-card" data-reveal>
+            <div class="next-card__body">
+              <p class="eyebrow">Projet suivant</p>
+              <p class="next-card__title"><a href="./proxidriver.html">Proxidriver</a></p>
+              <p class="next-card__cta" aria-hidden="true">Voir l’étude de cas <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </div>
+            <div class="next-card__media"><img src="./assets/img/proxidriver/proxidriver.webp" alt="" loading="lazy" /></div>
+          </article>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="site-footer site-footer--compact">
+      <div class="container">
+        <div class="site-footer__bottom">
+          <p class="site-footer__brand"><span class="logo">pauline thelliez<span class="logo__dot" aria-hidden="true"></span></span><span>© 2026</span></p>
+          <ul class="site-footer__nav">
+            <li><a href="mailto:thelliezpauline@gmail.com">thelliezpauline@gmail.com</a></li>
+            <li><a href="tel:0631007416">06 31 00 74 16</a></li>
+            <li><a href="https://www.linkedin.com/in/pauline-thelliez/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" class="to-top" aria-label="Retour en haut de la page" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+    <script src="./assets/js/style.js" defer></script>
+  </body>
+</html>
