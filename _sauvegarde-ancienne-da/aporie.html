@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FAVICON-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Portfolio Pauline Thz" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <title>APORIE®, site vitrine immersif | Pauline Thelliez</title>
+    <meta name="description" content="Étude de cas UX/UI : APORIE®, e-commerce immersif d'une maison de parfum de niche. Benchmark, personas, décisions de design et compromis, prototype interactif."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/projet.css" />
+    <style>
+      .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+      .aporie-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:24px 0 8px}
+      .aporie-mini{position:relative;background:#fff;color:#111;padding:16px 12px 14px;text-align:center;border:1px solid #111}
+      .aporie-mini::before{content:"";position:absolute;inset:5px;border:1px solid #111;pointer-events:none}
+      .aporie-mini::after{content:"";position:absolute;left:5px;right:5px;top:5px;height:4px;background:var(--c)}
+      .aporie-mini b{display:block;font:italic 300 2.4rem/1 Georgia,"Times New Roman",serif;color:var(--c)}
+      .aporie-mini span{display:block;margin-top:4px;font:400 1rem/1.2 Georgia,"Times New Roman",serif;letter-spacing:.14em;text-transform:uppercase}
+      .aporie-mini small{display:block;margin-top:8px;font-size:.8rem;color:#333}
+      main p,main ul,main ol,main li,main dd,main blockquote,main td,main figcaption{line-height:normal}
+      main li+li{margin-top:.4em}
+      .aporie-seg{margin-top:56px}
+      .aporie-seg h3{margin:0 0 16px}
+      .aporie-seg ol,.aporie-seg p{margin:0 0 16px}
+      .aporie-mood{margin:24px 0}
+      .aporie-mood img{width:100%;height:auto;display:block;border-radius:12px;background:rgba(128,128,128,.15)}
+      .aporie-mood figcaption{font-family:var(--paragraphe);font-size:12px;font-weight:400;margin-top:8px}
+      .aporie-arch{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:22px 0;padding:0;list-style:none}
+      .aporie-arch li{flex:1 1 180px;border:1px solid rgba(128,128,128,.55);border-radius:12px;padding:14px 16px;position:relative}
+      .aporie-arch li b{display:block}
+      .aporie-arch li span{font-size:.85rem;opacity:.8}
+      .aporie-arch li+li::before{content:"→";position:absolute;left:-18px;top:50%;transform:translateY(-50%);font-size:1.1rem}
+      @media (max-width:640px){.aporie-arch li+li::before{content:"↓";left:50%;top:-16px;transform:translateX(-50%)}.aporie-arch{gap:22px}}
+    </style>
+    <noscript>
+      <style>
+        .case-figure-frame {
+          max-height: none;
+        }
+        .case-figure-frame::after,
+        .case-figure-toggle {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </head>
+  <!--
+  Bravo d'être venu jusqu'ici. Si tu trouves un bug, fait le moi savoir !
+  On prend contact ?
+  -->
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <header class="header" id="header">
+      <a href="./index.html" class="logo" aria-label="Pauline Thelliez, retour à l'accueil">
+        <svg
+          id="logotype"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 93.12 77.96"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <style>
+                .cls-1{fill:#f9b233;}
+              <!-- .cls-2{fill: #fff} -->
+            </style>
+          </defs>
+          <g data-name="Calque 2">
+            <g id="Calque_1-2" data-name="Calque 1">
+              <path
+                class="cls-1"
+                d="M29,13.64h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,9.31,33.32h0a0,0,0,0,1,0,0v0A19.68,19.68,0,0,1,29,13.64Z"
+                transform="translate(-4.33 42.62) rotate(-90)"
+              />
+              <path
+                class="cls-1"
+                d="M9.31,45.54h0A19.68,19.68,0,0,1,29,65.22v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,9.31,45.54v0A0,0,0,0,1,9.31,45.54Z"
+                transform="translate(74.53 36.24) rotate(90)"
+              />
+              <path
+                class="cls-1"
+                d="M4.08,29.41h0A19.68,19.68,0,0,1,23.76,49.09v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,4.08,29.41v0A0,0,0,0,1,4.08,29.41Z"
+                transform="translate(51.51 57.16) rotate(135)"
+              />
+              <path
+                class="cls-1"
+                d="M25.59,6.67h0A19.68,19.68,0,0,1,45.27,26.36v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,6.67v0A0,0,0,0,1,25.59,6.67Z"
+                transform="translate(48.8 53.24) rotate(-135)"
+              />
+              <path
+                class="cls-1"
+                d="M25.59,52.32h0A19.68,19.68,0,0,1,45.27,72v0a0,0,0,0,1,0,0h0A19.68,19.68,0,0,1,25.59,52.32v0A0,0,0,0,1,25.59,52.32Z"
+                transform="translate(16.53 131.16) rotate(-135)"
+              />
+              <path
+                class="cls-1"
+                d="M36.34,46.53a7.54,7.54,0,0,1-3.24-.74,7.05,7.05,0,1,1,6.09-12.72,6.93,6.93,0,0,1,3.4,9.4l0,.07A6.8,6.8,0,0,1,36.34,46.53ZM36,36.86a2.33,2.33,0,0,0-2.15,1.49,2.43,2.43,0,0,0,1.26,3.35,2.52,2.52,0,1,0,2.17-4.54A2.94,2.94,0,0,0,36,36.86Z"
+              />
+              <path
+                class="cls-2"
+                id="p"
+                fill="#fff"
+                d="M90,11.44a21.33,21.33,0,0,0-9.31-8.35A33.92,33.92,0,0,0,65.52,0L38.64,0s0,0,0,0C44.31,5.76,46.17,14.91,44,22.7a12.83,12.83,0,0,0,1.42,10.86,9.67,9.67,0,0,1,.43,10.36c-2.09,3.6-3.18,7.77-2.05,11.77C46,63.36,44.29,72.3,38.74,78H51.39V46.33H65.52q9.65,0,15.82-3.31a21,21,0,0,0,9-8.58,23.68,23.68,0,0,0,2.8-11.22A22.87,22.87,0,0,0,90,11.44ZM76.41,32.58q-3.6,3.31-10.89,3.31H51.39V10.43H65.52Q80,10.43,80,23.22,80,29.28,76.41,32.58Z"
+              />
+            </g>
+          </g>
+        </svg>
+      </a>
+      <nav class="nav-bar desktop" id="navbarDesktop" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="./index.html" class="nav-link nav-link-lg btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./about.html" class="nav-link nav-link-lg btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
+              >Projets</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a
+              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
+              download
+              class="nav-link btn sun"
+              >Télécharger CV</a
+            >
+          </li>
+          <li class="nav-list-icon">
+						<a href="tel:0631007416"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone preview-icon"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></a>
+					</li>
+					<li class="nav-list-icon">
+						<a href="mailto:thelliezpauline@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail preview-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+					</li>
+        </ul>
+      </nav>
+      <nav class="nav-bar mobile" id="navbarMobile" aria-label="Navigation mobile">
+        <button
+          class="toggle-menu"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="navbarMobile"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="./index.html" class="nav-link btn">Accueil</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./about.html" class="nav-link btn">A propos</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="./index.html#projets" class="nav-link nav-link-lg btn"
+              >Projets</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a
+              href="./assets/pdf/CV-Pauline-Thelliez.pdf"
+              download
+              class="nav-link btn sun"
+              >Télécharger CV</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-contact">
+          <h2>On prend contact ?</h2>
+          <p>
+            <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+              ><span>thelliezpauline@gmail.com</span></a
+            >
+            <a href="tel:0631007416" class="btn-underline"
+              ><span>06 31 00 74 16</span></a
+            >
+            <a
+              href="https://www.linkedin.com/in/pauline-thelliez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg ></a>
+          </p>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="home projet" id="project_1">
+        <div class="row">
+          <div class="main-txt fadeInDown">
+            <span lang="en">UX/UI &amp; Creative Dev Case Study</span>
+            <h1>APORIE®</h1>
+            <p>
+              Projet fictif : concilier l'univers immersif d'une maison de
+              parfum de niche et la rigueur d'un e-commerce, pour des clients
+              qui achètent une œuvre autant qu'un parfum. Aucune marque,
+              boutique ou personne réelle n'est représentée, et les contenus
+              (notes, prix, revendeurs) sont inventés.
+            </p>
+          </div>
+          <div class="main-img">
+            <img
+              src="./assets/img/aporie/aporie_apercu.webp"
+              alt="Page d'accueil du site APORIE® sur un ordinateur portable et un téléphone : titre blanc sur un fond holographique violet, avec un flacon de cristal en filigrane et deux boutons"
+            />
+          </div>
+        </div>
+      </div>
+      <section class="elements" aria-label="Informations clés du projet">
+        <div class="element element-1">
+          <span>Rôle</span>
+          <p>Product designer (benchmark, architecture, UI, prototype codé)</p>
+        </div>
+        <div class="element element-2">
+          <span>Cibles</span>
+          <p>Connaisseurs de parfum de niche, sensibles aux univers artistiques et à la rareté.</p>
+        </div>
+        <div class="element element-3">
+          <span>Livrables</span>
+          <p>Benchmark, personas, architecture, système visuel, prototype (accueil, 3 fiches produits, panier).</p>
+        </div>
+        <div class="element element-4">
+          <span>Outils utilisés</span>
+          <p>HTML, CSS, JavaScript, three.js</p>
+        </div>
+      </section>
+
+      <div class="part-1">
+        <div class="process">
+          <div
+            class="content"
+            style="border-left: solid var(--sun) 5px; padding-left: 15px"
+          >
+            <h2>Le problème de départ</h2>
+            <h3>Un univers radical, des clients exigeants</h3>
+            <p>
+              APORIE® vend ses extraits en petites séries numérotées. Son brief
+              écarte le fond beige, les lettres dorées et le minimalisme déjà
+              vu : le visiteur doit entrer dans un univers. Mais il doit aussi
+              trouver l'information qui lui permet d'acheter.
+            </p>
+            <br />
+            <h3>Le critère de décision</h3>
+            <p>
+              Chaque choix devait tenir deux exigences opposées : surprendre un
+              public de connaisseurs, et rester lisible, accessible et efficace
+              jusqu'au panier.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-3" style="padding: 50px 0">
+        <div class="process">
+          <div class="flow-header">
+            <h2>Méthodologie : de la tension au prototype</h2>
+            <p>Quatre étapes, où chaque décision répond à un constat.</p>
+          </div>
+
+          <div class="flow-grid" role="list">
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">1</span>
+                <span class="step-tag">Cadrage</span>
+              </div>
+              <span class="step-actor">Problème</span>
+              <h3 class="step-title">Nommer la tension</h3>
+              <ul class="step-list">
+                <li>Immersion contre conversion : le critère de tous les choix.</li>
+              </ul>
+            </div>
+
+            <div class="flow-step active" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">2</span>
+                <span class="step-tag">Diagnostic</span>
+              </div>
+              <span class="step-actor">Benchmark</span>
+              <h3 class="step-title">Comparer le marché</h3>
+              <ul class="step-list">
+                <li>Quatre marques de parfum de niche, trois constats.</li>
+              </ul>
+              <div class="highlight-box">
+                <strong>Étape charnière :</strong> le benchmark fait passer le
+                projet d'une vitrine à un e-commerce.
+              </div>
+            </div>
+
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">3</span>
+                <span class="step-tag">Décision</span>
+              </div>
+              <span class="step-actor">Principes</span>
+              <h3 class="step-title">Poser les principes</h3>
+              <ul class="step-list">
+                <li>Trois proto-personas.</li>
+                <li>L'univers à l'accueil, l'information sur la fiche.</li>
+              </ul>
+            </div>
+
+            <div class="flow-step" role="listitem">
+              <div class="step-badge-wrapper">
+                <span class="step-number">4</span>
+                <span class="step-tag">Conception</span>
+              </div>
+              <span class="step-actor">Prototype</span>
+              <h3 class="step-title">Concevoir et coder</h3>
+              <ul class="step-list">
+                <li>Accueil, 3 fiches, panier.</li>
+                <li>Tests au clavier et sur mobile.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-1">
+        <div class="process">
+          <div class="content eco">
+            <h2 id="benchmark-titre">Benchmark : des boutiques toutes semblables</h2>
+            <p>
+              Quatre marques de parfum de niche comparées sur leur modèle, leur template, leur univers et leur fiche produit.
+            </p>
+            <br />
+            <div class="table-container" tabindex="0" role="region" aria-labelledby="benchmark-titre">
+              <table class="benchmark-table">
+                <caption class="sr-only">
+                  Benchmark de quatre marques de parfum de niche comparées à APORIE®
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Maisons de parfum</th>
+                    <th scope="col">Modèle</th>
+                    <th scope="col">Template</th>
+                    <th scope="col">Univers de marque</th>
+                    <th scope="col">Fiche produit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feature-title">Contes de Parfums, Bu Feng, Sora Dora, Room1015</td>
+                    <td>E-commerce</td>
+                    <td>Luxe « traditionnel » : épuré, blanc, minimaliste</td>
+                    <td>Peu marqué</td>
+                    <td>Image, nom, contenance, type, description, notes, ingrédients, prix</td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">APORIE®</td>
+                    <td class="highlight"><strong>E-commerce</strong><p>Avec un accueil immersif</p></td>
+                    <td class="highlight"><strong>Surprenant mais lisible</strong><p>Fond holographique, étiquette blanche</p></td>
+                    <td class="highlight"><strong>Marqué</strong><p>Flacon 3D, éléments olfactifs</p></td>
+                    <td class="highlight"><strong>Mêmes informations</strong><p>Mieux ordonnées : achat d'abord, détails en onglets</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-3" style="margin-top: 50px">
+        <div class="process">
+          <h2>Utilisateurs</h2>
+          <p>
+            Des connaisseurs très sensibles à l'image d'une maison, attirés par
+            les univers artistiques, et qui aiment la rareté. Trois
+            proto-personas, hypothèses issues du benchmark, à valider par des
+            entretiens.
+          </p>
+          <div class="personas-container">
+            <article class="persona-card">
+              <header class="persona-header">
+                <img src="./assets/img/aporie/persona-1.webp" alt="Portrait de Camille, 34 ans, directrice artistique" />
+                <div class="persona-title">
+                  <h3>Camille</h3>
+                  <p>34 ans, directrice artistique</p>
+                </div>
+              </header>
+              <div class="persona-body">
+                <blockquote class="persona-quote">Un parfum, c'est une œuvre : je veux comprendre l'univers avant d'acheter.</blockquote>
+                <div class="persona-section">
+                  <h4>Besoin clé</h4>
+                  <ul><li>Un univers cohérent et des notes lisibles.</li></ul>
+                </div>
+                <div class="persona-section">
+                  <h4>Réponse du site</h4>
+                  <ul><li>Un fond et un flacon 3D qui portent l'univers.</li></ul>
+                </div>
+              </div>
+            </article>
+            <article class="persona-card">
+              <header class="persona-header">
+                <img src="./assets/img/aporie/persona-2.webp" alt="Portrait de Hugo, 41 ans, collectionneur" />
+                <div class="persona-title">
+                  <h3>Hugo</h3>
+                  <p>41 ans, collectionneur</p>
+                </div>
+              </header>
+              <div class="persona-body">
+                <blockquote class="persona-quote">Si c'est rare, je veux le savoir, et pouvoir l'acheter tout de suite.</blockquote>
+                <div class="persona-section">
+                  <h4>Besoin clé</h4>
+                  <ul><li>Connaître la série et le tirage avant de décider.</li></ul>
+                </div>
+                <div class="persona-section">
+                  <h4>Réponse du site</h4>
+                  <ul><li>La série numérotée sous le bouton d'achat.</li></ul>
+                </div>
+              </div>
+            </article>
+            <article class="persona-card">
+              <header class="persona-header">
+                <img src="./assets/img/aporie/persona-3.webp" alt="Portrait d'Inès, 28 ans, photographe" />
+                <div class="persona-title">
+                  <h3>Inès</h3>
+                  <p>28 ans, photographe</p>
+                </div>
+              </header>
+              <div class="persona-body">
+                <blockquote class="persona-quote">Je découvre les maisons sur mon téléphone, par l'image.</blockquote>
+                <div class="persona-section">
+                  <h4>Besoin clé</h4>
+                  <ul><li>Une ambiance et un parcours simple sur mobile.</li></ul>
+                </div>
+                <div class="persona-section">
+                  <h4>Réponse du site</h4>
+                  <ul><li>Une étiquette compacte, deux actions à portée de pouce.</li></ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-3" style="margin-top: 50px">
+        <div class="process">
+          <h2>Parcours et structure</h2>
+          <p>
+            Le site tient en trois niveaux : un accueil immersif, une fiche par
+            fragrance, un panier.
+          </p>
+          <ol class="aporie-arch">
+              <li><b>Accueil immersif</b><span>8 écrans : découvrir, choisir</span></li>
+              <li><b>Fiche produit</b><span>3 pages, détails en onglets : s'informer</span></li>
+              <li><b>Panier</b><span>Panneau sur toutes les pages : acheter</span></li>
+            </ol>
+
+          <div class="aporie-seg">
+            <h3>Le parcours principal</h3>
+            <ol>
+              <li><b>Découvrir :</b> l'accueil se parcourt salle par salle.</li>
+              <li><b>Choisir :</b> l'étiquette donne le nom, l'accord, le prix et deux actions.</li>
+              <li><b>S'informer :</b> la fiche détaille notes, ingrédients et série.</li>
+              <li><b>Acheter :</b> « Ajouter au panier » ouvre le récapitulatif.</li>
+            </ol>
+            <p>
+              Deux raccourcis : le panier sur l'étiquette, et le menu qui mène
+              droit à une fiche.
+            </p>
+          </div>
+
+          <div class="aporie-seg">
+            <h3>L'étiquette</h3>
+            <div class="table-container" tabindex="0" role="region" aria-label="L'étiquette avant et après">
+              <table class="benchmark-table">
+                <caption class="sr-only">L'étiquette avant et après le passage à l'e-commerce</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Avant <span>(vitrine)</span></th>
+                    <th scope="col">Après <span>(e-commerce)</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Description et notes sur l'étiquette, repliées sur mobile.</td>
+                    <td class="highlight">Nom, accord et prix : de quoi décider d'un coup d'œil.</td>
+                  </tr>
+                  <tr>
+                    <td>Un seul bouton : « Me le procurer », vers les revendeurs.</td>
+                    <td class="highlight">« Découvrir la fragrance » et un bouton panier.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="aporie-seg">
+            <h3>La fiche produit</h3>
+            <p>Les mêmes informations que chez les concurrents, classées dans l'ordre de la décision :</p>
+            <ol>
+              <li><b>Visuel, nom, prix et bouton d'achat,</b> visibles sans défiler.</li>
+              <li><b>La série numérotée,</b> juste sous le bouton.</li>
+              <li><b>La description,</b> puis des onglets : notes, ingrédients, fiche technique, boutique.</li>
+              <li><b>Les autres fragrances,</b> pour continuer la visite.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-1">
+        <div class="process">
+          <div class="content eco">
+            <h2 id="decisions-titre">Décisions de design et compromis</h2>
+            
+            <p>Quatre décisions, chacune avec le compromis assumé.</p>
+            <br />
+            <div class="table-container" tabindex="0" role="region" aria-labelledby="decisions-titre">
+              <table class="benchmark-table">
+                <caption class="sr-only">
+                  Décisions de design, raisons et compromis assumés
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Décision</th>
+                    <th scope="col">Pourquoi</th>
+                    <th scope="col">Compromis assumé</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feature-title">Immersion à l'accueil, conversion sur la fiche</td>
+                    <td>
+                      <strong>Deux besoins, deux lieux</strong>
+                      <p>On vient pour l'univers, mais on achète sur une fiche complète.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Deux modes de navigation</strong>
+                      <p>Une visite en 8 écrans, puis des pages classiques à faire cohabiter.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Une étiquette réduite à l'essentiel</td>
+                    <td>
+                      <strong>Décider d'un coup d'œil</strong>
+                      <p>Nom, accord, prix, « Découvrir la fragrance » et panier.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Moins d'infos immédiates</strong>
+                      <p>Notes et ingrédients passent en onglets sur la fiche.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">La rareté mise en scène</td>
+                    <td>
+                      <strong>Là où l'on décide</strong>
+                      <p>Série numérotée et tirage sous le bouton d'achat, et boutiques en stock dans un onglet.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Une promesse à tenir</strong>
+                      <p>Les stocks affichés devront rester fiables.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">L'accessibilité comme contrainte</td>
+                    <td>
+                      <strong>Lisible malgré le fond animé</strong>
+                      <p>Texte toujours sur surface blanche, clavier, « réduire les animations » respecté.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Un 3D plus lourd sur mobile</strong>
+                      <p>Une version allégée reste à produire.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-1">
+        <div class="process">
+          <div class="content eco">
+            <h2 id="pistes-titre">Pistes écartées</h2>
+            <br />
+            <div class="table-container" tabindex="0" role="region" aria-labelledby="pistes-titre">
+              <table class="benchmark-table">
+                <caption class="sr-only">
+                  Pistes explorées, raisons de l'abandon et solution retenue
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Piste explorée</th>
+                    <th scope="col">Pourquoi je l'ai écartée</th>
+                    <th scope="col">Ce que j'ai retenu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feature-title">Scroll natif long sur l'accueil</td>
+                    <td>
+                      <strong>Transitions inachevées</strong>
+                      <p>Il fallait plusieurs gestes pour passer d'une salle à l'autre.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Un geste, une salle</strong>
+                      <p>Menu, boutons et clavier en secours.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Notes et description sur l'étiquette</td>
+                    <td>
+                      <strong>Trop dense sur mobile</strong>
+                      <p>Elle doublonne avec la fiche et cache le flacon.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Étiquette courte</strong>
+                      <p>Le détail vit sur la fiche.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="feature-title">Lettres dorées, codes du luxe</td>
+                    <td>
+                      <strong>Écartées par le brief</strong>
+                      <p>Elles rapprochent la marque de ses concurrents.</p>
+                    </td>
+                    <td class="highlight">
+                      <strong>Or réduit à des filets</strong>
+                      <p>Sur fonds sombres, retirable en une variable.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-3" style="margin-top: 50px">
+        <div class="process">
+          <h2>Un univers visuel : le rêve et la rigueur</h2>
+          <p>
+            Le moodboard oppose le rêve (dégradés holographiques, silhouettes
+            à contre-jour) à la rigueur (étiquettes sobres, mises en page
+            nettes). Le site garde ce double registre : un fond onirique, une
+            information nette, et une couleur d'accent par fragrance.
+          </p>
+          <figure class="aporie-mood">
+            <img src="./assets/img/aporie/aporie_moodboard.webp" width="1800" height="977" loading="lazy"
+              alt="Moodboard APORIE : collage d'images holographiques et irisées, silhouettes à contre-jour, flacons de parfum dans les nuages, sites web aux univers cristallins et étiquettes sobres de bougies et de parfums." />
+            <figcaption>Moodboard du projet.</figcaption>
+          </figure>
+          <div class="aporie-cards" aria-hidden="true">
+            <div class="aporie-mini" style="--c:#d9583a"><b>01</b><span>La fièvre</span><small>Corail</small></div>
+            <div class="aporie-mini" style="--c:#2f4fbf"><b>02</b><span>La lumière</span><small>Bleu</small></div>
+            <div class="aporie-mini" style="--c:#7a0c1e"><b>03</b><span>Le cauchemar</span><small>Grenat</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part-3" style="margin-top: 50px">
+        <div class="process">
+          <h2>Prototype</h2>
+          <p>
+            Fiche produit de « La lumière » en desktop et de « La fièvre » en
+            mobile : fond animé, flacon 3D, étiquette d'achat et onglets.
+          </p>
+        </div>
+      </div>
+
+      <div class="prototype desktop">
+        <img src="./assets/img/aporie/aporie_fiche_desktop.webp" loading="lazy" alt="Fiche produit desktop de La lumière : flacon 3D de cristal bleu et orange sur un fond holographique animé, et à droite l'étiquette blanche avec le prix de 185 euros, le bouton Ajouter au panier et la mention de série numérotée" />
+        <img src="./assets/img/aporie/aporie_fiche_mobile.webp" loading="lazy" style="width: 175.5px" alt="Fiche produit mobile de La fièvre : flacon 3D en haut, puis l'étiquette avec le prix et le bouton Ajouter au panier" />
+      </div>
+
+      
+    </main>
+    <footer class="footer" id="footer">
+      <h2>On prend contact ?</h2>
+      <p
+        style="
+          display: flex;
+          gap: 25px;
+          justify-content: center;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="mailto:thelliezpauline@gmail.com" class="btn-underline"
+          ><span>thelliezpauline@gmail.com</span></a
+        >
+        <a href="tel:0631007416" class="btn-underline"
+          ><span>06 31 00 74 16</span></a
+        >
+        <a
+              href="https://www.linkedin.com/in/pauline-thelliez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg ></a>
+      </p>
+      <p style="margin: auto; width: 100%">&copy; Pauline Thelliez</p>
+    </footer>
+    <button
+      class="back-to-up"
+      onclick="scrollToTop()"
+      id="back-to-up"
+      type="button"
+      aria-label="Retour en haut de la page"
+    >
+      <svg class="" viewBox="0 0 23 13" aria-hidden="true" focusable="false">
+        <polygon
+          style="stroke: #000"
+          points="17.4,1 16.6,1.7 21.1,6 1,6 1,7.1 21.1,7.1 16.7,11.3 17.5,12 23,6.5 "
+        ></polygon>
+      </svg>
+    </button>
+    <div class="cursor" aria-hidden="true"></div>
+    <script src="./assets/js/style.js"></script>
+    <script>
+      (function () {
+        var wrap = document.querySelector(".case-figure-wrap");
+        if (!wrap) return;
+        var frame = wrap.querySelector(".case-figure-frame");
+        var img = frame.querySelector("img");
+        var btn = wrap.querySelector(".case-figure-toggle");
+        var figure = wrap.closest("figure");
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var expanded = false;
+
+        function checkShort() {
+          if (expanded) return;
+          wrap.classList.toggle(
+            "is-short",
+            frame.scrollHeight <= frame.clientHeight + 1,
+          );
+        }
+
+        function setState(open) {
+          expanded = open;
+          wrap.classList.toggle("is-expanded", open);
+          btn.setAttribute("aria-expanded", String(open));
+          btn.innerHTML = open ? "<span>Voir moins</span>" : "<span>Voir plus</span>";
+          frame.style.maxHeight = open ? frame.scrollHeight + "px" : "";
+          if (!open && figure.getBoundingClientRect().top < 0) {
+            figure.scrollIntoView({
+              behavior: reduce.matches ? "auto" : "smooth",
+              block: "start",
+            });
+          }
+        }
+
+        btn.addEventListener("click", function () {
+          setState(!expanded);
+        });
+
+        if (img.complete) checkShort();
+        else {
+          img.addEventListener("load", checkShort);
+          img.addEventListener("error", checkShort);
+        }
+
+        window.addEventListener("resize", function () {
+          if (expanded) frame.style.maxHeight = frame.scrollHeight + "px";
+          else checkShort();
+        });
+      })();
+    </script>
+
+  </body>
+</html>
